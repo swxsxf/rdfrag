@@ -1,27 +1,27 @@
 ﻿# RDFRAG VKR
 
-Hybrid `graph + vector RAG` system for scientific PDF collections in digital economy and related technology domains.
+Гибридная `graph + vector RAG`-система для корпуса научных PDF-документов по цифровой экономике и смежным технологическим направлениям.
 
-This repository contains a diploma project prototype that combines:
-- scientific PDF parsing with `GROBID -> pypdf fallback`
-- preprocessing and chunking
-- LLM-based knowledge extraction
-- RDF knowledge graph construction
-- graph retrieval via `Apache Jena Fuseki / SPARQL`
-- vector retrieval via `FAISS`
-- hybrid fusion and reranking
-- answer generation with `Ollama + qwen3:8b`
-- `FastAPI` API and `Gradio` chat UI
+Репозиторий содержит прототип дипломного проекта, который объединяет:
+- парсинг научных PDF через `GROBID -> pypdf fallback`
+- preprocessing и chunking
+- извлечение знаний с использованием LLM
+- построение RDF-графа знаний
+- графовый retrieval через `Apache Jena Fuseki / SPARQL`
+- векторный retrieval через `FAISS`
+- гибридное объединение результатов и reranking
+- генерацию ответов через `Ollama + qwen3:8b`
+- API на `FastAPI` и чат-интерфейс на `Gradio`
 
-## Highlights
+## Ключевые характеристики
 
-- `151` scientific PDF documents in the working corpus
-- `5135` text chunks after preprocessing
-- hybrid retrieval: graph baseline, vector tuned mode, graph+vector hybrid mode
-- evaluation with `HitRate@K`, `Precision@K`, `Recall@K`, `MRR@K`, `nDCG@K`
-- generated diploma-ready visualizations and reports
+- `151` научный PDF-документ в рабочем корпусе
+- `5135` текстовых chunks после preprocessing
+- hybrid retrieval в трёх режимах: graph baseline, vector tuned mode, graph+vector hybrid mode
+- evaluation по метрикам `HitRate@K`, `Precision@K`, `Recall@K`, `MRR@K`, `nDCG@K`
+- готовые визуализации и отчёты для ВКР
 
-## Architecture
+## Архитектура
 
 ```mermaid
 flowchart LR
@@ -36,7 +36,7 @@ flowchart LR
     H --> I["FastAPI / Gradio"]
 ```
 
-## Tech Stack
+## Технологический стек
 
 - Python
 - FastAPI
@@ -48,88 +48,88 @@ flowchart LR
 - qwen3:8b
 - deepvk/USER-base
 
-## Repository Structure
+## Структура репозитория
 
 ```text
 data/
-  eval/            evaluation inputs and reports
-  rdf/             RDF graph and knowledge artifacts
+  eval/            входные данные и отчёты evaluation
+  rdf/             RDF-граф и артефакты извлечённых знаний
 artifacts/
-  metrics/         CSV and JSON evaluation outputs
-  plots/           generated figures and visualizations
-  reports/         markdown and HTML reports
-scripts/           ingestion, upload, evaluation, visualization scripts
-src/rdfrag_vkr/    source code
-tests/             test suite
+  metrics/         CSV и JSON результаты evaluation
+  plots/           сгенерированные графики и визуализации
+  reports/         markdown и HTML-отчёты
+scripts/           скрипты ingestion, upload, evaluation и генерации визуализаций
+src/rdfrag_vkr/    исходный код
+tests/             тесты
 ```
 
-## Quick Start
+## Быстрый старт
 
-Install:
+Установка:
 
 ```bash
 pip install -e .
 ```
 
-Run ingestion:
+Запуск ingestion:
 
 ```bash
 python scripts/run_ingestion.py
 ```
 
-Upload RDF to Fuseki:
+Загрузка RDF в Fuseki:
 
 ```bash
 python scripts/upload_rdf.py
 ```
 
-Run evaluation:
+Запуск evaluation:
 
 ```bash
 python scripts/run_evaluation.py
 ```
 
-Start API:
+Запуск API:
 
 ```bash
 python main.py --mode api --host 0.0.0.0 --port 8000
 ```
 
-Start Gradio UI:
+Запуск Gradio UI:
 
 ```bash
 python main.py
 ```
 
-## Retrieval Results
+## Результаты retrieval
 
-| Mode | HitRate@5 | Precision@5 | Recall@5 | MRR@5 | nDCG@5 |
+| Режим | HitRate@5 | Precision@5 | Recall@5 | MRR@5 | nDCG@5 |
 | --- | ---: | ---: | ---: | ---: | ---: |
 | Graph baseline | 0.60 | 0.26 | 0.5667 | 0.55 | 0.5631 |
 | Vector tuned | 1.00 | 0.30 | 0.6667 | 0.6667 | 0.7524 |
 | Hybrid | 0.90 | 0.36 | 0.80 | 0.725 | 0.7693 |
 
-The hybrid mode provides the strongest overall ranking quality and the best recall on the current gold-query evaluation set.
+Гибридный режим показывает наилучшее качество ранжирования в целом и лучший recall на текущем наборе gold-запросов.
 
-## Included Artifacts
+## Что уже включено в репозиторий
 
-This repository already contains:
-- evaluation metrics and reports
-- diploma figures and plots
+В репозитории уже присутствуют:
+- evaluation-метрики и отчёты
+- графики и иллюстрации для ВКР
 - graph visualizations
-- RDF artifacts
-- demo query tables
+- RDF-артефакты
+- таблицы с demo queries
 
-## Excluded from Git
+## Что исключено из Git
 
-Heavy local data is intentionally excluded from the repository:
+Тяжёлые локальные данные намеренно исключены из репозитория:
 - raw PDFs
 - parsed outputs
 - chunk dumps
 - embedding storage
 
-This keeps the repository compact while preserving the code, evaluation outputs, RDF artifacts, and visual materials.
+Это позволяет сохранить репозиторий компактным, оставив при этом код, evaluation-результаты, RDF-артефакты и визуальные материалы.
 
-## Project Goal
+## Цель проекта
 
-The goal of the project is to build a practical `graph-enhanced Retrieval-Augmented Generation` system that improves answer grounding by combining semantic vector search with explicit graph-structured knowledge retrieval.
+Цель проекта — построить практическую `graph-enhanced Retrieval-Augmented Generation`-систему, которая повышает обоснованность ответов за счёт сочетания семантического векторного поиска и retrieval по явно заданному графу знаний.
