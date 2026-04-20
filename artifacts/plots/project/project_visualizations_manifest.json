@@ -1,0 +1,8 @@
+{
+  "architecture": "C:\\rdfrag_vkr\\artifacts\\plots\\project\\architecture_overview.png",
+  "corpus_composition": "C:\\rdfrag_vkr\\artifacts\\plots\\project\\corpus_composition.png",
+  "parser_backends": "C:\\rdfrag_vkr\\artifacts\\plots\\project\\parser_backend_comparison.png",
+  "topic_focus": "C:\\rdfrag_vkr\\artifacts\\plots\\project\\corpus_topic_focus.png",
+  "retrieval_overlap": "C:\\rdfrag_vkr\\artifacts\\plots\\project\\retrieval_mode_overlap.png",
+  "demo_queries": "C:\\rdfrag_vkr\\artifacts\\plots\\project\\demo_queries_table.png"
+}

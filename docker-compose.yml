@@ -1,0 +1,54 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: uvicorn rdfrag_vkr.api.app:app --host 0.0.0.0 --port 8000
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data/parsed:/app/data/parsed
+      - ./data/chunks:/app/data/chunks
+      - ./data/rdf:/app/data/rdf
+      - ./data/embeddings:/app/data/embeddings
+      - ./data/eval:/app/data/eval
+      - ./artifacts:/app/artifacts
+    environment:
+      RDFRAG_PROJECT_ROOT: /app
+      RDFRAG_FUSEKI_URL: http://fuseki:3030/rdfrag
+      RDFRAG_FUSEKI_MODE: required
+      RDFRAG_FUSEKI_ADMIN_USER: admin
+      RDFRAG_FUSEKI_ADMIN_PASSWORD: admin
+      RDFRAG_GROBID_URL: http://grobid:8070
+      RDFRAG_GROBID_MODE: fallback
+      RDFRAG_VECTOR_BACKEND: faiss
+      RDFRAG_EMBEDDING_MODEL: deepvk/USER-base
+      RDFRAG_LLM_PROVIDER: ollama
+      RDFRAG_OLLAMA_URL: http://host.docker.internal:11434
+      RDFRAG_OLLAMA_MODEL: qwen3:8b
+      RDFRAG_KNOWLEDGE_BACKEND: ollama_hybrid
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    depends_on:
+      - fuseki
+      - grobid
+
+  fuseki:
+    image: stain/jena-fuseki:4.0.0
+    ports:
+      - "3030:3030"
+    environment:
+      ADMIN_PASSWORD: admin
+      FUSEKI_DATASET_1: rdfrag
+    volumes:
+      - fuseki-data:/fuseki
+
+  grobid:
+    image: lfoppiano/grobid:0.8.1
+    ports:
+      - "8070:8070"
+    environment:
+      JAVA_OPTS: "-Xms512m -Xmx2g"
+
+volumes:
+  fuseki-data:

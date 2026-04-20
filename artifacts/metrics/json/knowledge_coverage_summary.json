@@ -1,0 +1,16 @@
+{
+  "status": "completed",
+  "documents": 152,
+  "average_entities_per_doc": 2.1184,
+  "average_relations_per_doc": 2.0329,
+  "backend_distribution": [
+    {
+      "backend": "error",
+      "documents": 39
+    },
+    {
+      "backend": "ollama",
+      "documents": 113
+    }
+  ]
+}

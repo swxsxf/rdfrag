@@ -1,0 +1,4 @@
+mode,queries,top_k,hit_rate_at_k,precision_at_k,recall_at_k,mrr_at_k,ndcg_at_k
+baseline,10,5,0.6,0.26,0.566667,0.55,0.563093
+tuned,10,5,1.0,0.3,0.666667,0.666667,0.752372
+hybrid,10,5,0.9,0.36,0.8,0.725,0.769254

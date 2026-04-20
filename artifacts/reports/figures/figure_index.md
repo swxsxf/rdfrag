@@ -1,0 +1,11 @@
+- retrieval_quality_comparison.png
+- baseline_vs_tuned_vs_hybrid.png
+- precision_recall_comparison.png
+- per_query_hit_heatmap.png
+- first_relevant_rank_comparison.png
+- topk_hit_rate_comparison.png
+- topk_recall_comparison.png
+- answer_length_comparison.png
+- knowledge_backend_distribution.png
+- knowledge_entities_relations_distribution.png
+- knowledge_entities_relations_scatter.png

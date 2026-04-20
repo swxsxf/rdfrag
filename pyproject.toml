@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rdfrag-vkr"
+version = "0.1.0"
+description = "Hybrid graph + vector RAG MVP for scientific PDFs on the digital economy."
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+  { name = "Codex" }
+]
+dependencies = [
+  "fastapi>=0.110.0",
+  "uvicorn>=0.29.0",
+  "gradio>=4.44.0",
+  "pydantic>=2.6.0",
+  "pypdf>=4.2.0",
+  "httpx>=0.27.0",
+  "numpy>=1.26.0",
+  "pandas>=2.2.0",
+  "matplotlib>=3.8.0",
+  "rdflib>=7.0.0",
+  "sentence-transformers>=2.7.0",
+  "faiss-cpu>=1.8.0",
+  "spacy>=3.7.0",
+  "pytest>=8.0.0",
+]
+
+[project.optional-dependencies]
+full = []
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

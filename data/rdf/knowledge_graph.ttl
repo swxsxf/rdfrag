@@ -1,0 +1,4945 @@
+@prefix ns1: <http://example.org/rdfrag/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns1:1-78266795 a ns1:Article ;
+    ns1:hasAuthor ns1:author-04f0841716,
+        ns1:author-6dd82ed561,
+        ns1:author-b980090e62 ;
+    ns1:hasTopic ns1:topic-32cc066fff,
+        ns1:topic-4adb5b33f9,
+        ns1:topic-9a2bd6376a,
+        ns1:topic-d825498c63,
+        ns1:topic-e6a1304d26,
+        ns1:topic-fc8d46a677 ;
+    ns1:publishedInYear ns1:year-d7fef9f2f8 ;
+    ns1:publishedInYearLiteral 2010 ;
+    ns1:sourceFile "Промышленные чертежи метавселенной, часть 1 определения и требования для наиболее эффективных экономических результатов..pdf" ;
+    ns1:title "Промышленные чертежи метавселенной, часть 1 определения и требования для наиболее эффективных экономических результатов. Industrial Metaverse Blueprints, Part 1: Definitions & Requirements for the Most Impactful Economic Outcomes" .
+
+ns1:15-6g-iot-7b289536 a ns1:Article ;
+    ns1:hasAuthor ns1:author-69323a5d28,
+        ns1:author-7076244316,
+        ns1:author-b7defc4fda,
+        ns1:author-f8b6310bac,
+        ns1:author-fab78cd286 ;
+    ns1:hasTopic ns1:topic-32cc066fff,
+        ns1:topic-414da6384e,
+        ns1:topic-440a249cfd,
+        ns1:topic-644da0161a,
+        ns1:topic-6bb5ae6a52,
+        ns1:topic-6f5af92dd8,
+        ns1:topic-9095b0a38d,
+        ns1:topic-e6a1304d26 ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Распаковка 15-минутного города с помощью 6G, IoT и цифровых близнецов- на пути к новому подходу к повышению эффективности, устойчивости и устойчивости городов.pdf" ;
+    ns1:title "Unpacking the ‘15-Minute City’ via 6G, IoT, and Digital Twins: Towards a New Narrative for Increasing Urban Efficiency, Resilience, and Sustainability" .
+
+ns1:2-9cf95709 a ns1:Article ;
+    ns1:hasAuthor ns1:author-04f0841716,
+        ns1:author-5dafe6df18,
+        ns1:author-6dd82ed561,
+        ns1:author-9cd053a9a7,
+        ns1:author-a9cd5a09d3,
+        ns1:author-b980090e62 ;
+    ns1:hasTopic ns1:topic-059ee594dc,
+        ns1:topic-13805f4a32,
+        ns1:topic-32cc066fff,
+        ns1:topic-440a249cfd,
+        ns1:topic-d825498c63,
+        ns1:topic-e6a1304d26 ;
+    ns1:mentionsMethod ns1:method-65787dfebe ;
+    ns1:sourceFile "Промышленные чертежи метавселенной, часть 2- метавселенная работает на цифровых двойниках.pdf" ;
+    ns1:title "Промышленные чертежи метавселенной, часть 2: метавселенная работает на цифровых двойниках" .
+
+ns1:2021-08-04-5ae82683 a ns1:Article ;
+    ns1:evaluatedByMetric ns1:metric-6a331906f1 ;
+    ns1:hasTopic ns1:topic-13805f4a32,
+        ns1:topic-440a249cfd,
+        ns1:topic-842d53384d ;
+    ns1:mentionsMethod ns1:method-f36dcd78f2 ;
+    ns1:publishedInYear ns1:year-702cf86515 ;
+    ns1:publishedInYearLiteral 2021 ;
+    ns1:sourceFile "Зрелость цифрового двойника инфраструктуры- модель измерения прогресса  .Белая книга консорциума цифровых двойников  .2021-08-04.pdf" ;
+    ns1:title "Зрелость цифрового двойника инфраструктуры: модель измерения прогресса .Белая книга консорциума цифровых двойников .2021-08-04" .
+
+ns1:2022-10-25-c239d9e6 a ns1:Article ;
+    ns1:evaluatedByMetric ns1:metric-6a331906f1 ;
+    ns1:hasTopic ns1:topic-13805f4a32,
+        ns1:topic-32cc066fff ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Обеспечение надежности динамических систем с использованием цифровых двойников и векторов доверия . Основополагающий документ Консорциума цифровых двойников .2022-10-25.pdf" ;
+    ns1:title "Обеспечение надежности динамических систем с использованием цифровых двойников и векторов доверия . Основополагающий документ Консорциума цифровых двойников .2022-10-25" .
+
+ns1:215-1-514-1-10-20170621-cfb40a31 a ns1:Article ;
+    ns1:hasAuthor ns1:author-002d734614,
+        ns1:author-3bd3d45a23,
+        ns1:author-902305a501,
+        ns1:author-aa135d39b2,
+        ns1:author-ad077a5d11,
+        ns1:author-ccccb4f3c4 ;
+    ns1:hasTopic ns1:topic-32cc066fff,
+        ns1:topic-55265e0873,
+        ns1:topic-9ad6b77c8c,
+        ns1:topic-e55d434e0a ;
+    ns1:publishedInYear ns1:year-cc4de0c8ca ;
+    ns1:publishedInYearLiteral 2017 ;
+    ns1:sourceFile "215-1-514-1-10-20170621  гигабитное общество.pdf" ;
+    ns1:title "215-1-514-1-10-20170621  гигабитное общество" .
+
+ns1:3-0-21f1f897 a ns1:Article ;
+    ns1:hasAuthor ns1:author-8d8066c34f,
+        ns1:author-eac11f800d ;
+    ns1:hasTopic ns1:topic-2714c18783,
+        ns1:topic-eb5ede998f ;
+    ns1:sourceFile "Эволюция Интернета 3.0- история и будущее.pdf" ;
+    ns1:title "A Platform for Researchers and Technology Enthusiasts" .
+
+ns1:3-a1803a5b a ns1:Article ;
+    ns1:evaluatedByMetric ns1:metric-66c90435cf,
+        ns1:metric-6a331906f1,
+        ns1:metric-839a972df9 ;
+    ns1:hasAuthor ns1:author-04f0841716,
+        ns1:author-5dafe6df18,
+        ns1:author-6dd82ed561,
+        ns1:author-9cd053a9a7,
+        ns1:author-a9cd5a09d3,
+        ns1:author-b980090e62 ;
+    ns1:hasTopic ns1:topic-3c663e180c,
+        ns1:topic-d825498c63 ;
+    ns1:mentionsMethod ns1:method-97797660fd,
+        ns1:metric-839a972df9 ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Промышленные чертежи метавселенной, часть 3 - требования к совместимости систем.pdf" ;
+    ns1:title "Промышленные чертежи метавселенной, часть 3 -требования к совместимости систем Industrial Metaverse Blueprints, Part 3: System Interoperability Requirements" .
+
+ns1:30-2d387d79 a ns1:Article ;
+    ns1:hasAuthor ns1:author-043964ec29,
+        ns1:author-210354a37e,
+        ns1:author-3564eac296,
+        ns1:author-754c8f4501,
+        ns1:author-c3cb833264,
+        ns1:author-e76b1285fe,
+        ns1:author-ed727a1e6e ;
+    ns1:hasTopic ns1:topic-478f48df9c,
+        ns1:topic-4b583af053,
+        ns1:topic-6181207b0d ;
+    ns1:mentionsMethod ns1:method-20bd626542 ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Библиометрический анализ интерфейсов мозг-компьютер за 30-летний период.pdf" ;
+    ns1:title "Bibliometric analysis on Brain-computer interfaces in a 30-year period" .
+
+ns1:3d-72f28518 a ns1:Article ;
+    ns1:hasAuthor ns1:author-7d6c28a11f,
+        ns1:author-e0a340e5ce ;
+    ns1:hasTopic ns1:topic-c18e2e5fe9,
+        ns1:topic-c218ece6b9,
+        ns1:topic-d825498c63 ;
+    ns1:mentionsMethod ns1:method-df9fc6d17c ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Проектирование виртуальной 3D-реальности в метавселенной для образования в области охраны окружающей среды на основе когнитивной теории.pdf" ;
+    ns1:title "Design of 3D Virtual Reality in the Metaverse for Environmental Conservation Education Based on Cognitive Theory" .
+
+ns1:4-0ir-363fef48 a ns1:Article ;
+    ns1:hasAuthor ns1:author-19ffb00823,
+        ns1:author-269c52af54,
+        ns1:author-7a929f2ab3,
+        ns1:author-bf7685553b,
+        ns1:author-f5014a5282,
+        ns1:author-fd840a10e9 ;
+    ns1:hasTopic ns1:topic-32cc066fff,
+        ns1:topic-360b48120b,
+        ns1:topic-d825498c63,
+        ns1:topic-eb5ede998f ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Искусственный интеллект, технология блокчейн и рискованное поведение в эпоху метавселенной 4.0IR -  данные малых и средних предприятий Бангладеш.pdf" ;
+    ns1:title "Artificial Intelligence, Blockchain Technology, and Risk-Taking Behavior in the 4.0IR Metaverse Era: Evidence from Bangladesh-Based SMEs" .
+
+ns1:432-1274-1-pb-iot-c7ef9b8b a ns1:Article ;
+    ns1:hasAuthor ns1:author-19c791a0c9,
+        ns1:author-1ca7f95382,
+        ns1:author-7a924bef78,
+        ns1:author-7beed5f366,
+        ns1:author-8fc7a47dd3,
+        ns1:author-d014c87ec0 ;
+    ns1:hasTopic ns1:topic-32cc066fff,
+        ns1:topic-5a77e02320,
+        ns1:topic-5b7dcc8e20,
+        ns1:topic-6f5af92dd8,
+        ns1:topic-9ad6b77c8c,
+        ns1:topic-e402bc4768 ;
+    ns1:publishedInYear ns1:year-b6c4f78448 ;
+    ns1:publishedInYearLiteral 2016 ;
+    ns1:sourceFile "432-1274-1-PB веб вещей и iot.pdf" ;
+    ns1:title "432-1274-1-PB веб вещей и iot" .
+
+ns1:473-1403-2-pb-21b50173 a ns1:Article ;
+    ns1:hasTopic ns1:topic-32cc066fff,
+        ns1:topic-4dc9a955fc,
+        ns1:topic-4dcc238ebd,
+        ns1:topic-c280d88b1c,
+        ns1:topic-eb5ede998f,
+        ns1:topic-f6d2164f9f ;
+    ns1:publishedInYear ns1:year-cc4de0c8ca ;
+    ns1:publishedInYearLiteral 2017 ;
+    ns1:sourceFile "473-1403-2-PB блокчейн и цифровые цепи постаок.pdf" ;
+    ns1:title "473-1403-2-PB блокчейн и цифровые цепи постаок" .
+
+ns1:5-0-2d4905f2 a ns1:Article ;
+    ns1:hasAuthor ns1:author-1a6040532e,
+        ns1:author-6e5b3365fe,
+        ns1:author-710264a466,
+        ns1:author-780925e77c,
+        ns1:author-8aa4239a8b,
+        ns1:author-ba8ab3eac8 ;
+    ns1:hasTopic ns1:topic-32cc066fff,
+        ns1:topic-5b7dcc8e20,
+        ns1:topic-d825498c63,
+        ns1:topic-e6a1304d26,
+        ns1:topic-eb5ede998f ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Улучшение производства мудрости как промышленной метавселенной для промышленности и общества 5.0.pdf" ;
+    ns1:title "Enhancing wisdom manufacturing as industrial metaverse for industry and society 5.0" .
+
+ns1:540-1613-1-pb-ebe0fe52 a ns1:Article ;
+    ns1:evaluatedByMetric ns1:metric-6a331906f1 ;
+    ns1:hasTopic ns1:topic-2a6cee920f,
+        ns1:topic-32cc066fff,
+        ns1:topic-360b48120b,
+        ns1:topic-5b7dcc8e20,
+        ns1:topic-ddd2c4a580,
+        ns1:topic-eb5ede998f ;
+    ns1:sourceFile "540-1613-1-PB Блокчейн жд Германия.pdf" ;
+    ns1:title "540-1613-1-PB Блокчейн жд Германия" .
+
+ns1:557-1686-1-pb-fe8099fd a ns1:Article ;
+    ns1:hasTopic ns1:topic-55c824aa37,
+        ns1:topic-e55d434e0a,
+        ns1:topic-eb3c9e3a20,
+        ns1:topic-f79e8c5228 ;
+    ns1:publishedInYear ns1:year-ff8d316513 ;
+    ns1:publishedInYearLiteral 2018 ;
+    ns1:sourceFile "557-1686-1-PB РОБОТЫ ИИ в траспорте и логистике.pdf" ;
+    ns1:title "557-1686-1-PB РОБОТЫ ИИ в траспорте и логистике" .
+
+ns1:6g-343f1b70 a ns1:Article ;
+    ns1:hasAuthor ns1:author-079096ce72,
+        ns1:author-2a7459a744,
+        ns1:author-7c2185cdb6,
+        ns1:author-d910fe4c23 ;
+    ns1:hasTopic ns1:topic-32cc066fff ;
+    ns1:publishedInYear ns1:year-702cf86515 ;
+    ns1:publishedInYearLiteral 2021 ;
+    ns1:sourceFile "Интеллектуальная инфраструктура с поддержкой 6G для устойчивого развития общества - возможности, проблемы и план исследований.pdf" ;
+    ns1:title "6G Enabled Smart Infrastructure for Sustainable Society: Opportunities, Challenges, and Research Roadmap" .
+
+ns1:6g-36c66bd4 a ns1:Article ;
+    ns1:hasTopic ns1:topic-360b48120b,
+        ns1:topic-eb5ede998f ;
+    ns1:sourceFile "ИИ и технология блокчейн в беспроводной сети 6G.pdf" ;
+    ns1:title "ИИ и технология блокчейн в беспроводной сети 6G Mishra, A.K., Ponnusamy, V. (2022). Key Technologies and Architectures for 6G and Beyond Wireless Communication System. In: Dutta Borah, M., Singh, P., Deka, G.C. (eds) AI and Blockchain Technology in 6G Wireless Network. Blockchain Technologies. Springer, Singapore" .
+
+ns1:6g-4af68839 a ns1:Article ;
+    ns1:hasAuthor ns1:author-d0448e8498,
+        ns1:author-eafbf385ea ;
+    ns1:hasTopic ns1:topic-32cc066fff ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Приложения искусственного интеллекта и самообучающиеся сети 6G для цифровых экосистем умных городов  - таксономия, проблемы и направления на будущее.pdf" ;
+    ns1:title "Artificial Intelligence Applications and Self-Learning 6G Networks for Smart Cities Digital Ecosystems: Taxonomy, Challenges, and Future Directions" .
+
+ns1:6g-4cb1705a a ns1:Article ;
+    ns1:evaluatedByMetric ns1:metric-9149107815 ;
+    ns1:hasAuthor ns1:author-2b767dd1f3,
+        ns1:author-5c006218ce,
+        ns1:author-5c067483e7,
+        ns1:author-704f80d40a,
+        ns1:author-94257f26a0 ;
+    ns1:hasTopic ns1:topic-058681b747,
+        ns1:topic-6f9646b657 ;
+    ns1:mentionsMethod ns1:method-8b0d963719 ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "6G штурмом преодолеет цифровой разрыв- ключевые технологии и тенденции для преодоления разрыва.pdf" ;
+    ns1:title "6G to Take the Digital Divide by Storm: Key Technologies and Trends to Bridge the Gap" .
+
+ns1:6g-61faa64d a ns1:Article ;
+    ns1:hasAuthor ns1:author-4911507016,
+        ns1:author-5b2456b1c2,
+        ns1:author-95ca5e8ae9,
+        ns1:author-b57ef5265d,
+        ns1:author-be3b393049,
+        ns1:author-e080ff0791 ;
+    ns1:hasTopic ns1:topic-c9da85a78d,
+        ns1:topic-ca95dd363f ;
+    ns1:mentionsMethod ns1:method-0e0f5ba862,
+        ns1:method-bc24585fed ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Зеленая связь БПЛА для 6G- обзор.pdf" ;
+    ns1:title "Green UAV communications for 6G: A survey" .
+
+ns1:6g-6g-hexa-x-b80ebb5a a ns1:Article ;
+    ns1:hasAuthor ns1:author-0b180b4772,
+        ns1:author-119aa1029b,
+        ns1:author-126ffc1046,
+        ns1:author-1e97e7d143,
+        ns1:author-2141104077,
+        ns1:author-353a2cf36a,
+        ns1:author-419a6635b2,
+        ns1:author-6ea5e1ab57,
+        ns1:author-7697906b78,
+        ns1:author-8eb9201a85,
+        ns1:author-a3dd69c1d8,
+        ns1:author-a49a7e74ad,
+        ns1:author-ab110dcfc1,
+        ns1:author-bfc25f6521,
+        ns1:author-c4cdf661a8,
+        ns1:author-cf6845e604,
+        ns1:author-e5878cb9bd,
+        ns1:author-ebb0b52158,
+        ns1:author-f44b129a6e,
+        ns1:author-f9981eb99f ;
+    ns1:hasTopic ns1:topic-c021b626dc,
+        ns1:topic-ca5d44b9a3,
+        ns1:topic-dea9be28b5 ;
+    ns1:publishedInYear ns1:year-702cf86515 ;
+    ns1:publishedInYearLiteral 2021 ;
+    ns1:sourceFile "Концепция 6G, ценность, варианты использования и технологии из европейского флагманского проекта 6G Hexa-X.pdf" ;
+    ns1:title "6G Vision, Value, Use Cases and Technologies From European 6G Flagship Project Hexa-X" .
+
+ns1:6g-8292c305 a ns1:Article ;
+    ns1:hasTopic ns1:topic-360b48120b,
+        ns1:topic-8c4b7a4250,
+        ns1:topic-c280d88b1c,
+        ns1:topic-e77ecb485a,
+        ns1:topic-eb5ede998f ;
+    ns1:mentionsMethod ns1:topic-e77ecb485a ;
+    ns1:sourceFile "Экономическое влияние блокчейна с поддержкой ИИ в отрасли на основе 6G.pdf" ;
+    ns1:title "Экономическое влияние блокчейна с поддержкой ИИ в отрасли на основе 6G" .
+
+ns1:6g-8499bf7a a ns1:Article ;
+    ns1:hasAuthor ns1:author-51ede63720,
+        ns1:author-55b21e48a5 ;
+    ns1:hasTopic ns1:topic-296fd07906,
+        ns1:topic-32cc066fff,
+        ns1:topic-7687374464,
+        ns1:topic-ca95973f00 ;
+    ns1:mentionsMethod ns1:method-808a99ba9a ;
+    ns1:publishedInYear ns1:year-702cf86515 ;
+    ns1:publishedInYearLiteral 2021 ;
+    ns1:sourceFile "Промышленный Интернет всего с поддержкой 6G- на пути к теоретическим основам.pdf" ;
+    ns1:title "6G Enabled Industrial Internet of Everything: Towards a Theoretical Framework" .
+
+ns1:6s-e6ca9573 a ns1:Article ;
+    ns1:hasAuthor ns1:author-22287cec5c,
+        ns1:author-8595a3a459,
+        ns1:author-9ac14e4a38,
+        ns1:author-fae1acc4c5 ;
+    ns1:hasTopic ns1:topic-c22ff29eee,
+        ns1:topic-d825498c63,
+        ns1:topic-eb5ede998f,
+        ns1:topic-eda877ffdf ;
+    ns1:mentionsMethod ns1:method-13e610cddf ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Параллельное зондирование в метавселенных- виртуальные интерактивные интеллектуальные системы для зондирования 6S.pdf" ;
+    ns1:title "Parallel Sensing in Metaverses: Virtual-Real Interactive Smart Systems for “6S” Sensing" .
+
+ns1:alternative-energy-info-day-accenture-ae8ffdfd a ns1:Article ;
+    ns1:hasTopic ns1:topic-059ee594dc,
+        ns1:topic-2714c18783,
+        ns1:topic-32cc066fff,
+        ns1:topic-440a249cfd,
+        ns1:topic-89a94360ad,
+        ns1:topic-d825498c63 ;
+    ns1:sourceFile "Alternative-Energy-Info-Day-Accenture.pdf" ;
+    ns1:title "Digital Twins are digital representations of physical things Metaverse is the bridge between digital and physical Together they will transform every aspect of business" .
+
+ns1:article-04359bf900 a ns1:Article ;
+    ns1:label "Decentralized AI: Edge Intelligence and Smart Blockchain, Metaverse, Web3, and DeSci" .
+
+ns1:article-04d30c9a85 a ns1:Article ;
+    ns1:label "Применение гражданского развития растет во всем мире, обещая широкий спектр преимуществ. Гражданская разработка часто использует платформы с низким кодом для быстрого создания бизнес-решений. Проблема в том, что в настоящее время на рынке слишком много платформ с низким кодом, чтобы принять правильное решение, какую из них использовать. Более ранние попытки других источников часто приводили к туманным или расплывчатым таксономиям платформ с низким кодом; где было дано мало академических обоснований, почему были выбраны эти критерии. Это исследование направлено на создание списка важных проверенных функций платформы с низким кодом. Это актуально не только из-за вышеупомянутого роста, но и для снижения рисков теневых ИТ. На основе обзора литературы было выявлено более 200 признаков, преобразованных после нескольких слияний в номологическую модель. Эта модель была усовершенствована в ходе консультаций с шестью экспертами по платформам с низким кодом и двумя фокус-группами. Полевой опрос проводится для оценки исследовательской модели. 265 гражданских разработчиков заполнили этот опрос. Исследовательская модель была протестирована путем применения моделирования структурных уравнений с частичными наименьшими квадратами, чтобы проверить, есть ли поддержка упомянутой взаимосвязи. Результаты показали, что всего 16 гипотез подтверждаются данными, а 9 гипотез нет. Признаки, которые оказались важными, связаны с разработкой и являются более простыми. Примерами этого являются доступность информации, информационных панелей, форм и отчетов. Напротив, неподдерживаемые функции являются более техническими и сложными. API-интерфейсы функций и интеграции, управление контентом и база данных являются примерами этого. Особенности, которые не подтверждаются данными, позволяют предположить, что у гражданских разработчиков отсутствует целостное понимание развития. Лицам, принимающим решения в области ИТ, рекомендуется проводить обучение гражданских разработчиков по разработке специализированных систем и устранению неполадок в режиме онлайн. Кроме того, поверхностные характеристики созданных решений не обязательно могут быть улучшены за счет расширенных функций. Подразумевается, что для оптимального использования этого необходимо лучшее понимание управления развитием граждан. Маттейс Гелеедст, 2055499 2 Предисловие Эта магистерская диссертация была написана в рамках получения степени магистра в области управления информацией в Тилбургском университете. Эта диссертация была написана в сотрудничестве с NXP Semiconductors. За материализацию тезисного доклада я хотел бы поблагодарить Амина Ходабанде Амири за обширное академическое руководство на протяжении всего этого процесса. Кроме того, помощь руководителей моей компании в значительной степени способствовала завершению и повышению качества диссертации. Я хотел бы поблагодарить своих коллег Германа Хартманна, Йопа Хейтса и Роя Хохстенбаха из отдела корпоративной архитектуры за руководство мной. Их поддержка помогла мне создать качественную диссертацию" .
+
+ns1:article-06de736c12 a ns1:Article ;
+    ns1:label "The Use of Brain-Computer Interface Technology in Intelligent Home Installations" .
+
+ns1:article-06e7a14bdd a ns1:Article ;
+    ns1:label "A Hybrid Asynchronous Brain–Computer Interface Based on SSVEP and Eye-Tracking for Threatening Pedestrian Identification in Driving" .
+
+ns1:article-07277261ac a ns1:Article ;
+    ns1:label "Benefits and Challenges of Remote Work" .
+
+ns1:article-08ae185eef a ns1:Article ;
+    ns1:label "Ontology Engineering Methodologies: State of the Art" .
+
+ns1:article-0944dab96c a ns1:Article ;
+    ns1:label "Artificial Intelligence Applications and Self-Learning 6G Networks for Smart Cities Digital Ecosystems: Taxonomy, Challenges, and Future Directions" .
+
+ns1:article-09b6eab84a a ns1:Article ;
+    ns1:label "Thesis_Daan_van_der_Burgh" .
+
+ns1:article-09c8f2f12e a ns1:Article ;
+    ns1:label "Designing an Attractive Metaverse: Research on Design Factors Influencing Audience Satisfaction with a Virtual Space Based on QCA" .
+
+ns1:article-09ce334dd5 a ns1:Article ;
+    ns1:label "Edge AI (пограничный искусственный интеллект ) с поддержкой 6G для Metaverse (метавселенной) -проблемы, методы и направления будущих исследований Chang L. et al. 6G-enabled Edge AI for Metaverse: Challenges, Methods, and Future Research Directions //arXiv preprint" .
+
+ns1:article-0a9771b2df a ns1:Article ;
+    ns1:label "Fusion of Building Information Modeling and Blockchain for Metaverse: A Survey" .
+
+ns1:article-0af05c237f a ns1:Article ;
+    ns1:label "On the Possibilities of Light Environment Art in Digital Scenes: From the Perspective of Metaverse Research" .
+
+ns1:article-0bccaa27dc a ns1:Article ;
+    ns1:label "Knowledge System Supporting ITS Deployment" .
+
+ns1:article-0bee53ffd7 a ns1:Article ;
+    ns1:label "Metaverse and Internet Youth in China" .
+
+ns1:article-0cc7518cd0 a ns1:Article ;
+    ns1:label "A Comprehensive Study on Metaverse and Its Impacts on Humans" .
+
+ns1:article-13429d16b8 a ns1:Article ;
+    ns1:label "Modelling in low-code development: a multi-vocal systematic review" .
+
+ns1:article-16d60a73df a ns1:Article ;
+    ns1:label "MOOC 5.0: A Roadmap to the Future of Learning" .
+
+ns1:article-18f9b05a34 a ns1:Article ;
+    ns1:label "6G Enabled Industrial Internet of Everything: Towards a Theoretical Framework" .
+
+ns1:article-1fe35d7cfc a ns1:Article ;
+    ns1:label "Regulating the Metaverse, a Blueprint for the Future" .
+
+ns1:article-1ff9553141 a ns1:Article ;
+    ns1:label "A Review of Metaverse’s Definitions, Architecture, Applications, Challenges, Issues, Solutions, and Future Trends" .
+
+ns1:article-20b47d75fb a ns1:Article ;
+    ns1:label "Metaverse interview with expert Ken Wee _ McKinsey" .
+
+ns1:article-20de07536a a ns1:Article ;
+    ns1:label "METAVERSE AND MONEY Decrypting the Future" .
+
+ns1:article-214b4c5950 a ns1:Article ;
+    ns1:label "Evolution of Low-Code Platforms" .
+
+ns1:article-21a49fc353 a ns1:Article ;
+    ns1:label "Directorate-General for Communications Networks, Content and Technology Audiovisual Industry and Media Support Programmes" .
+
+ns1:article-222b2da8c1 a ns1:Article ;
+    ns1:label "Data Exchange Techniques for Internet of Robotic Things: Recent Developments" .
+
+ns1:article-2321240dcd a ns1:Article ;
+    ns1:label "An IoE and Big Multimedia Data Approach for Urban Transport System Resilience Management in Smart Cities" .
+
+ns1:article-2a610a8581 a ns1:Article ;
+    ns1:label "Обеспечение надежности динамических систем с использованием цифровых двойников и векторов доверия . Основополагающий документ Консорциума цифровых двойников .2022-10-25" .
+
+ns1:article-2b54e8f82c a ns1:Article ;
+    ns1:label "Blockchain-Based Solutions for UAV-Assisted Connected Vehicle Networks in Smart Cities: A Review, Open Issues, and Future Perspectives" .
+
+ns1:article-2d1d91040d a ns1:Article ;
+    ns1:label "ИИ и технология блокчейн в беспроводной сети 6G Mishra, A.K., Ponnusamy, V. (2022). Key Technologies and Architectures for 6G and Beyond Wireless Communication System. In: Dutta Borah, M., Singh, P., Deka, G.C. (eds) AI and Blockchain Technology in 6G Wireless Network. Blockchain Technologies. Springer, Singapore" .
+
+ns1:article-2e45ebc55a a ns1:Article ;
+    ns1:label "Immersive cultural heritage digital documentation and information service for historical figure metaverse: a case of Zhu Xi, Song Dynasty, China" .
+
+ns1:article-3021784769 a ns1:Article ;
+    ns1:label "NFTs and the Metaverse Revolution: Research Perspectives and Open Challenges" .
+
+ns1:article-307b893914 a ns1:Article ;
+    ns1:label "Прошлое, настоящее и будущее виртуального туризма-обзор литературы Verma S. et al. Past, present, and future of virtual tourism-a literature review //International Journal of Information Management Data Insights" .
+
+ns1:article-31e54dddbd a ns1:Article ;
+    ns1:label "Street Smart in 5G: Vehicular Applications, Communication, and Computing" .
+
+ns1:article-325a9ba4ca a ns1:Article ;
+    ns1:label "6G to Take the Digital Divide by Storm: Key Technologies and Trends to Bridge the Gap" .
+
+ns1:article-35a5da6e71 a ns1:Article ;
+    ns1:label "Metaverse for Cultural Heritages" .
+
+ns1:article-3620502437 a ns1:Article ;
+    ns1:label "DAVE: Deep Learning-Based Asymmetric Virtual Environment for Immersive Experiential Metaverse Content" .
+
+ns1:article-378f621032 a ns1:Article ;
+    ns1:label "Интеграция данных о продукции производителей в BIM-платформы с использованием семантических веб-технологий. Kebede R. et al. Integration of manufacturers' product data in BIM platforms using semantic web technologies //Automation in Construction" .
+
+ns1:article-3b2f026b9c a ns1:Article ;
+    ns1:label "Telelife-будущее удаленной жизни Orlosky J. et al. Telelife: the future of remote living //Frontiers in Virtual Reality" .
+
+ns1:article-3bb0a8a84a a ns1:Article ;
+    ns1:label "Teaching (Meta) Competences for Digital Practice Exemplified by Building Information Modeling Work Processes" .
+
+ns1:article-3ce1cbf611 a ns1:Article ;
+    ns1:label "Value-creation-in-the-metaverse (1)" .
+
+ns1:article-41f599f959 a ns1:Article ;
+    ns1:label "When Digital Economy Meets Web3.0: Applications and Challenges" .
+
+ns1:article-46250bda69 a ns1:Article ;
+    ns1:label "Probing reality and myth in the metaverse" .
+
+ns1:article-49d32158d0 a ns1:Article ;
+    ns1:label "Road and Railway Smart Mobility: A High-Definition Ground Truth Hybrid Dataset" .
+
+ns1:article-4c1a5327ee a ns1:Article ;
+    ns1:label "Study of Social Presence While Interacting in Metaverse with an Augmented Avatar during Autonomous Driving" .
+
+ns1:article-4dd36456ea a ns1:Article ;
+    ns1:label "Training and Preparing Tomorrow’s Workforce for the Fourth Industrial Revolution" .
+
+ns1:article-4efff451b7 a ns1:Article ;
+    ns1:label "Parallel Sensing in Metaverses: Virtual-Real Interactive Smart Systems for “6S” Sensing" .
+
+ns1:article-4f1fbec3f6 a ns1:Article ;
+    ns1:label "ERP System Design for Hydrogen Equipment Manufacturing Industry Based on Low Code Technology" .
+
+ns1:article-4f54aba8c4 a ns1:Article ;
+    ns1:label "Влияние техностресса на киберзапугивание в социальных платформах Метавселенной" .
+
+ns1:article-551b757617 a ns1:Article ;
+    ns1:label "The Application Research of Education Metaverse Under the Framework of SWOT Analysis" .
+
+ns1:article-5683d0607b a ns1:Article ;
+    ns1:label "557-1686-1-PB РОБОТЫ ИИ в траспорте и логистике" .
+
+ns1:article-5cdfeb7c30 a ns1:Article ;
+    ns1:label "Quality Assurance Framework for Low-Code Development Platforms" .
+
+ns1:article-5d10c879a1 a ns1:Article ;
+    ns1:label "Extensible Metaverse Implication for a Smart Tourism City" .
+
+ns1:article-5d2af150f5 a ns1:Article ;
+    ns1:label "A Platform for Researchers and Technology Enthusiasts" .
+
+ns1:article-5d4fafac3e a ns1:Article ;
+    ns1:label "Masterthesismatthijsgeleedst" .
+
+ns1:article-5e89d61b4b a ns1:Article ;
+    ns1:label "Digitalizing the Closing-of-the-Loop for Supply Chains: A Transportation and Blockchain Perspective" .
+
+ns1:article-65a3a2b64c a ns1:Article ;
+    ns1:label "540-1613-1-PB Блокчейн жд Германия" .
+
+ns1:article-67b5a62b02 a ns1:Article ;
+    ns1:label "Интеграция данных о строительных продуктах с BIM -семантическое представление данных о продуктах Kebede R. Z. Integration of building product data with BIM-Semantic representation of product data : дис" .
+
+ns1:article-6b45da3493 a ns1:Article ;
+    ns1:label "A Comprehensive Survey of Digital Twins and Federated Learning for Industrial Internet of Things (IIoT), Internet of Vehicles (IoV) and Internet of Drones (IoD)" .
+
+ns1:article-6fdf502401 a ns1:Article ;
+    ns1:label "Blockchain for Smart Transport Applications" .
+
+ns1:article-706acbacd8 a ns1:Article ;
+    ns1:label "SAFECAR: A Brain–Computer Interface and intelligent framework to detect drivers’ distractions" .
+
+ns1:article-7089d1fe88 a ns1:Article ;
+    ns1:label "Продвижение образования с помощью расширенной реальности и метавселенных с поддержкой Интернета всего-приложения, проблемы и открытые вопросы Jagatheesaperumal S. K. et al. Advancing Education Through Extended Reality and Internet of Everything Enabled Metaverses: Applications, Challenges, and Open Issues //arXiv preprint" .
+
+ns1:article-70cb84afda a ns1:Article ;
+    ns1:label "Когда интерфейсы Brain Computer встречаются с метавселенной -ландшафт, демонстратор, тенденции, проблемы и проблемы. Bernal S. L. et al. When Brain-Computer Interfaces Meet the Metaverse: Landscape, Demonstrator, Trends, Challenges, and Concerns //arXiv preprint" .
+
+ns1:article-733a1f0c0a a ns1:Article ;
+    ns1:label "Executive perspectives on the metaverse _ McKinsey" .
+
+ns1:article-7342d9eeff a ns1:Article ;
+    ns1:label "Экономическое влияние блокчейна с поддержкой ИИ в отрасли на основе 6G" .
+
+ns1:article-774d53c375 a ns1:Article ;
+    ns1:label "Research on the Application and Risk Prevention of Metaverse in Vocational Education" .
+
+ns1:article-777bb808b3 a ns1:Article ;
+    ns1:label "A Development of Visualization Technology through AR-Based Design Checklist Connection" .
+
+ns1:article-79d7f2605d a ns1:Article ;
+    ns1:label "Finding the Right Balance: Technical and Political Decentralization in the Token Economy" .
+
+ns1:article-7b4b8173a4 a ns1:Article ;
+    ns1:label "Virtual spaces as the future of consumption in tourism, hospitality and events" .
+
+ns1:article-7b8793032e a ns1:Article ;
+    ns1:label "Зрелость цифрового двойника инфраструктуры: модель измерения прогресса .Белая книга консорциума цифровых двойников .2021-08-04" .
+
+ns1:article-7be6e8b7ef a ns1:Article ;
+    ns1:label "Visualization of Railway Transportation Engineering Management Using BIM Technology under the Application of Internet of Things Edge Computing" .
+
+ns1:article-7cf2edb8db a ns1:Article ;
+    ns1:label "Enhancing wisdom manufacturing as industrial metaverse for industry and society 5.0" .
+
+ns1:article-7f4476c94d a ns1:Article ;
+    ns1:label "Intelligent Transportation Related Complex Systems and Sensors" .
+
+ns1:article-7fd176901a a ns1:Article ;
+    ns1:label "Systematic literature review and bibliometric analysis on virtual reality and education" .
+
+ns1:article-802e615cab a ns1:Article ;
+    ns1:label "ВИРТУАЛЬНЫЕ ВЛИЯТЕЛИ В МЕТАВСЕЛЕННОЙ. Обсуждение и исследование влияния решений о покупках поколения Z VIRTUAL INFLUENCERS IN METAVERSE. Discussion and research on the impacts of the purchas-ing decisions of Generation Z" .
+
+ns1:article-830fc728ff a ns1:Article ;
+    ns1:label "Перевернутое обучение и электронное обучение как модели обучения, ориентированные на метавселенную López-Belmonte J. et al. Flipped Learning and E-Learning as Training Models Focused on the Metaverse //Emerging Science Journal" .
+
+ns1:article-85282aa876 a ns1:Article ;
+    ns1:label "Промышленные чертежи метавселенной, часть 1 определения и требования для наиболее эффективных экономических результатов. Industrial Metaverse Blueprints, Part 1: Definitions & Requirements for the Most Impactful Economic Outcomes" .
+
+ns1:article-883f31dea3 a ns1:Article ;
+    ns1:label "Distance Learning and on Job Training From a Messenger Pigeon to Implanted Brain Microchips Interface and Metaverse" .
+
+ns1:article-8866fa28e5 a ns1:Article ;
+    ns1:label "The Metaverse: A New Challenge for the Healthcare System: A Scoping Review" .
+
+ns1:article-89de95b63d a ns1:Article ;
+    ns1:label "Digital twins: The foundation of the enterprise metaverse Companies can leverage digital twins in a way that delivers significant value today-while building the engine for the enterprise metaverse of tomorrow" .
+
+ns1:article-8e34dd731a a ns1:Article ;
+    ns1:label "Visualization and Cybersecurity in the Metaverse: A Survey" .
+
+ns1:article-8f4612de8e a ns1:Article ;
+    ns1:label "Метавселенная через призму власти и зависимости-что будет, когда виртуальный мир станет привлекательнее реальности Bojic, L. Metaverse through the prism of power and addiction: what will happen when the virtual world becomes more attractive than reality?" .
+
+ns1:article-8f70553b5a a ns1:Article ;
+    ns1:label "Metaverse: How to Approach Its Challenges from a BISE Perspective" .
+
+ns1:article-90545cd38d a ns1:Article ;
+    ns1:label "The Application of the Metaverse in Ecological Education" .
+
+ns1:article-92c0495cde a ns1:Article ;
+    ns1:label "A Systematic Review of Smart Learning Environments" .
+
+ns1:article-96d11bd6cf a ns1:Article ;
+    ns1:label "Review of studies of blockchain technology effects on the shipping industry" .
+
+ns1:article-96d89f9073 a ns1:Article ;
+    ns1:label "Parallel Factories for Smart Industrial Operations: From Big AI Models to Field Foundational Models and Scenarios Engineering" .
+
+ns1:article-96e1a56b86 a ns1:Article ;
+    ns1:label "Промышленные чертежи метавселенной, часть 3 -требования к совместимости систем Industrial Metaverse Blueprints, Part 3: System Interoperability Requirements" .
+
+ns1:article-99a36c3865 a ns1:Article ;
+    ns1:label "Применение технологии интерфейса мозг-компьютер на роботизированных линиях в промышленности в области повышения безопасности Paszkiel, S. (2022). Application of Brain-Computer Interface Technology on Robot Lines in Industry in the Field of Increasing Safety. In: Applications of Brain-Computer Interfaces in Intelligent Technologies. Studies in Computational" .
+
+ns1:article-9a2611e638 a ns1:Article ;
+    ns1:label "The metaverse in the hospitality and tourism industry: An overview of current trends and future research directions" .
+
+ns1:article-9ac18754dd a ns1:Article ;
+    ns1:label "432-1274-1-PB веб вещей и iot" .
+
+ns1:article-9bcf5ae2ad a ns1:Article ;
+    ns1:label "Demystifying Metaverse as a New Paradigm of Enterprise Digitization" .
+
+ns1:article-9bf241fa48 a ns1:Article ;
+    ns1:label "The Metaverse of Mind: Perspectives on DeSci for DeEco and DeSoc" .
+
+ns1:article-9e6b8f360d a ns1:Article ;
+    ns1:label "Тренд промышленного дизайна с точки зрения метавселенной" .
+
+ns1:article-a09dbfa2b9 a ns1:Article ;
+    ns1:label "Advances in Metaverse Investigation: Streams of Research and Future Agenda" .
+
+ns1:article-a37466621b a ns1:Article ;
+    ns1:label "QoS Provisioning: Key Drivers and Enablers Toward the Tactile Internet in Beyond 5G Era" .
+
+ns1:article-a39723abd4 a ns1:Article ;
+    ns1:label "Интеллектуальные системы здравоохранения в эпоху метавселенной, искусственного интеллекта и науки о данных Yang Y. et al. Smart Health: Intelligent Healthcare Systems in the Metaverse, Artificial Intelligence, and Data Science Era //Journal of Organizational and End User Computing (JOEUC)" .
+
+ns1:article-a39b18ed32 a ns1:Article ;
+    ns1:label "Opportunities and Challenges in Metaverse the Rise of Digital Universe" .
+
+ns1:article-a918257f40 a ns1:Article ;
+    ns1:label "Drones in B5G/6G Networks as Flying Base Stations" .
+
+ns1:article-ab4bdbcb9f a ns1:Article ;
+    ns1:label "Биоинформатика и метавселенная-готовы ли мы" .
+
+ns1:article-abdb7ab33b a ns1:Article ;
+    ns1:label "Minds in the Metaverse: Extended Cognition Meets Mixed Reality" .
+
+ns1:article-abe973d8d7 a ns1:Article ;
+    ns1:label "The Internet of Everything: Smart things and their impact on business models" .
+
+ns1:article-adac287889 a ns1:Article ;
+    ns1:label "Sii-Mobility: An IoT/IoE Architecture to Enhance Smart City Mobility and Transportation Services" .
+
+ns1:article-afe8e19f0e a ns1:Article ;
+    ns1:label "Metaverse-driven remote management solution for scene-based energy storage power stations" .
+
+ns1:article-b1c1c81540 a ns1:Article ;
+    ns1:label "policing in the metaverse-QLAS22002ENN" .
+
+ns1:article-b22732fd63 a ns1:Article ;
+    ns1:label "Роль Web 3.0 и блокчейна в будущем образования" .
+
+ns1:article-b5f3846013 a ns1:Article ;
+    ns1:label "Intelligent Campus System Design Based on Digital Twin" .
+
+ns1:article-b5fd9600d8 a ns1:Article ;
+    ns1:label "Blockchain and Cooperative Intelligent Transport Systems: Challenges and Opportunities" .
+
+ns1:article-b8c14dfe77 a ns1:Article ;
+    ns1:label "Blockchain-Empowered Digital Twins Collaboration: Smart Transportation Use Case" .
+
+ns1:article-ba6eb15549 a ns1:Article ;
+    ns1:label "Metaverse interview with expert Row Lowe _ McKinsey" .
+
+ns1:article-bb6479c851 a ns1:Article ;
+    ns1:label "Unpacking the ‘15-Minute City’ via 6G, IoT, and Digital Twins: Towards a New Narrative for Increasing Urban Efficiency, Resilience, and Sustainability" .
+
+ns1:article-bd0163ce17 a ns1:Article ;
+    ns1:label "Executive perspectives on the metaverse _ McKinsey" .
+
+ns1:article-bd5939fb1a a ns1:Article ;
+    ns1:label "План интероперабельности (взаимодействия) цифровых двойников" .
+
+ns1:article-c0df13f9c3 a ns1:Article ;
+    ns1:label "Hexa-X D1.1 6G Видение, сценарии использования и ключевые социальные ценности 2021" .
+
+ns1:article-c980b8ff61 a ns1:Article ;
+    ns1:label "Сравнительный анализ технологии блокчейн для поддержки цифровой трансформации в портах и судоходстве" .
+
+ns1:article-caacf29fcc a ns1:Article ;
+    ns1:label "ПОТЕНЦИАЛЬНОЕ ГЛОБАЛЬНОЕ ЭКОНОМИЧЕСКОЕ ВОЗДЕЙСТВИЕ МЕТАВСЕЛЕННОЙ" .
+
+ns1:article-cbef83ca63 a ns1:Article ;
+    ns1:label "215-1-514-1-10-20170621  гигабитное общество" .
+
+ns1:article-cf7d12061a a ns1:Article ;
+    ns1:label "A survey: applications of blockchain in the Internet of Vehicles" .
+
+ns1:article-d0601b2578 a ns1:Article ;
+    ns1:label "Digital Twins are digital representations of physical things Metaverse is the bridge between digital and physical Together they will transform every aspect of business" .
+
+ns1:article-d0819bf483 a ns1:Article ;
+    ns1:label "Integration of Augmented, Virtual and Mixed Reality with Building Information Modeling: A Systematic Review" .
+
+ns1:article-d12c20e1c7 a ns1:Article ;
+    ns1:label "Virtual Worlds (Metaverse): From Skepticism, to Fear, to Immersive Opportunities" .
+
+ns1:article-d22b7a695c a ns1:Article ;
+    ns1:label "Изучение границ расширенной реальности сервисной коммуникации-от дополненной и виртуальной реальности до нейронно-расширенной реальности Hilken, T., Chylinski, M., de Ruyter, K., Heller, J. and Keeling, D.I. (2022), \"Exploring the frontiers in reality-enhanced service communication: from augmented and virtual reality to neuro-enhanced reality\"" .
+
+ns1:article-d2af3d6994 a ns1:Article ;
+    ns1:label "Criminology Towards the Metaverse: Cryptocurrency Scams, Grey Economy and the Technosocial" .
+
+ns1:article-d52212dc9f a ns1:Article ;
+    ns1:label "Применение Интернета вещей в автомобильной промышленности-обзор аккумуляторов, топливных элементов и двигателей" .
+
+ns1:article-d5245e8886 a ns1:Article ;
+    ns1:label "Internet of Things (IoT) in Marketing Logistics" .
+
+ns1:article-d56104a5c6 a ns1:Article ;
+    ns1:label "DeviceTalk: A No-Code Low-Code IoT Device Code Generation" .
+
+ns1:article-d58a39bf50 a ns1:Article ;
+    ns1:label "Blockchain Technology and Smart Contracts in Decentralized Governance Systems" .
+
+ns1:article-d923ef1784 a ns1:Article ;
+    ns1:label "6G Enabled Smart Infrastructure for Sustainable Society: Opportunities, Challenges, and Research Roadmap" .
+
+ns1:article-d95300d796 a ns1:Article ;
+    ns1:label "Cutting-Edge Practical Research on Generative Design, IoT and Digital Twins" .
+
+ns1:article-d994d07a19 a ns1:Article ;
+    ns1:label "Executive perspectives on the metaverse _ McKinsey" .
+
+ns1:article-db93bea9ff a ns1:Article ;
+    ns1:label "Artificial Intelligence, Blockchain Technology, and Risk-Taking Behavior in the 4.0IR Metaverse Era: Evidence from Bangladesh-Based SMEs" .
+
+ns1:article-de5d0be120 a ns1:Article ;
+    ns1:label "Designing the Future? The Metaverse, NFTs, & the Future as Defined by Unity Users" .
+
+ns1:article-dec949f490 a ns1:Article ;
+    ns1:label "Промышленные чертежи метавселенной, часть 2: метавселенная работает на цифровых двойниках" .
+
+ns1:article-e183b79675 a ns1:Article ;
+    ns1:label "Integrated Inspection of QoM, QoP, and QoS for AOI Industries in Metaverses" .
+
+ns1:article-e22a702b4a a ns1:Article ;
+    ns1:label "Обзор вариантов использования виртуальной и дополненной реальности приложений на основе интерфейса мозг-компьютер для умных городов Kohli V. et al. A review on Virtual Reality and Augmented Reality use-cases of Brain Computer Interface based applications for smart cities //Microprocessors and" .
+
+ns1:article-e33c34029f a ns1:Article ;
+    ns1:label "473-1403-2-PB блокчейн и цифровые цепи постаок" .
+
+ns1:article-e614125714 a ns1:Article ;
+    ns1:label "Application of Digital Twins and Metaverse in the Field of Fluid Machinery Pumps and Fans: A Review" .
+
+ns1:article-e6c26df2b4 a ns1:Article ;
+    ns1:label "Gastroenterology in the Metaverse: The dawn of a new era?" .
+
+ns1:article-e891e52367 a ns1:Article ;
+    ns1:label "Blockchain Application Development Using Model-Driven Engineering and Low-Code Platforms: A Survey" .
+
+ns1:article-eb7478e1cf a ns1:Article ;
+    ns1:label "Bibliometric analysis on Brain-computer interfaces in a 30-year period" .
+
+ns1:article-eb8e7c8912 a ns1:Article ;
+    ns1:label "Business Models and Sustainability Plans in the FinTech, InsurTech, and PropTech Industry: Evidence from Spain" .
+
+ns1:article-ee39b098c6 a ns1:Article ;
+    ns1:label "A Survey on the Web of Things" .
+
+ns1:article-f0300ab89a a ns1:Article ;
+    ns1:label "6G Vision, Value, Use Cases and Technologies From European 6G Flagship Project Hexa-X" .
+
+ns1:article-f0ca4368bf a ns1:Article ;
+    ns1:label "What Is Metaverse?—A Definition Based on Qualitative Meta-Synthesis" .
+
+ns1:article-f50a0d0c0d a ns1:Article ;
+    ns1:label "Design of 3D Virtual Reality in the Metaverse for Environmental Conservation Education Based on Cognitive Theory" .
+
+ns1:article-f5d31d2ba9 a ns1:Article ;
+    ns1:label "Parallel Manufacturing for Industrial Metaverses: A New Paradigm in Smart Manufacturing" .
+
+ns1:article-f5d7a964e8 a ns1:Article ;
+    ns1:label "The Metaverse in Asia | Strategies for Accelerating Economic Impact" .
+
+ns1:article-f72d80d87c a ns1:Article ;
+    ns1:label "Reliable Vehicle Data Storage Using Blockchain and IPFS" .
+
+ns1:article-f7e137499f a ns1:Article ;
+    ns1:label "Exploration of Short Video Media Communication Based in the Metaverse" .
+
+ns1:article-f8ed906a53 a ns1:Article ;
+    ns1:label "Future Directions of Intelligent Vehicles: Potentials, Possibilities, and Perspectives" .
+
+ns1:article-fbf6b917ca a ns1:Article ;
+    ns1:label "Green UAV communications for 6G: A survey" .
+
+ns1:article-fee1b8b771 a ns1:Article ;
+    ns1:label "Token-Based Insurance Solutions on Blockchain" .
+
+ns1:azrc7-c4e1c308 a ns1:Article ;
+    ns1:evaluatedByMetric ns1:metric-01eb235d14,
+        ns1:metric-61aada9554 ;
+    ns1:hasAuthor ns1:author-20fdb7211e,
+        ns1:author-303d6fd3bf,
+        ns1:author-3174660af8,
+        ns1:author-340ef75b92,
+        ns1:author-36cb357483,
+        ns1:author-3f21d9cd1a,
+        ns1:author-6bea4ce201,
+        ns1:author-7135498e1e,
+        ns1:author-bc7161e4f7,
+        ns1:author-e08d26923d ;
+    ns1:hasTopic ns1:topic-1de4250c4b,
+        ns1:topic-2714c18783,
+        ns1:topic-360b48120b,
+        ns1:topic-d3718455ed,
+        ns1:topic-d825498c63 ;
+    ns1:mentionsMethod ns1:method-5184d162b4 ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "AZRC7.pdf" ;
+    ns1:title "METAVERSE AND MONEY Decrypting the Future" .
+
+ns1:b5g-6g-87267b65 a ns1:Article ;
+    ns1:evaluatedByMetric ns1:metric-9149107815 ;
+    ns1:hasAuthor ns1:author-29a153c572,
+        ns1:author-2c4316efcd,
+        ns1:author-48dc11e24f,
+        ns1:author-4a07bd50c6,
+        ns1:author-6f925b42fd,
+        ns1:author-982b56f5b3,
+        ns1:author-badc97c9ea ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Дроны в сетях B5G-6G в качестве летающих базовых станций.pdf" ;
+    ns1:title "Drones in B5G/6G Networks as Flying Base Stations" .
+
+ns1:bim-19260da2 a ns1:Article ;
+    ns1:hasAuthor ns1:author-3d8a8fb798,
+        ns1:author-f829d1e6c0 ;
+    ns1:hasTopic ns1:topic-32cc066fff,
+        ns1:topic-9ad6b77c8c ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Визуализация инженерного управления железнодорожным транспортом с использованием технологии BIM в рамках применения периферийных вычислений Интернета вещей.pdf" ;
+    ns1:title "Visualization of Railway Transportation Engineering Management Using BIM Technology under the Application of Internet of Things Edge Computing" .
+
+ns1:bim-24088072 a ns1:Article ;
+    ns1:hasTopic ns1:topic-29d0620d81,
+        ns1:topic-c6656e82bc,
+        ns1:topic-cebbf725ef ;
+    ns1:mentionsMethod ns1:method-ab389a344e ;
+    ns1:sourceFile "Интеграция данных о продукции производителей в BIM-платформы с использованием семантических веб-технологий..pdf" ;
+    ns1:title "Интеграция данных о продукции производителей в BIM-платформы с использованием семантических веб-технологий. Kebede R. et al. Integration of manufacturers' product data in BIM platforms using semantic web technologies //Automation in Construction" .
+
+ns1:bim-81cd910d a ns1:Article ;
+    ns1:hasAuthor ns1:author-dea1ba20b2 ;
+    ns1:sourceFile "Интеграция данных о строительных продуктах с BIM _ семантическое представление данных о продуктах.pdf" ;
+    ns1:title "Интеграция данных о строительных продуктах с BIM -семантическое представление данных о продуктах Kebede R. Z. Integration of building product data with BIM-Semantic representation of product data : дис" ;
+    ns1:usesDataset ns1:dataset-2c49569bee .
+
+ns1:bise-e36ddcfa a ns1:Article ;
+    ns1:hasAuthor ns1:author-08bc47bc9d,
+        ns1:author-2a271c1e84,
+        ns1:author-2d15f5a020,
+        ns1:author-7018d553b0 ;
+    ns1:hasTopic ns1:topic-3553eb949e,
+        ns1:topic-d825498c63,
+        ns1:topic-e6a1304d26 ;
+    ns1:mentionsMethod ns1:method-a9a466cb6f ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Метавселенная- как подойти к ее проблемам с точки зрения BISE.pdf" ;
+    ns1:title "Metaverse: How to Approach Its Challenges from a BISE Perspective" .
+
+ns1:brain-computer-e51144ec a ns1:Article ;
+    ns1:hasTopic ns1:topic-8206e1d529,
+        ns1:topic-d825498c63 ;
+    ns1:mentionsMethod ns1:method-b822fc17e9 ;
+    ns1:sourceFile "Когда интерфейсы Brain Computer встречаются с метавселенной.pdf" ;
+    ns1:title "Когда интерфейсы Brain Computer встречаются с метавселенной -ландшафт, демонстратор, тенденции, проблемы и проблемы. Bernal S. L. et al. When Brain-Computer Interfaces Meet the Metaverse: Landscape, Demonstrator, Trends, Challenges, and Concerns //arXiv preprint" .
+
+ns1:dave-d5b5d9f1 a ns1:Article ;
+    ns1:hasAuthor ns1:author-380d0dbb4c,
+        ns1:author-b9d9bb4630,
+        ns1:author-eb2b557ae6,
+        ns1:author-f8ad0405d4 ;
+    ns1:hasTopic ns1:topic-1bffdf65bb,
+        ns1:topic-53b0e3a888,
+        ns1:topic-d55af0a4e2,
+        ns1:topic-d825498c63,
+        ns1:topic-e6a1304d26 ;
+    ns1:mentionsMethod ns1:method-c9467526fe ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "DAVE - Асимметричная виртуальная среда на основе глубокого обучения для иммерсивного эмпирического контента метавселенной.pdf" ;
+    ns1:title "DAVE: Deep Learning-Based Asymmetric Virtual Environment for Immersive Experiential Metaverse Content" .
+
+ns1:desci-deeco-desoc-1772b6cb a ns1:Article ;
+    ns1:hasAuthor ns1:author-6cbbb1de55 ;
+    ns1:hasTopic ns1:topic-2714c18783,
+        ns1:topic-d825498c63,
+        ns1:topic-e6a1304d26,
+        ns1:topic-eb5ede998f ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Метавселенная разума- взгляды на DeSci для DeEco и DeSoc.pdf" ;
+    ns1:title "The Metaverse of Mind: Perspectives on DeSci for DeEco and DeSoc" .
+
+ns1:devicetalk-iot-37952894 a ns1:Article ;
+    ns1:hasAuthor ns1:author-3f33b80346,
+        ns1:author-5aafe9bb23,
+        ns1:author-5fa9883439,
+        ns1:author-6bb7063d33,
+        ns1:author-9f0744f481 ;
+    ns1:hasTopic ns1:topic-2f45bcd778,
+        ns1:topic-32cc066fff,
+        ns1:topic-b5a2aad27c,
+        ns1:topic-e59c74b690 ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "DeviceTalk- Генерация кода устройства IoT без кода с низким кодом.pdf" ;
+    ns1:title "DeviceTalk: A No-Code Low-Code IoT Device Code Generation" .
+
+ns1:digital-twins-the-foundation-of-the-enterprise-m-a1b62d9f a ns1:Article ;
+    ns1:evaluatedByMetric ns1:metric-8d7fae0de9 ;
+    ns1:hasAuthor ns1:author-1531bf72f5,
+        ns1:author-381cc1ae61,
+        ns1:author-4e3546f572,
+        ns1:author-84abbc5c54,
+        ns1:author-f7cbe8af09 ;
+    ns1:hasTopic ns1:topic-059ee594dc,
+        ns1:topic-440a249cfd,
+        ns1:topic-67da58716e,
+        ns1:topic-d825498c63,
+        ns1:topic-f6d2164f9f ;
+    ns1:mentionsMethod ns1:method-b18e87deb1 ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "digital-twins-the-foundation-of-the-enterprise-metaverse.pdf" ;
+    ns1:title "Digital twins: The foundation of the enterprise metaverse Companies can leverage digital twins in a way that delivers significant value today-while building the engine for the enterprise metaverse of tomorrow" ;
+    ns1:usesDataset ns1:dataset-1715b86cdd .
+
+ns1:document-07847086 a ns1:Article ;
+    ns1:hasAuthor ns1:author-1e83bd6994,
+        ns1:author-37cfa94f37,
+        ns1:author-d51e1b1600,
+        ns1:author-e05a71e40f ;
+    ns1:hasTopic ns1:topic-33437f6423,
+        ns1:topic-cb7cf3e8e5,
+        ns1:topic-e827a8d8dc ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Преподавательские (мета) компетенции для цифровой практики на примере создания рабочих процессов информационного моделирования.pdf" ;
+    ns1:title "Teaching (Meta) Competences for Digital Practice Exemplified by Building Information Modeling Work Processes" .
+
+ns1:document-0980e839 a ns1:Article ;
+    ns1:hasAuthor ns1:author-8d6467ffd1 ;
+    ns1:hasTopic ns1:topic-a64e6f9261 ;
+    ns1:mentionsMethod ns1:method-73b73d4d62,
+        ns1:method-a743858184 ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Преимущества и проблемы удаленной работы.pdf" ;
+    ns1:title "Benefits and Challenges of Remote Work" .
+
+ns1:document-16ac0c0c a ns1:Article ;
+    ns1:hasAuthor ns1:author-902f276b0e ;
+    ns1:hasTopic ns1:topic-34cd21e41f,
+        ns1:topic-9955cfbb93,
+        ns1:topic-d825498c63,
+        ns1:topic-e6a1304d26,
+        ns1:topic-eb5ede998f ;
+    ns1:mentionsMethod ns1:method-b03a00ea54 ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Криминология к метавселенной - мошенничество с криптовалютой, серая экономика и техносоциальное.pdf" ;
+    ns1:title "Criminology Towards the Metaverse: Cryptocurrency Scams, Grey Economy and the Technosocial" .
+
+ns1:document-18755072 a ns1:Article ;
+    ns1:hasAuthor ns1:author-1ea5cb398a,
+        ns1:author-2fe6026f86,
+        ns1:author-3de7716cde,
+        ns1:author-41413ffd0c,
+        ns1:author-49abe992b3,
+        ns1:author-5d69560f91 ;
+    ns1:hasTopic ns1:topic-6f5af92dd8,
+        ns1:topic-8d3968ab97,
+        ns1:topic-a4a98d034b,
+        ns1:topic-d825498c63,
+        ns1:topic-e6a1304d26,
+        ns1:topic-febd9ca130 ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Применение расширяемой метавселенной для умного туристического города.pdf" ;
+    ns1:title "Extensible Metaverse Implication for a Smart Tourism City" .
+
+ns1:document-2f55cd0f a ns1:Article ;
+    ns1:hasAuthor ns1:author-936ecfc908,
+        ns1:author-9961b76edb,
+        ns1:author-dbc33cae63 ;
+    ns1:hasTopic ns1:topic-32cc066fff,
+        ns1:topic-b59315ec3a,
+        ns1:topic-d825498c63,
+        ns1:topic-e6a1304d26,
+        ns1:topic-eb5ede998f,
+        ns1:topic-f052ff8538 ;
+    ns1:mentionsMethod ns1:method-d2190c36a6 ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Параллельное производство для промышленных метавселенных - новая парадигма умного производства.pdf" ;
+    ns1:title "Parallel Manufacturing for Industrial Metaverses: A New Paradigm in Smart Manufacturing" .
+
+ns1:document-37545004 a ns1:Article ;
+    ns1:hasAuthor ns1:author-fd4d940132 ;
+    ns1:hasTopic ns1:topic-32cc066fff,
+        ns1:topic-440a249cfd ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Передовые практические исследования в области генеративного проектирования, Интернета вещей и цифровых двойников.pdf" ;
+    ns1:title "Cutting-Edge Practical Research on Generative Design, IoT and Digital Twins" .
+
+ns1:document-377805e4 a ns1:Article ;
+    ns1:evaluatedByMetric ns1:metric-6a331906f1 ;
+    ns1:hasAuthor ns1:author-155cd9c751,
+        ns1:author-68d85bf364,
+        ns1:author-e81a12c196 ;
+    ns1:hasTopic ns1:topic-d825498c63,
+        ns1:topic-e6a1304d26 ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Иммерсивная цифровая документация по культурному наследию и информационная служба для метавселенной исторической личности- случай Чжу Си, династия Сун, Китай.pdf" ;
+    ns1:title "Immersive cultural heritage digital documentation and information service for historical figure metaverse: a case of Zhu Xi, Song Dynasty, China" .
+
+ns1:document-38c3bf47 a ns1:Article ;
+    ns1:hasAuthor ns1:author-8a098173fb,
+        ns1:author-b161df4519,
+        ns1:author-c6bb22534c ;
+    ns1:hasTopic ns1:topic-2341664f88,
+        ns1:topic-3844f77d23,
+        ns1:topic-5b7dcc8e20,
+        ns1:topic-ac7862a476,
+        ns1:topic-d825498c63,
+        ns1:topic-e6a1304d26,
+        ns1:topic-eb5ede998f ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "О возможностях искусства световой среды в цифровых сценах - с точки зрения исследования метавселенной.pdf" ;
+    ns1:title "On the Possibilities of Light Environment Art in Digital Scenes: From the Perspective of Metaverse Research" .
+
+ns1:document-3a8c4df3 a ns1:Article ;
+    ns1:hasAuthor ns1:author-12764a1328,
+        ns1:author-ceedaf1297,
+        ns1:author-de66c2418f ;
+    ns1:hasTopic ns1:topic-360b48120b,
+        ns1:topic-ad74f80718,
+        ns1:topic-d0d1a1beec,
+        ns1:topic-eb5ede998f,
+        ns1:topic-fd8e0a315d ;
+    ns1:mentionsMethod ns1:method-73b73d4d62,
+        ns1:method-bc24585fed,
+        ns1:topic-ad74f80718 ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Разработка блокчейн-приложений с использованием проектирования на основе моделей и платформ с малым кодом- обзор.pdf" ;
+    ns1:title "Blockchain Application Development Using Model-Driven Engineering and Low-Code Platforms: A Survey" .
+
+ns1:document-4050eac5 a ns1:Article ;
+    ns1:hasAuthor ns1:author-17e1619702,
+        ns1:author-1868f6ed66,
+        ns1:author-193693c7ae,
+        ns1:author-607ebb9319 ;
+    ns1:hasTopic ns1:topic-360b48120b,
+        ns1:topic-3ac0cee836,
+        ns1:topic-eb5ede998f ;
+    ns1:mentionsMethod ns1:method-edff9cecff ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Страховые решения на основе токенов на блокчейне.pdf" ;
+    ns1:title "Token-Based Insurance Solutions on Blockchain" .
+
+ns1:document-40925ff4 a ns1:Article ;
+    ns1:hasAuthor ns1:author-746d4c97d0 ;
+    ns1:hasTopic ns1:topic-4bcb301559,
+        ns1:topic-61de75543a,
+        ns1:topic-d825498c63,
+        ns1:topic-e6a1304d26 ;
+    ns1:mentionsMethod ns1:method-fb8c66a780 ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Регулирование Метавселенной _ проект будущего.pdf" ;
+    ns1:title "Regulating the Metaverse, a Blueprint for the Future" .
+
+ns1:document-4230e3ed a ns1:Article ;
+    ns1:hasAuthor ns1:author-21ca2899f5,
+        ns1:author-36200c5ba4,
+        ns1:author-7bd8114abf,
+        ns1:author-990a8f220a,
+        ns1:author-dbc33cae63,
+        ns1:author-e86b989f96 ;
+    ns1:hasTopic ns1:topic-32cc066fff,
+        ns1:topic-5b7dcc8e20,
+        ns1:topic-d1d581f1a6,
+        ns1:topic-e6a1304d26 ;
+    ns1:mentionsMethod ns1:method-1b37399b1e ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Параллельные фабрики для интеллектуальных промышленных операций- от больших моделей искусственного интеллекта до полевых базовых моделей и разработки сценариев.pdf" ;
+    ns1:title "Parallel Factories for Smart Industrial Operations: From Big AI Models to Field Foundational Models and Scenarios Engineering" ;
+    ns1:usesDataset ns1:dataset-1666ec5789 .
+
+ns1:document-433b8cb4 a ns1:Article ;
+    ns1:hasTopic ns1:topic-059ee594dc,
+        ns1:topic-32cc066fff,
+        ns1:topic-3fbadebbba,
+        ns1:topic-79fd273de1 ;
+    ns1:sourceFile "План интероперабельности  (взаимодействия) цифровых двойников.pdf" ;
+    ns1:title "План интероперабельности (взаимодействия) цифровых двойников" .
+
+ns1:document-4bb8b185 a ns1:Article ;
+    ns1:hasAuthor ns1:author-8f53ff1d82 ;
+    ns1:hasTopic ns1:topic-c361ed9312,
+        ns1:topic-d825498c63,
+        ns1:topic-e55d434e0a,
+        ns1:topic-e6a1304d26,
+        ns1:topic-eb5ede998f ;
+    ns1:mentionsMethod ns1:method-bf0f4370b8 ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Исследования по применению и предотвращению рисков метавселенной в профессиональном образовании.pdf" ;
+    ns1:title "Research on the Application and Risk Prevention of Metaverse in Vocational Education" .
+
+ns1:document-4e9a8a56 a ns1:Article ;
+    ns1:hasAuthor ns1:author-1bb66e1cd6,
+        ns1:author-1c12564428 ;
+    ns1:mentionsMethod ns1:method-97797660fd,
+        ns1:method-e0ee1de0cf ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Методологии разработки онтологий- современное состояние.pdf" ;
+    ns1:title "Ontology Engineering Methodologies: State of the Art" .
+
+ns1:document-55b3fc9f a ns1:Article ;
+    ns1:hasAuthor ns1:author-17deadce1b,
+        ns1:author-747e7f7277,
+        ns1:author-c990ce847d ;
+    ns1:hasTopic ns1:topic-0202e0953a,
+        ns1:topic-32cc066fff,
+        ns1:topic-775cec9f7e,
+        ns1:topic-8e8740ac44,
+        ns1:topic-e6a1304d26 ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Виртуальные пространства как будущее потребления в сфере туризма, гостеприимства и мероприятий.pdf" ;
+    ns1:title "Virtual spaces as the future of consumption in tourism, hospitality and events" .
+
+ns1:document-5a02e94b a ns1:Article ;
+    ns1:hasAuthor ns1:author-327858b003 ;
+    ns1:publishedInYear ns1:year-45ee3673e4 ;
+    ns1:publishedInYearLiteral 2020 ;
+    ns1:sourceFile "Выявление наиболее важных функций платформ с низким кодом.pdf" ;
+    ns1:title "Применение гражданского развития растет во всем мире, обещая широкий спектр преимуществ. Гражданская разработка часто использует платформы с низким кодом для быстрого создания бизнес-решений. Проблема в том, что в настоящее время на рынке слишком много платформ с низким кодом, чтобы принять правильное решение, какую из них использовать. Более ранние попытки других источников часто приводили к туманным или расплывчатым таксономиям платформ с низким кодом; где было дано мало академических обоснований, почему были выбраны эти критерии. Это исследование направлено на создание списка важных проверенных функций платформы с низким кодом. Это актуально не только из-за вышеупомянутого роста, но и для снижения рисков теневых ИТ. На основе обзора литературы было выявлено более 200 признаков, преобразованных после нескольких слияний в номологическую модель. Эта модель была усовершенствована в ходе консультаций с шестью экспертами по платформам с низким кодом и двумя фокус-группами. Полевой опрос проводится для оценки исследовательской модели. 265 гражданских разработчиков заполнили этот опрос. Исследовательская модель была протестирована путем применения моделирования структурных уравнений с частичными наименьшими квадратами, чтобы проверить, есть ли поддержка упомянутой взаимосвязи. Результаты показали, что всего 16 гипотез подтверждаются данными, а 9 гипотез нет. Признаки, которые оказались важными, связаны с разработкой и являются более простыми. Примерами этого являются доступность информации, информационных панелей, форм и отчетов. Напротив, неподдерживаемые функции являются более техническими и сложными. API-интерфейсы функций и интеграции, управление контентом и база данных являются примерами этого. Особенности, которые не подтверждаются данными, позволяют предположить, что у гражданских разработчиков отсутствует целостное понимание развития. Лицам, принимающим решения в области ИТ, рекомендуется проводить обучение гражданских разработчиков по разработке специализированных систем и устранению неполадок в режиме онлайн. Кроме того, поверхностные характеристики созданных решений не обязательно могут быть улучшены за счет расширенных функций. Подразумевается, что для оптимального использования этого необходимо лучшее понимание управления развитием граждан. Маттейс Гелеедст, 2055499 2 Предисловие Эта магистерская диссертация была написана в рамках получения степени магистра в области управления информацией в Тилбургском университете. Эта диссертация была написана в сотрудничестве с NXP Semiconductors. За материализацию тезисного доклада я хотел бы поблагодарить Амина Ходабанде Амири за обширное академическое руководство на протяжении всего этого процесса. Кроме того, помощь руководителей моей компании в значительной степени способствовала завершению и повышению качества диссертации. Я хотел бы поблагодарить своих коллег Германа Хартманна, Йопа Хейтса и Роя Хохстенбаха из отдела корпоративной архитектуры за руководство мной. Их поддержка помогла мне создать качественную диссертацию" .
+
+ns1:document-5ca554be a ns1:Article ;
+    ns1:hasTopic ns1:topic-b7e041422d,
+        ns1:topic-e74015f7c0 ;
+    ns1:publishedInYear ns1:year-45ee3673e4 ;
+    ns1:publishedInYearLiteral 2020 ;
+    ns1:sourceFile "Изучение границ расширенной реальности сервисной коммуникации- от дополненной и виртуальной реальности до нейронно-расширенной реальности.pdf" ;
+    ns1:title "Изучение границ расширенной реальности сервисной коммуникации-от дополненной и виртуальной реальности до нейронно-расширенной реальности Hilken, T., Chylinski, M., de Ruyter, K., Heller, J. and Keeling, D.I. (2022), \"Exploring the frontiers in reality-enhanced service communication: from augmented and virtual reality to neuro-enhanced reality\"" .
+
+ns1:document-5f4d62a1 a ns1:Article ;
+    ns1:hasAuthor ns1:author-01be713b1e,
+        ns1:author-358551783b,
+        ns1:author-b44471b99e,
+        ns1:author-fe04429a76 ;
+    ns1:hasTopic ns1:topic-d825498c63,
+        ns1:topic-e6a1304d26 ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Возможности и вызовы в метавселенной- рост цифровой вселенной.pdf" ;
+    ns1:title "Opportunities and Challenges in Metaverse the Rise of Digital Universe" .
+
+ns1:document-5fd8df66 a ns1:Article ;
+    ns1:hasAuthor ns1:author-42a0c000d3,
+        ns1:author-5c006218ce,
+        ns1:author-95b2384e85,
+        ns1:author-9b608ee746,
+        ns1:author-dbdb533eb4 ;
+    ns1:hasTopic ns1:topic-0a17189715,
+        ns1:topic-32cc066fff,
+        ns1:topic-5a77e02320,
+        ns1:topic-6f5af92dd8,
+        ns1:topic-c90f3cd733 ;
+    ns1:mentionsMethod ns1:method-58a71d1539,
+        ns1:method-ab389a344e,
+        ns1:method-bc24585fed ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Опрос в Интернете вещей.pdf" ;
+    ns1:title "A Survey on the Web of Things" .
+
+ns1:document-650e8864 a ns1:Article ;
+    ns1:hasAuthor ns1:author-61117ec5c5,
+        ns1:author-ca0bc630c5 ;
+    ns1:hasTopic ns1:topic-1bffdf65bb,
+        ns1:topic-379cb93e71,
+        ns1:topic-53b0e3a888,
+        ns1:topic-d825498c63,
+        ns1:topic-e6a1304d26,
+        ns1:topic-eb5ede998f ;
+    ns1:mentionsMethod ns1:method-808a99ba9a ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Метавселенная- новый вызов для системы здравоохранения- предварительный обзор.pdf" ;
+    ns1:title "The Metaverse: A New Challenge for the Healthcare System: A Scoping Review" .
+
+ns1:document-66d6527b a ns1:Article ;
+    ns1:hasAuthor ns1:author-3a60342f0b,
+        ns1:author-7145d9016f,
+        ns1:author-a7cce268cc,
+        ns1:author-e0061663a3,
+        ns1:author-e07f3c3129 ;
+    ns1:hasTopic ns1:topic-360b48120b,
+        ns1:topic-d825498c63,
+        ns1:topic-e6a1304d26 ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Всестороннее исследование Метавселенной и ее воздействия на людей.pdf" ;
+    ns1:title "A Comprehensive Study on Metaverse and Its Impacts on Humans" .
+
+ns1:document-67638000 a ns1:Article ;
+    ns1:hasTopic ns1:topic-0b943bfaf0,
+        ns1:topic-1d62b52f6e,
+        ns1:topic-9aa0270338,
+        ns1:topic-d825498c63,
+        ns1:topic-e6a1304d26,
+        ns1:topic-eb3c9e3a20,
+        ns1:topic-eb5ede998f ;
+    ns1:sourceFile "Метавселенная через призму власти и зависимости- что будет, когда виртуальный мир станет привлекательнее реальности.pdf" ;
+    ns1:title "Метавселенная через призму власти и зависимости-что будет, когда виртуальный мир станет привлекательнее реальности Bojic, L. Metaverse through the prism of power and addiction: what will happen when the virtual world becomes more attractive than reality?" .
+
+ns1:document-676b3a2d a ns1:Article ;
+    ns1:hasAuthor ns1:author-0db681b45e,
+        ns1:author-20390bd1a1,
+        ns1:author-2b760c9310,
+        ns1:author-515c0f3579,
+        ns1:author-d14e6ad907,
+        ns1:author-d2efdccbaf ;
+    ns1:publishedInYear ns1:year-702cf86515 ;
+    ns1:publishedInYearLiteral 2021 ;
+    ns1:sourceFile "Интернет всего- умные вещи и их влияние на бизнес-модели.pdf" ;
+    ns1:title "The Internet of Everything: Smart things and their impact on business models" .
+
+ns1:document-68dac801 a ns1:Article ;
+    ns1:hasAuthor ns1:author-4ffbfd5f21,
+        ns1:author-f7f5e4b034 ;
+    ns1:hasTopic ns1:topic-32cc066fff,
+        ns1:topic-360b48120b,
+        ns1:topic-6b52a2814e,
+        ns1:topic-9bab08a9c1,
+        ns1:topic-c1e198806a,
+        ns1:topic-eb5ede998f ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Блокчейн для интеллектуальных транспортных приложений.pdf" ;
+    ns1:title "Blockchain for Smart Transport Applications" .
+
+ns1:document-6f821c96 a ns1:Article ;
+    ns1:hasAuthor ns1:author-0265f6b098 ;
+    ns1:hasTopic ns1:topic-ac5567af7b,
+        ns1:topic-cc83171181,
+        ns1:topic-d825498c63,
+        ns1:topic-e6a1304d26,
+        ns1:topic-eb5ede998f ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Метавселенная и интернет.pdf" ;
+    ns1:title "Metaverse and Internet Youth in China" .
+
+ns1:document-70b111d9 a ns1:Article ;
+    ns1:hasAuthor ns1:author-5acad35829,
+        ns1:author-d2aaf6698c,
+        ns1:author-d580207072 ;
+    ns1:hasTopic ns1:topic-32cc066fff,
+        ns1:topic-466cc5b4c7,
+        ns1:topic-c280d88b1c,
+        ns1:topic-eb5ede998f,
+        ns1:topic-f79e8c5228,
+        ns1:topic-fd8e0a315d ;
+    ns1:mentionsMethod ns1:method-58a71d1539,
+        ns1:topic-fd8e0a315d ;
+    ns1:sourceFile "Сравнительный анализ технологии блокчейн для поддержки цифровой трансформации в портах и судоходстве.pdf" ;
+    ns1:title "Сравнительный анализ технологии блокчейн для поддержки цифровой трансформации в портах и судоходстве" .
+
+ns1:document-73a7451e a ns1:Article ;
+    ns1:hasAuthor ns1:author-0079b32437,
+        ns1:author-14901303c4,
+        ns1:author-3bd3e95529 ;
+    ns1:hasTopic ns1:topic-7bd81dd917 ;
+    ns1:mentionsMethod ns1:method-487c8633d8,
+        ns1:method-808a99ba9a,
+        ns1:method-853f8df074 ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Моделирование в разработке с низким кодом -  многоголосый систематический обзор.pdf" ;
+    ns1:title "Modelling in low-code development: a multi-vocal systematic review" ;
+    ns1:usesDataset ns1:dataset-08a09d014f .
+
+ns1:document-73c8e8d1 a ns1:Article ;
+    ns1:evaluatedByMetric ns1:metric-07add205e9 ;
+    ns1:hasAuthor ns1:author-33e354bf2d ;
+    ns1:hasTopic ns1:topic-d825498c63,
+        ns1:topic-e6a1304d26 ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Что такое метавселенная - определение, основанное на качественном метасинтезе.pdf" ;
+    ns1:title "What Is Metaverse?—A Definition Based on Qualitative Meta-Synthesis" ;
+    ns1:usesDataset ns1:dataset-046f91d51d,
+        ns1:dataset-2c49569bee .
+
+ns1:document-74cc20bd a ns1:Article ;
+    ns1:hasAuthor ns1:author-056bfc0281,
+        ns1:author-2d4f6e12ed,
+        ns1:author-77d731cb23,
+        ns1:author-a429a1e328 ;
+    ns1:hasTopic ns1:topic-1b01f0c771,
+        ns1:topic-360b48120b,
+        ns1:topic-c280d88b1c,
+        ns1:topic-eaa3dc24f1,
+        ns1:topic-eb5ede998f,
+        ns1:topic-f6d2164f9f ;
+    ns1:publishedInYear ns1:year-702cf86515 ;
+    ns1:publishedInYearLiteral 2021 ;
+    ns1:sourceFile "Цифровизация замыкания цикла для цепочек поставок- перспектива транспорта и блокчейна.pdf" ;
+    ns1:title "Digitalizing the Closing-of-the-Loop for Supply Chains: A Transportation and Blockchain Perspective" .
+
+ns1:document-752016db a ns1:Article ;
+    ns1:hasAuthor ns1:author-4080c8af64,
+        ns1:author-607ebb9319,
+        ns1:author-a7a50dcb7a,
+        ns1:author-d8ffd35bf3 ;
+    ns1:hasTopic ns1:topic-2fcf1c25fc,
+        ns1:topic-79fb5ba7ba ;
+    ns1:mentionsMethod ns1:method-a4a90a9e7f ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "В поисках правильного баланса - техническая и политическая децентрализация в экономике токенов.pdf" ;
+    ns1:title "Finding the Right Balance: Technical and Political Decentralization in the Token Economy" ;
+    ns1:usesDataset ns1:topic-2fcf1c25fc .
+
+ns1:document-7b09de94 a ns1:Article ;
+    ns1:hasAuthor ns1:author-034224da37,
+        ns1:author-f0e9bb8194 ;
+    ns1:hasTopic ns1:topic-18967210c7 ;
+    ns1:mentionsMethod ns1:method-a903cbeae3,
+        ns1:method-f469141835 ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Развитие технологии визуализации с помощью контрольного списка проектирования на основе дополненной реальности.pdf" ;
+    ns1:title "A Development of Visualization Technology through AR-Based Design Checklist Connection" .
+
+ns1:document-7b7e2bdc a ns1:Article ;
+    ns1:hasAuthor ns1:author-565b266882 ;
+    ns1:hasTopic ns1:topic-137a3a9671,
+        ns1:topic-32cc066fff,
+        ns1:topic-5b7dcc8e20,
+        ns1:topic-cb2df6c453,
+        ns1:topic-d825498c63 ;
+    ns1:mentionsMethod ns1:method-6d8628e988 ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Разум в метавселенной- расширенное познание в сочетании со смешанной реальностью.pdf" ;
+    ns1:title "Minds in the Metaverse: Extended Cognition Meets Mixed Reality" .
+
+ns1:document-84f2aec4 a ns1:Article ;
+    ns1:evaluatedByMetric ns1:metric-6a331906f1 ;
+    ns1:hasAuthor ns1:author-18de097613,
+        ns1:author-52cf88b6a7,
+        ns1:author-ed576c831a,
+        ns1:author-f6e1a12158,
+        ns1:author-ffdcda05ff ;
+    ns1:hasTopic ns1:topic-d825498c63,
+        ns1:topic-e6a1304d26 ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Гастроэнтерология в Метавселенной- рассвет новой эры.pdf" ;
+    ns1:title "Gastroenterology in the Metaverse: The dawn of a new era?" .
+
+ns1:document-8df4f424 a ns1:Article ;
+    ns1:hasAuthor ns1:author-66e622fd2a ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Использование технологии интерфейса мозг-компьютер в интеллектуальных домашних установках.pdf" ;
+    ns1:title "The Use of Brain-Computer Interface Technology in Intelligent Home Installations" .
+
+ns1:document-944db440 a ns1:Article ;
+    ns1:hasAuthor ns1:author-0598537cfb,
+        ns1:author-0c1d5be21f,
+        ns1:author-4b54ee34d3,
+        ns1:author-5288fbfe2a,
+        ns1:author-6753c3ec25,
+        ns1:author-b7de81fcd2 ;
+    ns1:hasTopic ns1:topic-059ee594dc,
+        ns1:topic-360b48120b,
+        ns1:topic-440a249cfd,
+        ns1:topic-bb1d5f2bfc,
+        ns1:topic-eb5ede998f ;
+    ns1:mentionsMethod ns1:method-ceab684ded ;
+    ns1:publishedInYear ns1:year-702cf86515 ;
+    ns1:publishedInYearLiteral 2021 ;
+    ns1:sourceFile "Сотрудничество цифровых близнецов с поддержкой блокчейна- пример использования умного транспорта.pdf" ;
+    ns1:title "Blockchain-Empowered Digital Twins Collaboration: Smart Transportation Use Case" .
+
+ns1:document-9aeae144 a ns1:Article ;
+    ns1:hasAuthor ns1:author-0ed8085360,
+        ns1:author-348c8841d9,
+        ns1:author-3ba1f9ef40 ;
+    ns1:hasTopic ns1:topic-338efc4df1,
+        ns1:topic-5a59253ad0,
+        ns1:topic-f605c40751 ;
+    ns1:mentionsMethod ns1:method-20bd626542,
+        ns1:method-808a99ba9a ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Систематический обзор литературы и библиометрический анализ по виртуальной реальности и образованию.pdf" ;
+    ns1:title "Systematic literature review and bibliometric analysis on virtual reality and education" .
+
+ns1:document-9b90a843 a ns1:Article ;
+    ns1:hasAuthor ns1:author-5069c2023d ;
+    ns1:hasTopic ns1:topic-360b48120b,
+        ns1:topic-79e50fdc84,
+        ns1:topic-c80a06776c,
+        ns1:topic-eb5ede998f ;
+    ns1:mentionsMethod ns1:topic-360b48120b ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Блокчейн и кооперативные интеллектуальные транспортные системы -  вызовы и возможности.pdf" ;
+    ns1:title "Blockchain and Cooperative Intelligent Transport Systems: Challenges and Opportunities" .
+
+ns1:document-9d27c707 a ns1:Article ;
+    ns1:hasAuthor ns1:author-34a01956a4,
+        ns1:author-69c6bd0db6,
+        ns1:author-74f55b0014,
+        ns1:author-7be4aaaf89,
+        ns1:author-8cd2471f2b,
+        ns1:author-a773594284,
+        ns1:author-cefb1054de,
+        ns1:author-d3a74614e1,
+        ns1:author-fe0cb2b851 ;
+    ns1:hasTopic ns1:topic-13805f4a32,
+        ns1:topic-32cc066fff,
+        ns1:topic-5b7dcc8e20,
+        ns1:topic-d825498c63,
+        ns1:topic-e6a1304d26,
+        ns1:topic-eb5ede998f ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Метавселенная культурного наследия.pdf" ;
+    ns1:title "Metaverse for Cultural Heritages" .
+
+ns1:document-9d4dd04b a ns1:Article ;
+    ns1:evaluatedByMetric ns1:metric-6a331906f1 ;
+    ns1:hasAuthor ns1:author-1c10fd5d10,
+        ns1:author-5755d56bee,
+        ns1:author-645184806a,
+        ns1:author-7ea7e124df,
+        ns1:author-8c182f4815,
+        ns1:author-b765d0fba2,
+        ns1:author-ccf1767518 ;
+    ns1:hasTopic ns1:topic-13805f4a32,
+        ns1:topic-2c17cf097c,
+        ns1:topic-32cc066fff,
+        ns1:topic-440a249cfd ;
+    ns1:mentionsMethod ns1:method-291599c3ca,
+        ns1:method-4c3c2a8cb5 ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Проект интеллектуальной кампусной системы на основе цифрового двойника.pdf" ;
+    ns1:title "Intelligent Campus System Design Based on Digital Twin" .
+
+ns1:document-a4156153 a ns1:Article ;
+    ns1:hasAuthor ns1:author-330bfdab39,
+        ns1:author-acbaba0fe8,
+        ns1:author-d69c70d363 ;
+    ns1:hasTopic ns1:topic-55c824aa37,
+        ns1:topic-a5b5ced291,
+        ns1:topic-d2e23c0e72,
+        ns1:topic-e6a1304d26 ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Обучение и подготовка завтрашней рабочей силы к четвертой промышленной революции.pdf" ;
+    ns1:title "Training and Preparing Tomorrow’s Workforce for the Fourth Industrial Revolution" .
+
+ns1:document-a493a5b1 a ns1:Article ;
+    ns1:evaluatedByMetric ns1:metric-6a331906f1 ;
+    ns1:hasAuthor ns1:author-eb3addfd30 ;
+    ns1:hasTopic ns1:topic-353a3e5285,
+        ns1:topic-e6a1304d26 ;
+    ns1:mentionsMethod ns1:method-93258a5cdf,
+        ns1:method-f5b1e70e49 ;
+    ns1:publishedInYear ns1:year-d7c7d2d362 ;
+    ns1:publishedInYearLiteral 2019 ;
+    ns1:sourceFile "Биоинформатика и метавселенная- готовы ли мы.pdf" ;
+    ns1:title "Биоинформатика и метавселенная-готовы ли мы" ;
+    ns1:usesDataset ns1:dataset-2c49569bee .
+
+ns1:document-a66e22e6 a ns1:Article ;
+    ns1:hasAuthor ns1:author-6e34004c28,
+        ns1:author-6f0cb06552,
+        ns1:author-922743012b,
+        ns1:author-9c5e80f9ed,
+        ns1:author-d7fbdf0e82 ;
+    ns1:hasTopic ns1:topic-32cc066fff,
+        ns1:topic-5b7dcc8e20 ;
+    ns1:mentionsMethod ns1:method-73b73d4d62 ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Методы обмена данными для Интернета роботизированных вещей.pdf" ;
+    ns1:title "Data Exchange Techniques for Internet of Robotic Things: Recent Developments" .
+
+ns1:document-b13f7a8f a ns1:Article ;
+    ns1:hasAuthor ns1:author-37d1f59bee,
+        ns1:author-72201b5db8,
+        ns1:author-85a83088b6,
+        ns1:author-f1fcc319c1,
+        ns1:author-f3768d86ab ;
+    ns1:hasTopic ns1:topic-32cc066fff,
+        ns1:topic-5b7dcc8e20,
+        ns1:topic-666791506e,
+        ns1:topic-d825498c63,
+        ns1:topic-e402bc4768,
+        ns1:topic-e6a1304d26,
+        ns1:topic-eb5ede998f ;
+    ns1:mentionsMethod ns1:method-bc24585fed ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Визуализация и кибербезопасность в метавселенной  обзор.pdf" ;
+    ns1:title "Visualization and Cybersecurity in the Metaverse: A Survey" .
+
+ns1:document-b9c8333e a ns1:Article ;
+    ns1:hasTopic ns1:topic-d825498c63,
+        ns1:topic-e6a1304d26 ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Интеллектуальные системы здравоохранения в эпоху метавселенной, искусственного интеллекта и науки о данных.pdf" ;
+    ns1:title "Интеллектуальные системы здравоохранения в эпоху метавселенной, искусственного интеллекта и науки о данных Yang Y. et al. Smart Health: Intelligent Healthcare Systems in the Metaverse, Artificial Intelligence, and Data Science Era //Journal of Organizational and End User Computing (JOEUC)" .
+
+ns1:document-bbf63fc7 a ns1:Article ;
+    ns1:hasAuthor ns1:author-17fd360d9e,
+        ns1:author-f72ffbb7f5 ;
+    ns1:hasTopic ns1:topic-d825498c63,
+        ns1:topic-e6a1304d26,
+        ns1:topic-eb5ede998f ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Успехи в исследовании метавселенной - направления исследований и планы на будущее.pdf" ;
+    ns1:title "Advances in Metaverse Investigation: Streams of Research and Future Agenda" .
+
+ns1:document-bca82487 a ns1:Article ;
+    ns1:hasTopic ns1:topic-1b944b6d51,
+        ns1:topic-68c8d5bdc4,
+        ns1:topic-bc388a42df ;
+    ns1:sourceFile "Применение технологии интерфейса мозг-компьютер на роботизированных линиях в промышленности в области повышения безопасности.pdf" ;
+    ns1:title "Применение технологии интерфейса мозг-компьютер на роботизированных линиях в промышленности в области повышения безопасности Paszkiel, S. (2022). Application of Brain-Computer Interface Technology on Robot Lines in Industry in the Field of Increasing Safety. In: Applications of Brain-Computer Interfaces in Intelligent Technologies. Studies in Computational" .
+
+ns1:document-be4ba84d a ns1:Article ;
+    ns1:hasAuthor ns1:author-112505803d,
+        ns1:author-1cf89706dd,
+        ns1:author-2439b170c6,
+        ns1:author-6fd1587db1,
+        ns1:author-e131a630b3,
+        ns1:author-f7b696345a,
+        ns1:author-fc20bfdcf6 ;
+    ns1:hasTopic ns1:topic-13805f4a32,
+        ns1:topic-6f5af92dd8,
+        ns1:topic-c8361d233c,
+        ns1:topic-d825498c63,
+        ns1:topic-e6a1304d26,
+        ns1:topic-eb5ede998f ;
+    ns1:mentionsMethod ns1:method-cab7d2c140 ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Исследование социального присутствия при взаимодействии в метавселенной с дополненным аватаром во время автономного вождения.pdf" ;
+    ns1:title "Study of Social Presence While Interacting in Metaverse with an Augmented Avatar during Autonomous Driving" .
+
+ns1:document-c0cb30dd a ns1:Article ;
+    ns1:hasTopic ns1:topic-d825498c63,
+        ns1:topic-e6a1304d26 ;
+    ns1:publishedInYear ns1:year-702cf86515 ;
+    ns1:publishedInYearLiteral 2021 ;
+    ns1:sourceFile "Влияние техностресса на киберзапугивание в социальных платформах Метавселенной.pdf" ;
+    ns1:title "Влияние техностресса на киберзапугивание в социальных платформах Метавселенной" .
+
+ns1:document-c2886157 a ns1:Article ;
+    ns1:hasAuthor ns1:author-3d674b995e,
+        ns1:author-5371149fbe,
+        ns1:author-68d24de1ba,
+        ns1:author-89997e5311,
+        ns1:author-b245c81769,
+        ns1:author-e7d3473b73 ;
+    ns1:hasTopic ns1:topic-360b48120b,
+        ns1:topic-501636ed8d,
+        ns1:topic-eb5ede998f ;
+    ns1:mentionsMethod ns1:method-c8be8c44c1 ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Технология блокчейн и смарт-контракты в децентрализованных системах управления.pdf" ;
+    ns1:title "Blockchain Technology and Smart Contracts in Decentralized Governance Systems" ;
+    ns1:usesDataset ns1:dataset-00844f995a .
+
+ns1:document-c99b7dc5 a ns1:Article ;
+    ns1:hasAuthor ns1:author-46224dd16a ;
+    ns1:mentionsMethod ns1:method-808a99ba9a ;
+    ns1:publishedInYear ns1:year-d7c7d2d362 ;
+    ns1:publishedInYearLiteral 2019 ;
+    ns1:sourceFile "Прошлое, настоящее и будущее виртуального туризма- обзор литературы.pdf" ;
+    ns1:title "Прошлое, настоящее и будущее виртуального туризма-обзор литературы Verma S. et al. Past, present, and future of virtual tourism-a literature review //International Journal of Information Management Data Insights" .
+
+ns1:document-ca2b9cd7 a ns1:Article ;
+    ns1:hasAuthor ns1:author-2870c752b5,
+        ns1:author-ba98541cb4,
+        ns1:author-c18cbbf0d0 ;
+    ns1:hasTopic ns1:topic-32cc066fff,
+        ns1:topic-5b7dcc8e20,
+        ns1:topic-6fd8ded34d,
+        ns1:topic-d825498c63,
+        ns1:topic-e6a1304d26,
+        ns1:topic-eb5ede998f ;
+    ns1:mentionsMethod ns1:method-989cb917c3 ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Демистификация метавселенной как новой парадигмы цифровизации предприятий.pdf" ;
+    ns1:title "Demystifying Metaverse as a New Paradigm of Enterprise Digitization" .
+
+ns1:document-ca6686ca a ns1:Article ;
+    ns1:evaluatedByMetric ns1:metric-6a331906f1 ;
+    ns1:hasAuthor ns1:author-1e698e3a5e,
+        ns1:author-6dbe185044 ;
+    ns1:hasTopic ns1:topic-04e5e90322,
+        ns1:topic-57dafda792,
+        ns1:topic-976bcd355a,
+        ns1:topic-d825498c63,
+        ns1:topic-e6a1304d26,
+        ns1:topic-eb5ede998f ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Исследование коротких видеокоммуникаций на основе метавселенной.pdf" ;
+    ns1:title "Exploration of Short Video Media Communication Based in the Metaverse" .
+
+ns1:document-cc4457aa a ns1:Article ;
+    ns1:hasAuthor ns1:author-12f93108b8 ;
+    ns1:hasTopic ns1:topic-d825498c63,
+        ns1:topic-e6a1304d26 ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Дистанционное обучение и обучение на рабочем месте От голубя-посыльного до имплантированных мозговых микрочипов Интерфейс и Метавселенная.pdf" ;
+    ns1:title "Distance Learning and on Job Training From a Messenger Pigeon to Implanted Brain Microchips Interface and Metaverse" .
+
+ns1:document-cd44a867 a ns1:Article ;
+    ns1:hasAuthor ns1:author-6604402d63,
+        ns1:author-a3a523cfce,
+        ns1:author-f3e97a55bd ;
+    ns1:hasTopic ns1:topic-32cc066fff,
+        ns1:topic-360b48120b,
+        ns1:topic-a52140e81e,
+        ns1:topic-c1e198806a,
+        ns1:topic-db7ada8091 ;
+    ns1:mentionsMethod ns1:method-808a99ba9a,
+        ns1:topic-c1e198806a ;
+    ns1:publishedInYear ns1:year-702cf86515 ;
+    ns1:publishedInYearLiteral 2021 ;
+    ns1:sourceFile "Решения на основе блокчейна для транспортных сетей с использованием БПЛА в умных городах- обзор, открытые проблемы и перспективы на будущее.pdf" ;
+    ns1:title "Blockchain-Based Solutions for UAV-Assisted Connected Vehicle Networks in Smart Cities: A Review, Open Issues, and Future Perspectives" .
+
+ns1:document-d8b1e03a a ns1:Article ;
+    ns1:evaluatedByMetric ns1:metric-ec7166135f ;
+    ns1:hasAuthor ns1:author-3399bee9e5,
+        ns1:author-922a0f80c6,
+        ns1:author-a5ee0b6d6e,
+        ns1:author-b34860654f,
+        ns1:author-d04f894483,
+        ns1:author-f4c72d20f3,
+        ns1:author-fe5d6ac57a ;
+    ns1:hasTopic ns1:topic-db1892f176 ;
+    ns1:mentionsMethod ns1:method-bbd1ec3444 ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Умная мобильность автомобильных и железных дорог- гибридный набор данных высокого разрешения.pdf" ;
+    ns1:title "Road and Railway Smart Mobility: A High-Definition Ground Truth Hybrid Dataset" ;
+    ns1:usesDataset ns1:dataset-2c49569bee,
+        ns1:dataset-a91b7a5297,
+        ns1:dataset-c5a835bdb3 .
+
+ns1:document-d937f3de a ns1:Article ;
+    ns1:hasTopic ns1:topic-d1d0b2d7a8,
+        ns1:topic-d825498c63,
+        ns1:topic-e19858b09f,
+        ns1:topic-e6a1304d26 ;
+    ns1:sourceFile "Перевернутое обучение и электронное обучение как модели обучения, ориентированные на метавселенную.pdf" ;
+    ns1:title "Перевернутое обучение и электронное обучение как модели обучения, ориентированные на метавселенную López-Belmonte J. et al. Flipped Learning and E-Learning as Training Models Focused on the Metaverse //Emerging Science Journal" .
+
+ns1:document-dad44c4e a ns1:Article ;
+    ns1:hasAuthor ns1:author-297394ecd9,
+        ns1:author-4a06f45c64,
+        ns1:author-523286effa,
+        ns1:author-5d413441e1,
+        ns1:author-f9a72b7638 ;
+    ns1:hasTopic ns1:topic-d825498c63,
+        ns1:topic-e6a1304d26,
+        ns1:topic-eb5ede998f ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Виртуальные миры (метавселенная) -  от скептицизма к страху и захватывающим возможностям.pdf" ;
+    ns1:title "Virtual Worlds (Metaverse): From Skepticism, to Fear, to Immersive Opportunities" .
+
+ns1:document-dba4fe7e a ns1:Article ;
+    ns1:hasAuthor ns1:author-0200e92c5f,
+        ns1:author-0e08f8afd9 ;
+    ns1:hasTopic ns1:topic-360b48120b,
+        ns1:topic-82b4cf6532,
+        ns1:topic-d825498c63,
+        ns1:topic-e6a1304d26,
+        ns1:topic-eb5ede998f ;
+    ns1:mentionsMethod ns1:method-023064dc3b,
+        ns1:method-808a99ba9a ;
+    ns1:sourceFile "ПОТЕНЦИАЛЬНОЕ ГЛОБАЛЬНОЕ ЭКОНОМИЧЕСКОЕ ВОЗДЕЙСТВИЕ МЕТАВСЕЛЕННОЙ.pdf" ;
+    ns1:title "ПОТЕНЦИАЛЬНОЕ ГЛОБАЛЬНОЕ ЭКОНОМИЧЕСКОЕ ВОЗДЕЙСТВИЕ МЕТАВСЕЛЕННОЙ" .
+
+ns1:document-dda35e18 a ns1:Article ;
+    ns1:hasTopic ns1:topic-059ee594dc,
+        ns1:topic-b6194540f5,
+        ns1:topic-d825498c63,
+        ns1:topic-e6a1304d26,
+        ns1:topic-eb5ede998f ;
+    ns1:sourceFile "Тренд промышленного дизайна с точки зрения метавселенной.pdf" ;
+    ns1:title "Тренд промышленного дизайна с точки зрения метавселенной" .
+
+ns1:document-e07da855 a ns1:Article ;
+    ns1:hasAuthor ns1:author-24b74edd8d,
+        ns1:author-95ea5441fc,
+        ns1:author-dbe2a3baf1,
+        ns1:author-e8a976d4bb ;
+    ns1:mentionsMethod ns1:method-73b73d4d62,
+        ns1:method-808a99ba9a,
+        ns1:method-853f8df074 ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Интеграция дополненной, виртуальной и смешанной реальности с информационным моделированием зданий  систематический обзор.pdf" ;
+    ns1:title "Integration of Augmented, Virtual and Mixed Reality with Building Information Modeling: A Systematic Review" .
+
+ns1:document-e13958dc a ns1:Article ;
+    ns1:hasAuthor ns1:author-a7a2a2c5c2 ;
+    ns1:hasTopic ns1:topic-6c00027109,
+        ns1:topic-d825498c63,
+        ns1:topic-e6a1304d26 ;
+    ns1:mentionsMethod ns1:method-5b7a37f965 ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Применение метавселенной в экологическом образовании.pdf" ;
+    ns1:title "The Application of the Metaverse in Ecological Education" .
+
+ns1:document-e6457d4e a ns1:Article ;
+    ns1:mentionsMethod ns1:method-808a99ba9a ;
+    ns1:publishedInYear ns1:year-05b9aef9ac ;
+    ns1:publishedInYearLiteral 2005 ;
+    ns1:sourceFile "Обзор вариантов использования виртуальной и дополненной реальности приложений на основе  интерфейса мозг-компьютер для умных городов.pdf" ;
+    ns1:title "Обзор вариантов использования виртуальной и дополненной реальности приложений на основе интерфейса мозг-компьютер для умных городов Kohli V. et al. A review on Virtual Reality and Augmented Reality use-cases of Brain Computer Interface based applications for smart cities //Microprocessors and" .
+
+ns1:document-ea9d286e a ns1:Article ;
+    ns1:hasAuthor ns1:author-03a60b35e0,
+        ns1:author-21ca2899f5,
+        ns1:author-21e5d07145,
+        ns1:author-61f73cf62b,
+        ns1:author-6cbbb1de55,
+        ns1:author-8f53ff1d82,
+        ns1:author-9ac14e4a38,
+        ns1:author-a19bd2056c,
+        ns1:author-af4cd2e63c,
+        ns1:author-d4db51a166 ;
+    ns1:hasTopic ns1:topic-506e816e22,
+        ns1:topic-d825498c63,
+        ns1:topic-e485db3f82,
+        ns1:topic-eb5ede998f ;
+    ns1:mentionsMethod ns1:method-2ae975bce9 ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Будущие направления интеллектуальных транспортных средств - потенциал, возможности и перспективы.pdf" ;
+    ns1:title "Future Directions of Intelligent Vehicles: Potentials, Possibilities, and Perspectives" .
+
+ns1:document-ec5b13cd a ns1:Article ;
+    ns1:hasAuthor ns1:author-211114fff2 ;
+    ns1:hasTopic ns1:topic-0ea38fcd4d,
+        ns1:topic-32cc066fff,
+        ns1:topic-5b7dcc8e20,
+        ns1:topic-a1986716f5 ;
+    ns1:publishedInYear ns1:year-e8fcfa53cf ;
+    ns1:publishedInYearLiteral 2000 ;
+    ns1:sourceFile "Применение Интернета вещей в автомобильной промышленности- обзор аккумуляторов, топливных элементов и двигателей.pdf" ;
+    ns1:title "Применение Интернета вещей в автомобильной промышленности-обзор аккумуляторов, топливных элементов и двигателей" .
+
+ns1:document-f1434528 a ns1:Article ;
+    ns1:hasAuthor ns1:author-05de29cb5f,
+        ns1:author-88c66d778d,
+        ns1:author-92ff58f49f ;
+    ns1:hasTopic ns1:topic-123b8470c7,
+        ns1:topic-1d056fdfd1,
+        ns1:topic-32cc066fff,
+        ns1:topic-5b7dcc8e20,
+        ns1:topic-f8cca57fac ;
+    ns1:mentionsMethod ns1:method-808a99ba9a,
+        ns1:method-853f8df074,
+        ns1:topic-f8cca57fac ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Систематический обзор умных обучающих сред.pdf" ;
+    ns1:title "A Systematic Review of Smart Learning Environments" ;
+    ns1:usesDataset ns1:topic-123b8470c7 .
+
+ns1:document-f4b21e0f a ns1:Article ;
+    ns1:evaluatedByMetric ns1:metric-8e19b2d7b5 ;
+    ns1:hasAuthor ns1:author-40df8eff90,
+        ns1:author-56db57f6e0,
+        ns1:author-bd0d9789c1,
+        ns1:author-daaccb3e35,
+        ns1:author-e2b6f7c943 ;
+    ns1:hasTopic ns1:topic-32cc066fff,
+        ns1:topic-360b48120b,
+        ns1:topic-c1e198806a,
+        ns1:topic-eb5ede998f ;
+    ns1:mentionsMethod ns1:method-bc24585fed ;
+    ns1:publishedInYear ns1:year-702cf86515 ;
+    ns1:publishedInYearLiteral 2021 ;
+    ns1:sourceFile "Обзор приложений блокчейна в Интернете транспортных средств.pdf" ;
+    ns1:title "A survey: applications of blockchain in the Internet of Vehicles" .
+
+ns1:document-f6d3f41e a ns1:Article ;
+    ns1:evaluatedByMetric ns1:metric-6a331906f1 ;
+    ns1:hasAuthor ns1:author-068596416f,
+        ns1:author-1eb7500b48,
+        ns1:author-5ac14146fd,
+        ns1:author-a3b3fc02ed,
+        ns1:author-b7c06e361d ;
+    ns1:hasTopic ns1:topic-3f6a4ec957,
+        ns1:topic-67539de53e ;
+    ns1:mentionsMethod ns1:method-7b166ddc24 ;
+    ns1:publishedInYear ns1:year-702cf86515 ;
+    ns1:publishedInYearLiteral 2021 ;
+    ns1:sourceFile "Интеллектуальные сложные транспортные системы и датчики.pdf" ;
+    ns1:title "Intelligent Transportation Related Complex Systems and Sensors" .
+
+ns1:document-f724b35c a ns1:Article ;
+    ns1:hasAuthor ns1:author-c2d4ff1e5e ;
+    ns1:hasTopic ns1:topic-2405b8fc76,
+        ns1:topic-360b48120b,
+        ns1:topic-90f37727af,
+        ns1:topic-c280d88b1c,
+        ns1:topic-eb5ede998f,
+        ns1:topic-fd8e0a315d ;
+    ns1:mentionsMethod ns1:method-808a99ba9a ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Обзор исследований влияния технологии блокчейн на судоходную отрасль.pdf" ;
+    ns1:title "Review of studies of blockchain technology effects on the shipping industry" .
+
+ns1:document-feb77d9d a ns1:Article ;
+    ns1:hasTopic ns1:topic-2714c18783,
+        ns1:topic-2b68e86079,
+        ns1:topic-32cc066fff,
+        ns1:topic-5b7dcc8e20,
+        ns1:topic-768831b3b5,
+        ns1:topic-b6194540f5,
+        ns1:topic-d825498c63,
+        ns1:topic-e6a1304d26,
+        ns1:topic-eb5ede998f ;
+    ns1:sourceFile "Продвижение образования с помощью расширенной реальности и метавселенных с поддержкой Интернета всего- приложения, проблемы и открытые вопросы.pdf" ;
+    ns1:title "Продвижение образования с помощью расширенной реальности и метавселенных с поддержкой Интернета всего-приложения, проблемы и открытые вопросы Jagatheesaperumal S. K. et al. Advancing Education Through Extended Reality and Internet of Everything Enabled Metaverses: Applications, Challenges, and Open Issues //arXiv preprint" .
+
+ns1:edge-ai-6g-metaverse-4d41a84b a ns1:Article ;
+    ns1:hasTopic ns1:topic-1cbf5cdb48,
+        ns1:topic-6bf210f3c9,
+        ns1:topic-d825498c63,
+        ns1:topic-e6a1304d26,
+        ns1:topic-eb5ede998f ;
+    ns1:sourceFile "Edge AI с поддержкой 6G для Metaverse- проблемы, методы и направления будущих исследований.pdf" ;
+    ns1:title "Edge AI (пограничный искусственный интеллект ) с поддержкой 6G для Metaverse (метавселенной) -проблемы, методы и направления будущих исследований Chang L. et al. 6G-enabled Edge AI for Metaverse: Challenges, Methods, and Future Research Directions //arXiv preprint" .
+
+ns1:edge-intelligence-smart-blockchain-metaverse-web-3406665e a ns1:Article ;
+    ns1:hasAuthor ns1:author-692cb3693e ;
+    ns1:hasTopic ns1:topic-2714c18783,
+        ns1:topic-360b48120b,
+        ns1:topic-5611b016a0,
+        ns1:topic-8fad5d87bf,
+        ns1:topic-cfcd1441be,
+        ns1:topic-d825498c63,
+        ns1:topic-e6a1304d26,
+        ns1:topic-eb5ede998f ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Децентрализованный ИИ- Edge Intelligence и Smart Blockchain, Metaverse, Web3 и DeSci.pdf" ;
+    ns1:title "Decentralized AI: Edge Intelligence and Smart Blockchain, Metaverse, Web3, and DeSci" .
+
+ns1:erp-low-code-bc30a165 a ns1:Article ;
+    ns1:hasAuthor ns1:author-42fc4aa067,
+        ns1:author-52a3b42452,
+        ns1:author-cfdfa1d4e7,
+        ns1:author-de9f17ccb4 ;
+    ns1:hasTopic ns1:topic-e2ae7d8169,
+        ns1:topic-eeceb6b5ba ;
+    ns1:mentionsMethod ns1:method-88678a7973 ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Разработка ERP-системы для производства водородного оборудования на основе технологии Low Code.pdf" ;
+    ns1:title "ERP System Design for Hydrogen Equipment Manufacturing Industry Based on Low Code Technology" .
+
+ns1:evolution-of-low-code-platforms-9a810e0e a ns1:Article ;
+    ns1:hasAuthor ns1:author-f111e02d57 ;
+    ns1:hasTopic ns1:topic-011aabe092,
+        ns1:topic-874f1b35a6,
+        ns1:topic-d0d1a1beec ;
+    ns1:mentionsMethod ns1:method-808a99ba9a ;
+    ns1:sourceFile "Evolution of Low-Code Platforms.pdf" ;
+    ns1:title "Evolution of Low-Code Platforms" .
+
+ns1:fintech-insurtech-proptech-215cbf0a a ns1:Article ;
+    ns1:hasAuthor ns1:author-2156833946,
+        ns1:author-346a7af1a7,
+        ns1:author-b8b2d8bde4,
+        ns1:author-f5e07da6b5 ;
+    ns1:hasTopic ns1:topic-32cc066fff,
+        ns1:topic-5b7dcc8e20,
+        ns1:topic-eb5ede998f ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Бизнес-модели и планы устойчивого развития в индустрии FinTech, InsurTech и PropTech- данные из Испании.pdf" ;
+    ns1:title "Business Models and Sustainability Plans in the FinTech, InsurTech, and PropTech Industry: Evidence from Spain" .
+
+ns1:hexa-x-d1-1-6g-2021-f0aed55c a ns1:Article ;
+    ns1:publishedInYear ns1:year-702cf86515 ;
+    ns1:publishedInYearLiteral 2021 ;
+    ns1:sourceFile "Hexa-X D1.1 6G Видение, сценарии использования и ключевые социальные ценности 2021.pdf" ;
+    ns1:title "Hexa-X D1.1 6G Видение, сценарии использования и ключевые социальные ценности 2021" .
+
+ns1:iiot-iov-iod-6dd7eb8f a ns1:Article ;
+    ns1:evaluatedByMetric ns1:metric-6a331906f1 ;
+    ns1:hasAuthor ns1:author-5225382c92,
+        ns1:author-b3c5575ec2,
+        ns1:author-c22ebf1880 ;
+    ns1:hasTopic ns1:topic-059ee594dc,
+        ns1:topic-32cc066fff,
+        ns1:topic-440a249cfd,
+        ns1:topic-5b7dcc8e20,
+        ns1:topic-9ad6b77c8c,
+        ns1:topic-9e4b022981,
+        ns1:topic-b7b1f482e3 ;
+    ns1:mentionsMethod ns1:method-bc24585fed,
+        ns1:method-e6cabe7fe2 ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Комплексный обзор цифровых двойников и федеративного обучения для промышленного Интернета вещей (IIoT), Интернета транспортных средств (IoV) и Интернета дронов (IoD).pdf" ;
+    ns1:title "A Comprehensive Survey of Digital Twins and Federated Learning for Industrial Internet of Things (IIoT), Internet of Vehicles (IoV) and Internet of Drones (IoD)" .
+
+ns1:ioe-4a41b5c1 a ns1:Article ;
+    ns1:hasAuthor ns1:author-1187698e46,
+        ns1:author-1bfb0ae1a7,
+        ns1:author-3b59cadd84,
+        ns1:author-5abfccb94e,
+        ns1:author-cfb7c46efb,
+        ns1:author-f0822c9b0f,
+        ns1:author-f5b806a950 ;
+    ns1:hasTopic ns1:topic-32cc066fff,
+        ns1:topic-6bb5ae6a52,
+        ns1:topic-6f5af92dd8,
+        ns1:topic-c802045979 ;
+    ns1:mentionsMethod ns1:method-19aad0d7bb ;
+    ns1:publishedInYear ns1:year-702cf86515 ;
+    ns1:publishedInYearLiteral 2021 ;
+    ns1:sourceFile "Подход IoE и больших мультимедийных данных для управления отказоустойчивостью городских транспортных систем в умных городах.pdf" ;
+    ns1:title "An IoE and Big Multimedia Data Approach for Urban Transport System Resilience Management in Smart Cities" .
+
+ns1:iot-77ed2c9a a ns1:Article ;
+    ns1:hasAuthor ns1:author-6f90be076c ;
+    ns1:hasTopic ns1:topic-32cc066fff,
+        ns1:topic-561335050d,
+        ns1:topic-5b7dcc8e20,
+        ns1:topic-879d966a1c,
+        ns1:topic-9ad6b77c8c,
+        ns1:topic-c280d88b1c,
+        ns1:topic-f6d2164f9f ;
+    ns1:publishedInYear ns1:year-702cf86515 ;
+    ns1:publishedInYearLiteral 2021 ;
+    ns1:sourceFile "Интернет вещей (IoT) в маркетинговой логистике.pdf" ;
+    ns1:title "Internet of Things (IoT) in Marketing Logistics" .
+
+ns1:ipfs-e660e7be a ns1:Article ;
+    ns1:hasAuthor ns1:author-5b324af18b,
+        ns1:author-6e19ec827a ;
+    ns1:hasTopic ns1:topic-32cc066fff,
+        ns1:topic-360b48120b,
+        ns1:topic-4c315a3afc,
+        ns1:topic-c47aae5cda,
+        ns1:topic-eb5ede998f ;
+    ns1:mentionsMethod ns1:topic-360b48120b,
+        ns1:topic-4c315a3afc ;
+    ns1:publishedInYear ns1:year-702cf86515 ;
+    ns1:publishedInYearLiteral 2021 ;
+    ns1:sourceFile "Надежное хранение данных об автомобилях с использованием блокчейна и IPFS.pdf" ;
+    ns1:title "Reliable Vehicle Data Storage Using Blockchain and IPFS" .
+
+ns1:its-499f508c a ns1:Article ;
+    ns1:hasAuthor ns1:author-36c475ef4a,
+        ns1:author-6e3e98c3dc,
+        ns1:author-af8ee31da1,
+        ns1:author-c264b614a7 ;
+    ns1:mentionsMethod ns1:method-97797660fd ;
+    ns1:publishedInYear ns1:year-702cf86515 ;
+    ns1:publishedInYearLiteral 2021 ;
+    ns1:sourceFile "Система знаний, поддерживающая развертывание ИТС (ITS).pdf" ;
+    ns1:title "Knowledge System Supporting ITS Deployment" .
+
+ns1:masterthesismatthijsgeleedst-ffbbb1f4 a ns1:Article ;
+    ns1:hasTopic ns1:topic-cd4f491a75,
+        ns1:topic-d0d1a1beec,
+        ns1:topic-f9be088486 ;
+    ns1:mentionsMethod ns1:method-808a99ba9a,
+        ns1:method-bc24585fed ;
+    ns1:sourceFile "Masterthesismatthijsgeleedst.pdf" ;
+    ns1:title "Masterthesismatthijsgeleedst" .
+
+ns1:metaverse-00930f38 a ns1:Article ;
+    ns1:hasAuthor ns1:author-3a19812334,
+        ns1:author-5119ae93b4,
+        ns1:author-53a9a1174d,
+        ns1:author-6f9ce3d3bd,
+        ns1:author-766e069275 ;
+    ns1:hasTopic ns1:topic-053aae1034,
+        ns1:topic-071cc4d7c9,
+        ns1:topic-440a249cfd,
+        ns1:topic-ca95dd363f,
+        ns1:topic-d825498c63,
+        ns1:topic-e6a1304d26 ;
+    ns1:mentionsMethod ns1:method-808a99ba9a ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Применение цифровых двойников и Metaverse в области насосов и вентиляторов жидкостных машин обзор.pdf" ;
+    ns1:title "Application of Digital Twins and Metaverse in the Field of Fluid Machinery Pumps and Fans: A Review" ;
+    ns1:usesDataset ns1:topic-ca95dd363f .
+
+ns1:metaverse-51acbf5f a ns1:Article ;
+    ns1:hasAuthor ns1:author-1d0a1b74f9,
+        ns1:author-5bf8bf941e,
+        ns1:author-793545770c,
+        ns1:author-88c788a86c,
+        ns1:author-b9497de2f5,
+        ns1:author-db3dd67640 ;
+    ns1:hasTopic ns1:topic-059ee594dc,
+        ns1:topic-360b48120b,
+        ns1:topic-466cc5b4c7,
+        ns1:topic-5b7dcc8e20,
+        ns1:topic-701dc3278a,
+        ns1:topic-d825498c63,
+        ns1:topic-eb5ede998f ;
+    ns1:mentionsMethod ns1:method-bc24585fed ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Слияние информационного моделирования зданий и блокчейна для Metaverse- обзор.pdf" ;
+    ns1:title "Fusion of Building Information Modeling and Blockchain for Metaverse: A Survey" .
+
+ns1:metaverse-5bddf4cd a ns1:Article ;
+    ns1:hasAuthor ns1:author-12dc1e14b4,
+        ns1:author-1709dbcf07,
+        ns1:author-b5a6f3240b ;
+    ns1:hasTopic ns1:topic-13805f4a32,
+        ns1:topic-6f3104dd66,
+        ns1:topic-b85889d4e0,
+        ns1:topic-d825498c63,
+        ns1:topic-e6a1304d26 ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Решение для удаленного управления на основе Metaverse для энергоаккумулирующих электростанций на основе сцен.pdf" ;
+    ns1:title "Metaverse-driven remote management solution for scene-based energy storage power stations" .
+
+ns1:metaverse-appealing-to-a-broader-audience-5646c104 a ns1:Article ;
+    ns1:hasAuthor ns1:author-f407bd6550 ;
+    ns1:hasTopic ns1:topic-d825498c63 ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Metaverse. Appealing to a broader audience.pdf" ;
+    ns1:title "Metaverse interview with expert Ken Wee _ McKinsey" .
+
+ns1:metaverse-building-a-safer-metaverse-5a596f82 a ns1:Article ;
+    ns1:hasAuthor ns1:author-f407bd6550 ;
+    ns1:hasTopic ns1:topic-d825498c63 ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Metaverse. Building a safer metaverse.pdf" ;
+    ns1:title "Metaverse interview with expert Row Lowe _ McKinsey" .
+
+ns1:metaverse-building-an-open-metaverse-a958c8ff a ns1:Article ;
+    ns1:hasAuthor ns1:author-f407bd6550 ;
+    ns1:hasTopic ns1:topic-d825498c63 ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Metaverse. Building an open metaverse.pdf" ;
+    ns1:title "Executive perspectives on the metaverse _ McKinsey" .
+
+ns1:metaverse-exploring-the-business-promise-of-the-a07927a9 a ns1:Article ;
+    ns1:hasAuthor ns1:author-f407bd6550 ;
+    ns1:hasTopic ns1:topic-d825498c63 ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Metaverse. Exploring the business promise of the.pdf" ;
+    ns1:title "Executive perspectives on the metaverse _ McKinsey" .
+
+ns1:metaverse-f2d7f3fa a ns1:Article ;
+    ns1:hasAuthor ns1:author-061cc15548,
+        ns1:author-570cae7459,
+        ns1:author-5db335fd0b,
+        ns1:author-73d1f26a3d,
+        ns1:author-80f83a0e11,
+        ns1:author-8bfd9a0ef5,
+        ns1:author-9c13113cd5,
+        ns1:author-ad494b1a88 ;
+    ns1:hasTopic ns1:topic-2714c18783,
+        ns1:topic-32cc066fff,
+        ns1:topic-5b7dcc8e20,
+        ns1:topic-d825498c63,
+        ns1:topic-e6a1304d26,
+        ns1:topic-eb5ede998f ;
+    ns1:mentionsMethod ns1:method-409e88f2b9,
+        ns1:method-808a99ba9a ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Обзор определений, архитектуры, приложений, задач, проблем, решений и будущих тенденций Metaverse..pdf" ;
+    ns1:title "A Review of Metaverse’s Definitions, Architecture, Applications, Challenges, Issues, Solutions, and Future Trends" ;
+    ns1:usesDataset ns1:dataset-bc357b3c6e .
+
+ns1:metaverse-gaming-for-a-cause-2-c91a95ba a ns1:Article ;
+    ns1:hasAuthor ns1:author-f407bd6550 ;
+    ns1:hasTopic ns1:topic-d825498c63 ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Metaverse. Gaming for a cause (2).pdf" ;
+    ns1:title "Executive perspectives on the metaverse _ McKinsey" .
+
+ns1:mooc-5-16a1163c a ns1:Article ;
+    ns1:hasAuthor ns1:author-246fb9d64a,
+        ns1:author-4d1b94b069,
+        ns1:author-6cc006fa21,
+        ns1:author-b0cc24c7fd,
+        ns1:author-bc736e46ce,
+        ns1:author-c324ba527a ;
+    ns1:hasTopic ns1:topic-13805f4a32,
+        ns1:topic-5b7dcc8e20,
+        ns1:topic-e6a1304d26,
+        ns1:topic-eb5ede998f ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "MOOC 5.pdf" ;
+    ns1:title "MOOC 5.0: A Roadmap to the Future of Learning" .
+
+ns1:mr-z-eb23be66 a ns1:Article ;
+    ns1:hasAuthor ns1:author-192575cf2a,
+        ns1:author-97bd4f6c51,
+        ns1:author-baa187f983 ;
+    ns1:hasTopic ns1:topic-297bba70e2,
+        ns1:topic-319fd915cd,
+        ns1:topic-d825498c63,
+        ns1:topic-e6a1304d26 ;
+    ns1:mentionsMethod ns1:method-9a9c4dec8b ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Смешанная реальность (MR) для поколения Z в туризме культурного наследия . На пути к метавселенной.pdf" ;
+    ns1:title "The metaverse in the hospitality and tourism industry: An overview of current trends and future research directions" .
+
+ns1:nft-bc49c349 a ns1:Article ;
+    ns1:hasAuthor ns1:author-3c7220bd47,
+        ns1:author-4251dd262b,
+        ns1:author-436d56f2f6,
+        ns1:author-a2cdd7a3c3,
+        ns1:author-fc7c777904 ;
+    ns1:hasTopic ns1:topic-0e8cfee4d4,
+        ns1:topic-7831567ce6,
+        ns1:topic-d825498c63,
+        ns1:topic-e6a1304d26,
+        ns1:topic-eb5ede998f ;
+    ns1:mentionsMethod ns1:method-6e68c070f9 ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "NFT и революция метавселенной- перспективы исследований и открытые вызовы.pdf" ;
+    ns1:title "NFTs and the Metaverse Revolution: Research Perspectives and Open Challenges" .
+
+ns1:nft-unity-cf28e118 a ns1:Article ;
+    ns1:hasAuthor ns1:author-bc7712cd10 ;
+    ns1:hasTopic ns1:topic-2714c18783,
+        ns1:topic-80e1ebcac2,
+        ns1:topic-d825498c63,
+        ns1:topic-e6a1304d26,
+        ns1:topic-eb5ede998f,
+        ns1:topic-ff787f0baf ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Проектирование будущего. Метавселенная, NFT и будущее глазами пользователей Unity.pdf" ;
+    ns1:title "Designing the Future? The Metaverse, NFTs, & the Future as Defined by Unity Users" .
+
+ns1:policing-in-the-metaverse-qlas22002enn-467278d6 a ns1:Article ;
+    ns1:hasAuthor ns1:author-2e8b2a5e42 ;
+    ns1:hasTopic ns1:topic-14fb49fec6,
+        ns1:topic-2714c18783,
+        ns1:topic-29469faef7,
+        ns1:topic-360b48120b,
+        ns1:topic-440a249cfd,
+        ns1:topic-d825498c63,
+        ns1:topic-e55d434e0a ;
+    ns1:mentionsMethod ns1:method-739a2a3340 ;
+    ns1:publishedInYear ns1:year-737058a970 ;
+    ns1:publishedInYearLiteral 2002 ;
+    ns1:sourceFile "policing in the metaverse-QLAS22002ENN.pdf" ;
+    ns1:title "policing in the metaverse-QLAS22002ENN" .
+
+ns1:probing-reality-and-myth-in-the-metaverse-final-586df474 a ns1:Article ;
+    ns1:hasAuthor ns1:author-41ca528665,
+        ns1:author-6c5593bd05,
+        ns1:author-975baeb392,
+        ns1:author-a4e607504b ;
+    ns1:hasTopic ns1:topic-d825498c63 ;
+    ns1:mentionsMethod ns1:method-bc24585fed ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "probing-reality-and-myth-in-the-metaverse-final.pdf" ;
+    ns1:title "Probing reality and myth in the metaverse" .
+
+ns1:qca-c06ee6e0 a ns1:Article ;
+    ns1:hasAuthor ns1:author-035023acff,
+        ns1:author-12826aad72,
+        ns1:author-84c7b6a152,
+        ns1:author-ce9964fec2 ;
+    ns1:hasTopic ns1:topic-6609ae2063,
+        ns1:topic-d825498c63,
+        ns1:topic-e6a1304d26 ;
+    ns1:mentionsMethod ns1:method-d10aa436e9,
+        ns1:method-f5be2459a8 ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Проектирование привлекательной метавселенной- исследование факторов дизайна, влияющих на удовлетворенность аудитории с помощью виртуального пространства, на основе QCA.pdf" ;
+    ns1:title "Designing an Attractive Metaverse: Research on Design Factors Influencing Audience Satisfaction with a Virtual Space Based on QCA" .
+
+ns1:qom-qop-qos-aoi-industries-3dd4fb94 a ns1:Article ;
+    ns1:evaluatedByMetric ns1:metric-9149107815 ;
+    ns1:hasAuthor ns1:author-18c6f0fe1f,
+        ns1:author-1e7a143409,
+        ns1:author-8595a3a459,
+        ns1:author-c0a3237fba,
+        ns1:author-d61a73448f,
+        ns1:author-fc71baa9c3 ;
+    ns1:hasTopic ns1:topic-039a7e9c39,
+        ns1:topic-2b68e86079,
+        ns1:topic-32cc066fff,
+        ns1:topic-5b7dcc8e20,
+        ns1:topic-d825498c63,
+        ns1:topic-db58ee97ff,
+        ns1:topic-e6a1304d26,
+        ns1:topic-eb5ede998f ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Интегрированная проверка QoM, QoP и QoS для AOI Industries в метавселенных.pdf" ;
+    ns1:title "Integrated Inspection of QoM, QoP, and QoS for AOI Industries in Metaverses" .
+
+ns1:qos-5g-9ae655a6 a ns1:Article ;
+    ns1:evaluatedByMetric ns1:metric-081cd17f38,
+        ns1:metric-9149107815 ;
+    ns1:hasAuthor ns1:author-0fc745b37b,
+        ns1:author-5bf65826aa,
+        ns1:author-e2167469bb,
+        ns1:author-e483cef214 ;
+    ns1:hasTopic ns1:topic-32cc066fff,
+        ns1:topic-7215815a98,
+        ns1:topic-9cbcb7b466,
+        ns1:topic-b126065c2d,
+        ns1:topic-c280d88b1c ;
+    ns1:mentionsMethod ns1:topic-7215815a98 ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Предоставление QoS -  ключевые факторы и возможности на пути к тактильному Интернету после эпохи 5G.pdf" ;
+    ns1:title "QoS Provisioning: Key Drivers and Enablers Toward the Tactile Internet in Beyond 5G Era" .
+
+ns1:quality-assurance-framework-for-low-code-develop-dd6146ed a ns1:Article ;
+    ns1:hasAuthor ns1:author-1e00dcf954 ;
+    ns1:hasTopic ns1:topic-7bd81dd917,
+        ns1:topic-c5ae89f11b ;
+    ns1:mentionsMethod ns1:method-bc24585fed,
+        ns1:method-cddc4deda8 ;
+    ns1:sourceFile "Quality Assurance Framework for Low-Code Development Platforms.pdf" ;
+    ns1:title "Quality Assurance Framework for Low-Code Development Platforms" ;
+    ns1:usesDataset ns1:topic-c5ae89f11b .
+
+ns1:safecar-94e37e5b a ns1:Article ;
+    ns1:evaluatedByMetric ns1:metric-22f06c84c6,
+        ns1:metric-6a331906f1 ;
+    ns1:hasAuthor ns1:author-23b4883c4a,
+        ns1:author-2879a74d5a,
+        ns1:author-7969b19e9d,
+        ns1:author-a84ecdf215,
+        ns1:author-c8baef3cad ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "SAFECAR- интерфейс мозг-компьютер и интеллектуальная система для обнаружения отвлекающих факторов водителей..pdf" ;
+    ns1:title "SAFECAR: A Brain–Computer Interface and intelligent framework to detect drivers’ distractions" .
+
+ns1:sg-metaverse-in-asia-deloitte-center-for-the-edg-a857867b a ns1:Article ;
+    ns1:hasTopic ns1:topic-2714c18783,
+        ns1:topic-32cc066fff,
+        ns1:topic-360b48120b,
+        ns1:topic-440a249cfd,
+        ns1:topic-d825498c63,
+        ns1:topic-e2126d5056,
+        ns1:topic-e2cf9a2b62,
+        ns1:topic-f6d2164f9f ;
+    ns1:publishedInYear ns1:year-21774e249f ;
+    ns1:publishedInYearLiteral 2035 ;
+    ns1:sourceFile "sg-metaverse-in-asia-deloitte-center-for-the-edge-nov22.pdf" ;
+    ns1:title "The Metaverse in Asia | Strategies for Accelerating Economic Impact" .
+
+ns1:sii-mobility-iot-ioe-1bafb161 a ns1:Article ;
+    ns1:hasAuthor ns1:author-5abfccb94e,
+        ns1:author-5e6982beb5,
+        ns1:author-cfb7c46efb,
+        ns1:author-ee7187e287 ;
+    ns1:hasTopic ns1:topic-32cc066fff,
+        ns1:topic-5b7dcc8e20,
+        ns1:topic-6f5af92dd8,
+        ns1:topic-9095b0a38d,
+        ns1:topic-ac7adc5ab7,
+        ns1:topic-d771802fcf ;
+    ns1:publishedInYear ns1:year-ff8d316513 ;
+    ns1:publishedInYearLiteral 2018 ;
+    ns1:sourceFile "Sii-Mobility- архитектура IoT - IoE для улучшения мобильности и транспортных услуг умного города.pdf" ;
+    ns1:title "Sii-Mobility: An IoT/IoE Architecture to Enhance Smart City Mobility and Transportation Services" .
+
+ns1:ssvep-06b8ae84 a ns1:Article ;
+    ns1:evaluatedByMetric ns1:metric-6a331906f1 ;
+    ns1:hasAuthor ns1:author-079b5e1055,
+        ns1:author-21d19f4334 ;
+    ns1:hasTopic ns1:topic-1ccbc16595,
+        ns1:topic-5dd8a3c6ef,
+        ns1:topic-e7997dbfff ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Гибридный асинхронный интерфейс мозг-компьютер на основе SSVEP и отслеживания движения глаз для  идентификации угрожающих пешеходов при вождении.pdf" ;
+    ns1:title "A Hybrid Asynchronous Brain–Computer Interface Based on SSVEP and Eye-Tracking for Threatening Pedestrian Identification in Driving" .
+
+ns1:street-smart-5g-e6f73f9c a ns1:Article ;
+    ns1:hasAuthor ns1:author-0961d10d53,
+        ns1:author-7aa6900bc9,
+        ns1:author-a65aca90e0,
+        ns1:author-d8f6e17a27,
+        ns1:author-e4520732a4 ;
+    ns1:hasTopic ns1:topic-42a4ac7127,
+        ns1:topic-c894eddf53,
+        ns1:topic-ddc45b592a ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Street Smart (умные улицы)  в 5G- автомобильные приложения, связь и вычисления.pdf" ;
+    ns1:title "Street Smart in 5G: Vehicular Applications, Communication, and Computing" .
+
+ns1:swot-d8215f1c a ns1:Article ;
+    ns1:hasAuthor ns1:author-1e698e3a5e,
+        ns1:author-6dbe185044 ;
+    ns1:hasTopic ns1:topic-32d271bce4,
+        ns1:topic-d825498c63,
+        ns1:topic-e6a1304d26,
+        ns1:topic-eb5ede998f,
+        ns1:topic-fd8e0a315d ;
+    ns1:mentionsMethod ns1:method-286a2258c7,
+        ns1:method-58a71d1539 ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Прикладное исследование метавселенной образования в рамках SWOT-анализа.pdf" ;
+    ns1:title "The Application Research of Education Metaverse Under the Framework of SWOT Analysis" ;
+    ns1:usesDataset ns1:topic-fd8e0a315d .
+
+ns1:telelife-745d2039 a ns1:Article ;
+    ns1:hasTopic ns1:topic-32cc066fff ;
+    ns1:publishedInYear ns1:year-f31b047b3b ;
+    ns1:publishedInYearLiteral 1999 ;
+    ns1:sourceFile "Telelife-будущее удаленной жизни.pdf" ;
+    ns1:title "Telelife-будущее удаленной жизни Orlosky J. et al. Telelife: the future of remote living //Frontiers in Virtual Reality" .
+
+ns1:thesis-daan-van-der-burgh-085b5bb1 a ns1:Article ;
+    ns1:hasTopic ns1:topic-6a70c1c952,
+        ns1:topic-7bd81dd917,
+        ns1:topic-9ffb66fda4 ;
+    ns1:mentionsMethod ns1:method-bc24585fed ;
+    ns1:sourceFile "Thesis_Daan_van_der_Burgh.pdf" ;
+    ns1:title "Thesis_Daan_van_der_Burgh" .
+
+ns1:value-creation-in-the-metaverse-1-d7d30762 a ns1:Article ;
+    ns1:hasAuthor ns1:author-0bf97d117e,
+        ns1:author-0eaee18cbd,
+        ns1:author-1c7b0614c2,
+        ns1:author-1fdd1e8370,
+        ns1:author-2220fc15d4,
+        ns1:author-22eff91eaf,
+        ns1:author-24d6422b17,
+        ns1:author-2d54c895a9,
+        ns1:author-358fd0cbf9,
+        ns1:author-3f9e6e0a7c,
+        ns1:author-4b6d4d24d2,
+        ns1:author-5877899b13,
+        ns1:author-62225fa09e,
+        ns1:author-6aad5def03,
+        ns1:author-776404b292,
+        ns1:author-8cbd9e3410,
+        ns1:author-92366e26e0,
+        ns1:author-98a690816f,
+        ns1:author-a36c39f64b,
+        ns1:author-a4e607504b,
+        ns1:author-a627589603,
+        ns1:author-a85e9ae7f4,
+        ns1:author-aab21c4e2e,
+        ns1:author-ab176a943b,
+        ns1:author-b71dc6ba52,
+        ns1:author-ce50b70ef3,
+        ns1:author-d521fee3b0,
+        ns1:author-e431cc62af,
+        ns1:author-ec11a86499,
+        ns1:author-f3768d86ab,
+        ns1:author-f74b2a7b76,
+        ns1:author-fc3f9bcb94 ;
+    ns1:hasTopic ns1:topic-d825498c63 ;
+    ns1:mentionsMethod ns1:method-bc24585fed ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Value-creation-in-the-metaverse (1).pdf" ;
+    ns1:title "Value-creation-in-the-metaverse (1)" ;
+    ns1:usesDataset ns1:dataset-afdbb25cb4 .
+
+ns1:vrar-industrial-coalition-kk0622204enn-a8f1065a a ns1:Article ;
+    ns1:hasAuthor ns1:author-1be2ad1ad4,
+        ns1:author-ca4536cbf0 ;
+    ns1:hasTopic ns1:topic-069c432b3b,
+        ns1:topic-20ce257a5f,
+        ns1:topic-b8acb5cc90,
+        ns1:topic-d825498c63 ;
+    ns1:mentionsMethod ns1:method-bc24585fed,
+        ns1:method-eaafafc252 ;
+    ns1:sourceFile "vrar industrial coalition-KK0622204ENN.pdf" ;
+    ns1:title "Directorate-General for Communications Networks, Content and Technology Audiovisual Industry and Media Support Programmes" .
+
+ns1:web-3-0-fee9f48b a ns1:Article ;
+    ns1:hasAuthor ns1:author-5e2041c301 ;
+    ns1:hasTopic ns1:topic-360b48120b,
+        ns1:topic-eb5ede998f ;
+    ns1:publishedInYear ns1:year-cc4de0c8ca ;
+    ns1:publishedInYearLiteral 2017 ;
+    ns1:sourceFile "Роль Web 3.0 и блокчейна в будущем образования.pdf" ;
+    ns1:title "Роль Web 3.0 и блокчейна в будущем образования" .
+
+ns1:web3-0-d5a70d7e a ns1:Article ;
+    ns1:evaluatedByMetric ns1:metric-6a331906f1 ;
+    ns1:hasAuthor ns1:author-0c4065d67c,
+        ns1:author-23607a1e6f,
+        ns1:author-253e462a3f,
+        ns1:author-2979a11943,
+        ns1:author-51e36aca59,
+        ns1:author-6ad559f394,
+        ns1:author-cc9c282d86,
+        ns1:author-e21db2c277 ;
+    ns1:hasTopic ns1:topic-2714c18783,
+        ns1:topic-3a590695ba,
+        ns1:topic-e55d434e0a,
+        ns1:topic-eb5ede998f ;
+    ns1:mentionsMethod ns1:method-f33f7ea54b ;
+    ns1:publishedInYear ns1:year-c038715a58 ;
+    ns1:publishedInYearLiteral 2022 ;
+    ns1:sourceFile "Когда цифровая экономика встречается с Web3.0- приложения и вызовы.pdf" ;
+    ns1:title "When Digital Economy Meets Web3.0: Applications and Challenges" .
+
+ns1:z-c7a2d51a a ns1:Article ;
+    ns1:hasTopic ns1:topic-5611b016a0,
+        ns1:topic-d825498c63,
+        ns1:topic-e6a1304d26,
+        ns1:topic-fe25b8dab1 ;
+    ns1:publishedInYear ns1:year-b5b35c5e8a ;
+    ns1:publishedInYearLiteral 1992 ;
+    ns1:sourceFile "ВИРТУАЛЬНЫЕ ВЛИЯТЕЛИ В МЕТАВСЕЛЕННОЙ. Обсуждение и исследование влияния решений о покупках поколения Z.pdf" ;
+    ns1:title "ВИРТУАЛЬНЫЕ ВЛИЯТЕЛИ В МЕТАВСЕЛЕННОЙ. Обсуждение и исследование влияния решений о покупках поколения Z VIRTUAL INFLUENCERS IN METAVERSE. Discussion and research on the impacts of the purchas-ing decisions of Generation Z" .
+
+ns1:author-002d734614 a ns1:Author ;
+    ns1:label "Dobrynin Andrey" .
+
+ns1:author-0079b32437 a ns1:Author ;
+    ns1:label "Alessio Bucaioni" .
+
+ns1:author-01be713b1e a ns1:Author ;
+    ns1:label "Shami Fadli" .
+
+ns1:author-0200e92c5f a ns1:Author ;
+    ns1:label "Alex Robinson" .
+
+ns1:author-0265f6b098 a ns1:Author ;
+    ns1:label "Kunjing Zhang" .
+
+ns1:author-034224da37 a ns1:Author ;
+    ns1:label "Hyejin Park" .
+
+ns1:author-035023acff a ns1:Author ;
+    ns1:label "Taoqin Chen" .
+
+ns1:author-03a60b35e0 a ns1:Author ;
+    ns1:label "Yuanyuan Chen" .
+
+ns1:author-043964ec29 a ns1:Author ;
+    ns1:label "Tong Wang" .
+
+ns1:author-056bfc0281 a ns1:Author ;
+    ns1:label "Joseph Sarkis" .
+
+ns1:author-0598537cfb a ns1:Author ;
+    ns1:label """Saeed
+
+H Alsamhi""" .
+
+ns1:author-05de29cb5f a ns1:Author ;
+    ns1:label "Lan Zhang" .
+
+ns1:author-061cc15548 a ns1:Author ;
+    ns1:label "Hairoladenan Kasim" .
+
+ns1:author-068596416f a ns1:Author ;
+    ns1:label "Kyandoghere Kyamakya" .
+
+ns1:author-079096ce72 a ns1:Author ;
+    ns1:label """Agbotiname
+
+Lucky Imoize""" .
+
+ns1:author-079b5e1055 a ns1:Author ;
+    ns1:label "Yadong Liu" .
+
+ns1:author-08bc47bc9d a ns1:Author ;
+    ns1:label "Oliver Hinz" .
+
+ns1:author-0961d10d53 a ns1:Author ;
+    ns1:label "Pan Hui" .
+
+ns1:author-0b180b4772 a ns1:Author ;
+    ns1:label "Marie-Helene Hamon" .
+
+ns1:author-0bf97d117e a ns1:Author ;
+    ns1:label "Greg Kelly" .
+
+ns1:author-0c1d5be21f a ns1:Author ;
+    ns1:label "Radhya Sahal" .
+
+ns1:author-0c4065d67c a ns1:Author ;
+    ns1:label "Jiajing Wu" .
+
+ns1:author-0db681b45e a ns1:Author ;
+    ns1:label "Alexander Lazovik" .
+
+ns1:author-0e08f8afd9 a ns1:Author ;
+    ns1:label "Lau Christensen" .
+
+ns1:author-0eaee18cbd a ns1:Author ;
+    ns1:label "Peter Vang" .
+
+ns1:author-0ed8085360 a ns1:Author ;
+    ns1:label """Mario
+
+A Rojas-Sánchez""" .
+
+ns1:author-0fc745b37b a ns1:Author ;
+    ns1:label """Muhammad
+
+Zubair Islam""" .
+
+ns1:author-112505803d a ns1:Author ;
+    ns1:label "Adrian Soica" .
+
+ns1:author-1187698e46 a ns1:Author ;
+    ns1:label "Michela Paolucci" .
+
+ns1:author-119aa1029b a ns1:Author ;
+    ns1:label "Henk Wymeersch" .
+
+ns1:author-126ffc1046 a ns1:Author ;
+    ns1:label "Matti Latva-Aho" .
+
+ns1:author-12764a1328 a ns1:Author ;
+    ns1:label "Felix Härer" .
+
+ns1:author-12826aad72 a ns1:Author ;
+    ns1:label "Xiongfei Dong" .
+
+ns1:author-12dc1e14b4 a ns1:Author ;
+    ns1:label "Tianlong Zhang" .
+
+ns1:author-12f93108b8 a ns1:Author ;
+    ns1:label "Neurosurgery Springer" .
+
+ns1:author-14901303c4 a ns1:Author ;
+    ns1:label "Federico Ciccozzi" .
+
+ns1:author-1531bf72f5 a ns1:Author ;
+    ns1:label "Sanchit Tiwari" .
+
+ns1:author-155cd9c751 a ns1:Author ;
+    ns1:label "Zhanling Fan" .
+
+ns1:author-1709dbcf07 a ns1:Author ;
+    ns1:label "Zhoubo Weng" .
+
+ns1:author-17deadce1b a ns1:Author ;
+    ns1:label "Mark Ashton" .
+
+ns1:author-17e1619702 a ns1:Author ;
+    ns1:label "Simon Cousaert" .
+
+ns1:author-17fd360d9e a ns1:Author ;
+    ns1:label "Mariapina Trunfio" .
+
+ns1:author-1868f6ed66 a ns1:Author ;
+    ns1:label "Jiahua Xu" .
+
+ns1:author-18c6f0fe1f a ns1:Author ;
+    ns1:label "Jiangong Wang" .
+
+ns1:author-18de097613 a ns1:Author ;
+    ns1:label "Shuo Zhang" .
+
+ns1:author-192575cf2a a ns1:Author ;
+    ns1:label "Suresh Malodia" .
+
+ns1:author-193693c7ae a ns1:Author ;
+    ns1:label "Nikhil Vadgama" .
+
+ns1:author-19c791a0c9 a ns1:Author ;
+    ns1:label "Vasily Kupriyanovsky" .
+
+ns1:author-19ffb00823 a ns1:Author ;
+    ns1:label """Mohammad
+
+Rashed Hasan Polas""" .
+
+ns1:author-1a6040532e a ns1:Author ;
+    ns1:label "Nanfeng Ma" .
+
+ns1:author-1bb66e1cd6 a ns1:Author ;
+    ns1:label "Jalil Elhassouni" .
+
+ns1:author-1be2ad1ad4 a ns1:Author ;
+    ns1:label "En" .
+
+ns1:author-1bfb0ae1a7 a ns1:Author ;
+    ns1:label "Irene Paoli" .
+
+ns1:author-1c10fd5d10 a ns1:Author ;
+    ns1:label "Xu Han" .
+
+ns1:author-1c12564428 a ns1:Author ;
+    ns1:label """Abderrahim
+
+El Qadi""" .
+
+ns1:author-1c7b0614c2 a ns1:Author ;
+    ns1:label "Marius Huber" .
+
+ns1:author-1ca7f95382 a ns1:Author ;
+    ns1:label "Manfred Sneps-Sneppe" .
+
+ns1:author-1cf89706dd a ns1:Author ;
+    ns1:label "Mihai Duguleana" .
+
+ns1:author-1d0a1b74f9 a ns1:Author ;
+    ns1:label "Lisheng Fan" .
+
+ns1:author-1e00dcf954 a ns1:Author ;
+    ns1:label """Ana
+
+Teresa Dias""" .
+
+ns1:author-1e7a143409 a ns1:Author ;
+    ns1:label "Yutong Wang" .
+
+ns1:author-1e83bd6994 a ns1:Author ;
+    ns1:label "Franziska Weise" .
+
+ns1:author-1e97e7d143 a ns1:Author ;
+    ns1:label "Azeddine Gati" .
+
+ns1:author-1ea5cb398a a ns1:Author ;
+    ns1:label "Pannee Suanpang" .
+
+ns1:author-1eb7500b48 a ns1:Author ;
+    ns1:label "Antoine Bagula" .
+
+ns1:author-1fdd1e8370 a ns1:Author ;
+    ns1:label "Vinayak Hv" .
+
+ns1:author-20390bd1a1 a ns1:Author ;
+    ns1:label "Jenny Van Doorn" .
+
+ns1:author-20fdb7211e a ns1:Author ;
+    ns1:label "Kathleen Boyle" .
+
+ns1:author-210354a37e a ns1:Author ;
+    ns1:label "Zichao Yin" .
+
+ns1:author-211114fff2 a ns1:Author ;
+    ns1:label "3 Структура Интернета" .
+
+ns1:author-2141104077 a ns1:Author ;
+    ns1:label "Gustav Wikstrom" .
+
+ns1:author-2156833946 a ns1:Author ;
+    ns1:label """Salvador
+
+Cruz Rambaud""" .
+
+ns1:author-21d19f4334 a ns1:Author ;
+    ns1:label "Jianxiang Sun" .
+
+ns1:author-21e5d07145 a ns1:Author ;
+    ns1:label "Chen Lv" .
+
+ns1:author-2220fc15d4 a ns1:Author ;
+    ns1:label "Eric Hazan" .
+
+ns1:author-22287cec5c a ns1:Author ;
+    ns1:label "Yu Shen" .
+
+ns1:author-22eff91eaf a ns1:Author ;
+    ns1:label "Shivam Srivastava" .
+
+ns1:author-23607a1e6f a ns1:Author ;
+    ns1:label "Siran Zhao" .
+
+ns1:author-23b4883c4a a ns1:Author ;
+    ns1:label "Mario Quiles Pérez" .
+
+ns1:author-2439b170c6 a ns1:Author ;
+    ns1:label "Ruxandra-Cristina Stănescu" .
+
+ns1:author-246fb9d64a a ns1:Author ;
+    ns1:label "Anita Gehlot" .
+
+ns1:author-24b74edd8d a ns1:Author ;
+    ns1:label "Ahlem Assila" .
+
+ns1:author-24d6422b17 a ns1:Author ;
+    ns1:label "Ewa Starzynska" .
+
+ns1:author-253e462a3f a ns1:Author ;
+    ns1:label "Zibin Zheng" .
+
+ns1:author-269c52af54 a ns1:Author ;
+    ns1:label "Ridoan Karim" .
+
+ns1:author-2870c752b5 a ns1:Author ;
+    ns1:label """J
+
+Leon Zhao""" .
+
+ns1:author-2879a74d5a a ns1:Author ;
+    ns1:label """Enrique
+
+Tomás Martínez Beltrán""" .
+
+ns1:author-297394ecd9 a ns1:Author ;
+    ns1:label "Paolo Faraboschi" .
+
+ns1:author-2979a11943 a ns1:Author ;
+    ns1:label "Yihao Li" .
+
+ns1:author-29a153c572 a ns1:Author ;
+    ns1:label "Panagiotis Sarigiannidis" .
+
+ns1:author-2a271c1e84 a ns1:Author ;
+    ns1:label "Christof Weinhardt" .
+
+ns1:author-2a7459a744 a ns1:Author ;
+    ns1:label "Sachin Shetty" .
+
+ns1:author-2b760c9310 a ns1:Author ;
+    ns1:label """Irene
+
+C L Ng""" .
+
+ns1:author-2b767dd1f3 a ns1:Author ;
+    ns1:label "Marco Di Felice" .
+
+ns1:author-2c4316efcd a ns1:Author ;
+    ns1:label "Thomas Lagkas" .
+
+ns1:author-2d15f5a020 a ns1:Author ;
+    ns1:label """Wil
+
+M P Van Der Aalst""" .
+
+ns1:author-2d4f6e12ed a ns1:Author ;
+    ns1:label "Abdelghani Bekrar" .
+
+ns1:author-2d54c895a9 a ns1:Author ;
+    ns1:label "Matt Higginson" .
+
+ns1:author-2e8b2a5e42 a ns1:Author ;
+    ns1:label "Catherine De Bolle" .
+
+ns1:author-2fe6026f86 a ns1:Author ;
+    ns1:label "Kittisak Jermsittiparsert" .
+
+ns1:author-303d6fd3bf a ns1:Author ;
+    ns1:label "Huawei and Oxford Economics Digital Spillover. Measuring the True Impact of the Digital Economy 2017" .
+
+ns1:author-3174660af8 a ns1:Author ;
+    ns1:label "Ioana Surpateanu" .
+
+ns1:author-327858b003 a ns1:Author ;
+    ns1:label "Маттейс Гелеедст" .
+
+ns1:author-330bfdab39 a ns1:Author ;
+    ns1:label "Thorsten Jelinek" .
+
+ns1:author-3399bee9e5 a ns1:Author ;
+    ns1:label "Vincent Vauchey" .
+
+ns1:author-33e354bf2d a ns1:Author ;
+    ns1:label "Markus Weinberger" .
+
+ns1:author-340ef75b92 a ns1:Author ;
+    ns1:label "Phil Chen" .
+
+ns1:author-346a7af1a7 a ns1:Author ;
+    ns1:label """Javier
+
+Sada Bittini""" .
+
+ns1:author-348c8841d9 a ns1:Author ;
+    ns1:label """José
+
+A Folgado-Fernández""" .
+
+ns1:author-34a01956a4 a ns1:Author ;
+    ns1:label "Xijun Huang" .
+
+ns1:author-353a2cf36a a ns1:Author ;
+    ns1:label "Panagiotis Demestichas" .
+
+ns1:author-3564eac296 a ns1:Author ;
+    ns1:label "Yuehua Wan" .
+
+ns1:author-358551783b a ns1:Author ;
+    ns1:label "Shakaib Ahmadand" .
+
+ns1:author-358fd0cbf9 a ns1:Author ;
+    ns1:label "Ian De Bode" .
+
+ns1:author-36200c5ba4 a ns1:Author ;
+    ns1:label "Jingwei Lu" .
+
+ns1:author-36c475ef4a a ns1:Author ;
+    ns1:label "Juraj Spalek" .
+
+ns1:author-36cb357483 a ns1:Author ;
+    ns1:label "Yonatan Raz-Fridman" .
+
+ns1:author-37cfa94f37 a ns1:Author ;
+    ns1:label "Sebastian Damek" .
+
+ns1:author-37d1f59bee a ns1:Author ;
+    ns1:label "Yannan Li" .
+
+ns1:author-380d0dbb4c a ns1:Author ;
+    ns1:label "Seunghyun Hong" .
+
+ns1:author-381cc1ae61 a ns1:Author ;
+    ns1:label "Ignacio Ferrero" .
+
+ns1:author-3a19812334 a ns1:Author ;
+    ns1:label "Zhihan Lv" .
+
+ns1:author-3a60342f0b a ns1:Author ;
+    ns1:label """Muhammed
+
+Furqaan Hashim""" .
+
+ns1:author-3b59cadd84 a ns1:Author ;
+    ns1:label "Daniele Cenni" .
+
+ns1:author-3ba1f9ef40 a ns1:Author ;
+    ns1:label """Pedro
+
+R Palos-Sánchez""" .
+
+ns1:author-3bd3d45a23 a ns1:Author ;
+    ns1:label "Ishmuratov Albert" .
+
+ns1:author-3bd3e95529 a ns1:Author ;
+    ns1:label "Antonio Cicchetti" .
+
+ns1:author-3c7220bd47 a ns1:Author ;
+    ns1:label "Marinos Themistocleous" .
+
+ns1:author-3d674b995e a ns1:Author ;
+    ns1:label "Oana-Matilda Sabie" .
+
+ns1:author-3d8a8fb798 a ns1:Author ;
+    ns1:label "Xue Zhang" .
+
+ns1:author-3de7716cde a ns1:Author ;
+    ns1:label "Chawalin Niamsorn" .
+
+ns1:author-3f21d9cd1a a ns1:Author ;
+    ns1:label "Jamie Burke" .
+
+ns1:author-3f33b80346 a ns1:Author ;
+    ns1:label "Whai-En Chen" .
+
+ns1:author-3f9e6e0a7c a ns1:Author ;
+    ns1:label "Kim Baroudy" .
+
+ns1:author-4080c8af64 a ns1:Author ;
+    ns1:label "Ali Sunyaev" .
+
+ns1:author-40df8eff90 a ns1:Author ;
+    ns1:label "Yunhua He" .
+
+ns1:author-41413ffd0c a ns1:Author ;
+    ns1:label "Titiya Netwong" .
+
+ns1:author-419a6635b2 a ns1:Author ;
+    ns1:label """Mauro
+
+Renato Boldi""" .
+
+ns1:author-41ca528665 a ns1:Author ;
+    ns1:label "Cara Aiello" .
+
+ns1:author-4251dd262b a ns1:Author ;
+    ns1:label "Leonidas Katelaris" .
+
+ns1:author-42a0c000d3 a ns1:Author ;
+    ns1:label """Marco
+
+Di Felice""" .
+
+ns1:author-42fc4aa067 a ns1:Author ;
+    ns1:label "Ping Lu" .
+
+ns1:author-436d56f2f6 a ns1:Author ;
+    ns1:label "Panayiotis Christodoulou" .
+
+ns1:author-46224dd16a a ns1:Author ;
+    ns1:label "References" .
+
+ns1:author-48dc11e24f a ns1:Author ;
+    ns1:label "Thanos Xirofotos" .
+
+ns1:author-4911507016 a ns1:Author ;
+    ns1:label "Weidang Lu" .
+
+ns1:author-49abe992b3 a ns1:Author ;
+    ns1:label "Pattanaphong Pothipassa" .
+
+ns1:author-4a06f45c64 a ns1:Author ;
+    ns1:label "Dejan Milojicic" .
+
+ns1:author-4a07bd50c6 a ns1:Author ;
+    ns1:label "Georgios Amponis" .
+
+ns1:author-4b54ee34d3 a ns1:Author ;
+    ns1:label "Conor Mccarthy" .
+
+ns1:author-4b6d4d24d2 a ns1:Author ;
+    ns1:label "Hamza Khan" .
+
+ns1:author-4d1b94b069 a ns1:Author ;
+    ns1:label "Sonal Sharma" .
+
+ns1:author-4e3546f572 a ns1:Author ;
+    ns1:label "Jing Zhang" .
+
+ns1:author-4ffbfd5f21 a ns1:Author ;
+    ns1:label "Palak Bagga" .
+
+ns1:author-5069c2023d a ns1:Author ;
+    ns1:label "Leo Mendiboure" .
+
+ns1:author-5119ae93b4 a ns1:Author ;
+    ns1:label "Shuang Yang" .
+
+ns1:author-515c0f3579 a ns1:Author ;
+    ns1:label "Albert Boonstra" .
+
+ns1:author-51e36aca59 a ns1:Author ;
+    ns1:label "Lei Zhang" .
+
+ns1:author-51ede63720 a ns1:Author ;
+    ns1:label "Feranando Charrua-Santos" .
+
+ns1:author-5225382c92 a ns1:Author ;
+    ns1:label "Sonain Jamil" .
+
+ns1:author-523286effa a ns1:Author ;
+    ns1:label "Eitan Frachtenberg" .
+
+ns1:author-5288fbfe2a a ns1:Author ;
+    ns1:label """Kenneth
+
+N Brown""" .
+
+ns1:author-52a3b42452 a ns1:Author ;
+    ns1:label "Long Wang" .
+
+ns1:author-52cf88b6a7 a ns1:Author ;
+    ns1:label "Yi Fang" .
+
+ns1:author-5371149fbe a ns1:Author ;
+    ns1:label "Tomáš Klieštik" .
+
+ns1:author-53a9a1174d a ns1:Author ;
+    ns1:label "Bin Yang" .
+
+ns1:author-55b21e48a5 a ns1:Author ;
+    ns1:label "Prafulla Padhi" .
+
+ns1:author-565b266882 a ns1:Author ;
+    ns1:label "Дело Холофолдит" .
+
+ns1:author-56db57f6e0 a ns1:Author ;
+    ns1:label "Xiaoman Cheng" .
+
+ns1:author-570cae7459 a ns1:Author ;
+    ns1:label """Jakir
+
+Hussain Tharik""" .
+
+ns1:author-5755d56bee a ns1:Author ;
+    ns1:label "Wenhao You" .
+
+ns1:author-5877899b13 a ns1:Author ;
+    ns1:label "Lotte Lauer" .
+
+ns1:author-5aafe9bb23 a ns1:Author ;
+    ns1:label "Yi-Bing Lin" .
+
+ns1:author-5ac14146fd a ns1:Author ;
+    ns1:label """Jean
+
+Chamberlain Chedjou""" .
+
+ns1:author-5acad35829 a ns1:Author ;
+    ns1:label """Dimah
+
+H Alahmadi""" .
+
+ns1:author-5b2456b1c2 a ns1:Author ;
+    ns1:label "Chengwen Xing" .
+
+ns1:author-5b324af18b a ns1:Author ;
+    ns1:label "Sejin Park" .
+
+ns1:author-5bf65826aa a ns1:Author ;
+    ns1:label "Amir Haider" .
+
+ns1:author-5bf8bf941e a ns1:Author ;
+    ns1:label "Chen Qiu" .
+
+ns1:author-5c067483e7 a ns1:Author ;
+    ns1:label "Giuseppe Araniti" .
+
+ns1:author-5d413441e1 a ns1:Author ;
+    ns1:label "Roberto Saracco" .
+
+ns1:author-5d69560f91 a ns1:Author ;
+    ns1:label "Thinnagorn Chunhapataragul" .
+
+ns1:author-5db335fd0b a ns1:Author ;
+    ns1:label "Marini Othman" .
+
+ns1:author-5e2041c301 a ns1:Author ;
+    ns1:label "University of Patras pp. 31-37 Greece" .
+
+ns1:author-5e6982beb5 a ns1:Author ;
+    ns1:label "Claudio Badii" .
+
+ns1:author-5fa9883439 a ns1:Author ;
+    ns1:label "Syuan-Ru Peng" .
+
+ns1:author-61117ec5c5 a ns1:Author ;
+    ns1:label "Giuseppe Musumeci" .
+
+ns1:author-61f73cf62b a ns1:Author ;
+    ns1:label "Dongpu Cao" .
+
+ns1:author-62225fa09e a ns1:Author ;
+    ns1:label "Marc Brodherson" .
+
+ns1:author-645184806a a ns1:Author ;
+    ns1:label "Baohua Tan" .
+
+ns1:author-6604402d63 a ns1:Author ;
+    ns1:label "Lion Silva" .
+
+ns1:author-66e622fd2a a ns1:Author ;
+    ns1:label "Szczepan Paszkiel" .
+
+ns1:author-6753c3ec25 a ns1:Author ;
+    ns1:label "Donna O’shea" .
+
+ns1:author-68d24de1ba a ns1:Author ;
+    ns1:label "Miloš Poliak" .
+
+ns1:author-68d85bf364 a ns1:Author ;
+    ns1:label "Chongcheng Chen" .
+
+ns1:author-692cb3693e a ns1:Author ;
+    ns1:label "Longbing Cao" .
+
+ns1:author-69323a5d28 a ns1:Author ;
+    ns1:label "Zaheer Allam" .
+
+ns1:author-69c6bd0db6 a ns1:Author ;
+    ns1:label "Shujun Zhou" .
+
+ns1:author-6aad5def03 a ns1:Author ;
+    ns1:label """Rodney
+
+W Zemmel""" .
+
+ns1:author-6ad559f394 a ns1:Author ;
+    ns1:label "Huawei Huang" .
+
+ns1:author-6bb7063d33 a ns1:Author ;
+    ns1:label "Yun-Wei Lin" .
+
+ns1:author-6bea4ce201 a ns1:Author ;
+    ns1:label "AIT News Desk The World's First Healthcare Metaverse from DeHealth,\" AITHORITY December 23 2021" .
+
+ns1:author-6c5593bd05 a ns1:Author ;
+    ns1:label "Jennifer Schmidt" .
+
+ns1:author-6cc006fa21 a ns1:Author ;
+    ns1:label "Neeraj Priyadarshi" .
+
+ns1:author-6e19ec827a a ns1:Author ;
+    ns1:label "Hyoeun Ye" .
+
+ns1:author-6e34004c28 a ns1:Author ;
+    ns1:label "Chaman Verma" .
+
+ns1:author-6e3e98c3dc a ns1:Author ;
+    ns1:label "Vladimír Faltus" .
+
+ns1:author-6e5b3365fe a ns1:Author ;
+    ns1:label "Xifan Yao" .
+
+ns1:author-6ea5e1ab57 a ns1:Author ;
+    ns1:label "Bjorn Richerzhagen" .
+
+ns1:author-6f0cb06552 a ns1:Author ;
+    ns1:label "Neerendra Kumar" .
+
+ns1:author-6f90be076c a ns1:Author ;
+    ns1:label """Ezgi
+
+Uzel Aydınocak""" .
+
+ns1:author-6f925b42fd a ns1:Author ;
+    ns1:label "Maria Zevgara" .
+
+ns1:author-6f9ce3d3bd a ns1:Author ;
+    ns1:label "Faming Wang" .
+
+ns1:author-6fd1587db1 a ns1:Author ;
+    ns1:label "Csaba Antonya" .
+
+ns1:author-7018d553b0 a ns1:Author ;
+    ns1:label "Christian Peukert" .
+
+ns1:author-704f80d40a a ns1:Author ;
+    ns1:label "Sara Pizzi" .
+
+ns1:author-7076244316 a ns1:Author ;
+    ns1:label """David
+
+S Jones""" .
+
+ns1:author-710264a466 a ns1:Author ;
+    ns1:label "Kesai Wang" .
+
+ns1:author-7135498e1e a ns1:Author ;
+    ns1:label "Citi Research \"VR/AR The Next Dimension -Staying Connected Remotely Now a Reality,\" June 24 2020" .
+
+ns1:author-7145d9016f a ns1:Author ;
+    ns1:label "Jatin Vaishnav" .
+
+ns1:author-72201b5db8 a ns1:Author ;
+    ns1:label "Willy Susilo" .
+
+ns1:author-73d1f26a3d a ns1:Author ;
+    ns1:label "Ibraheem Shayea" .
+
+ns1:author-746d4c97d0 a ns1:Author ;
+    ns1:label """Louis
+
+B Rosenberg""" .
+
+ns1:author-747e7f7277 a ns1:Author ;
+    ns1:label "Viachaslau Filimonau" .
+
+ns1:author-74f55b0014 a ns1:Author ;
+    ns1:label "Xiaoqun Wu" .
+
+ns1:author-754c8f4501 a ns1:Author ;
+    ns1:label "Zheng Wang" .
+
+ns1:author-766e069275 a ns1:Author ;
+    ns1:label "Thomas Olofsson" .
+
+ns1:author-7697906b78 a ns1:Author ;
+    ns1:label "Patrik Rugeland" .
+
+ns1:author-776404b292 a ns1:Author ;
+    ns1:label "Klemens Hjartar" .
+
+ns1:author-77d731cb23 a ns1:Author ;
+    ns1:label "Abdessamad Ait El Cadi" .
+
+ns1:author-780925e77c a ns1:Author ;
+    ns1:label "Maurizio Faccio" .
+
+ns1:author-793545770c a ns1:Author ;
+    ns1:label "Huijun Wu" .
+
+ns1:author-7969b19e9d a ns1:Author ;
+    ns1:label "Sergio López Bernal" .
+
+ns1:author-7a924bef78 a ns1:Author ;
+    ns1:label "Sergey Sinyagov" .
+
+ns1:author-7a929f2ab3 a ns1:Author ;
+    ns1:label "Asghar Afshar Jahanshahi" .
+
+ns1:author-7aa6900bc9 a ns1:Author ;
+    ns1:label """Ahmad
+
+Yousef Alhilal""" .
+
+ns1:author-7bd8114abf a ns1:Author ;
+    ns1:label "Xingxia Wang" .
+
+ns1:author-7be4aaaf89 a ns1:Author ;
+    ns1:label "Xiao Zhang" .
+
+ns1:author-7beed5f366 a ns1:Author ;
+    ns1:label "Dmitry Namiot" .
+
+ns1:author-7c2185cdb6 a ns1:Author ;
+    ns1:label "Oluwadara Adedeji" .
+
+ns1:author-7d6c28a11f a ns1:Author ;
+    ns1:label "Hung-Hsu Tsai" .
+
+ns1:author-7ea7e124df a ns1:Author ;
+    ns1:label "Chengxu Huang" .
+
+ns1:author-80f83a0e11 a ns1:Author ;
+    ns1:label """Zainuddin
+
+Bin Hassan""" .
+
+ns1:author-84abbc5c54 a ns1:Author ;
+    ns1:label "Tanay Jalan" .
+
+ns1:author-84c7b6a152 a ns1:Author ;
+    ns1:label "Zhicheng Weng" .
+
+ns1:author-85a83088b6 a ns1:Author ;
+    ns1:label "Nan Li" .
+
+ns1:author-88c66d778d a ns1:Author ;
+    ns1:label "Rouye Pan" .
+
+ns1:author-88c788a86c a ns1:Author ;
+    ns1:label "Huakun Huang" .
+
+ns1:author-89997e5311 a ns1:Author ;
+    ns1:label """Adam
+
+P Balcerzak""" .
+
+ns1:author-8a098173fb a ns1:Author ;
+    ns1:label "Zihan Cui" .
+
+ns1:author-8aa4239a8b a ns1:Author ;
+    ns1:label "Jianming Zhang" .
+
+ns1:author-8bfd9a0ef5 a ns1:Author ;
+    ns1:label """Naif
+
+Mohammed Al-Hada""" .
+
+ns1:author-8c182f4815 a ns1:Author ;
+    ns1:label "Hua Yu" .
+
+ns1:author-8cbd9e3410 a ns1:Author ;
+    ns1:label "Stephen Schwab" .
+
+ns1:author-8cd2471f2b a ns1:Author ;
+    ns1:label "Jia Guo" .
+
+ns1:author-8d6467ffd1 a ns1:Author ;
+    ns1:label "Joana Fialho" .
+
+ns1:author-8d8066c34f a ns1:Author ;
+    ns1:label "Devashish Gupta" .
+
+ns1:author-8eb9201a85 a ns1:Author ;
+    ns1:label "Hans Schotten" .
+
+ns1:author-8fc7a47dd3 a ns1:Author ;
+    ns1:label "Sergey Seleznev" .
+
+ns1:author-902305a501 a ns1:Author ;
+    ns1:label "Sinyagov Sergey" .
+
+ns1:author-902f276b0e a ns1:Author ;
+    ns1:label "Simon Mackenzie" .
+
+ns1:author-922743012b a ns1:Author ;
+    ns1:label """Maria
+
+Simona Raboaca""" .
+
+ns1:author-922a0f80c6 a ns1:Author ;
+    ns1:label "Jayadeep Gajula" .
+
+ns1:author-92366e26e0 a ns1:Author ;
+    ns1:label "Maciel Tavares" .
+
+ns1:author-92ff58f49f a ns1:Author ;
+    ns1:label "Junfeng Yang" .
+
+ns1:author-936ecfc908 a ns1:Author ;
+    ns1:label "Xiaoxing Wang" .
+
+ns1:author-94257f26a0 a ns1:Author ;
+    ns1:label "Chiara Suraci" .
+
+ns1:author-95b2384e85 a ns1:Author ;
+    ns1:label "Luca Sciullo" .
+
+ns1:author-95ca5e8ae9 a ns1:Author ;
+    ns1:label "Min Sheng" .
+
+ns1:author-95ea5441fc a ns1:Author ;
+    ns1:label "Mourad Zghal" .
+
+ns1:author-975baeb392 a ns1:Author ;
+    ns1:label "Yurii Vilchynskyi" .
+
+ns1:author-97bd4f6c51 a ns1:Author ;
+    ns1:label "Amandeep Dhir" .
+
+ns1:author-982b56f5b3 a ns1:Author ;
+    ns1:label "Georgios Katsikas" .
+
+ns1:author-98a690816f a ns1:Author ;
+    ns1:label "Marek Grabowski" .
+
+ns1:author-990a8f220a a ns1:Author ;
+    ns1:label "Oliver Kwan" .
+
+ns1:author-9961b76edb a ns1:Author ;
+    ns1:label "Yandong Zhao" .
+
+ns1:author-9b608ee746 a ns1:Author ;
+    ns1:label "Angelo Trotta" .
+
+ns1:author-9c13113cd5 a ns1:Author ;
+    ns1:label """Abbas
+
+M Al-Ghaili""" .
+
+ns1:author-9c5e80f9ed a ns1:Author ;
+    ns1:label "Aqsa Sayeed" .
+
+ns1:author-9f0744f481 a ns1:Author ;
+    ns1:label "Tai-Hsiang Yen" .
+
+ns1:author-a19bd2056c a ns1:Author ;
+    ns1:label "Ying Li" .
+
+ns1:author-a2cdd7a3c3 a ns1:Author ;
+    ns1:label "Klitos Christodoulou" .
+
+ns1:author-a36c39f64b a ns1:Author ;
+    ns1:label "Ichiro Otobe" .
+
+ns1:author-a3a523cfce a ns1:Author ;
+    ns1:label "Naercio Magaia" .
+
+ns1:author-a3b3fc02ed a ns1:Author ;
+    ns1:label "Ahmad Haj Mosa" .
+
+ns1:author-a3dd69c1d8 a ns1:Author ;
+    ns1:label "Marten Ericson" .
+
+ns1:author-a429a1e328 a ns1:Author ;
+    ns1:label "Raca Todosijevic" .
+
+ns1:author-a49a7e74ad a ns1:Author ;
+    ns1:label "Tommy Svensson" .
+
+ns1:author-a5ee0b6d6e a ns1:Author ;
+    ns1:label "Rémi Boutteau" .
+
+ns1:author-a627589603 a ns1:Author ;
+    ns1:label """Estelle
+
+Menye Zanga""" .
+
+ns1:author-a65aca90e0 a ns1:Author ;
+    ns1:label "Dongzhe Su" .
+
+ns1:author-a773594284 a ns1:Author ;
+    ns1:label "Lihui Huang" .
+
+ns1:author-a7a2a2c5c2 a ns1:Author ;
+    ns1:label "Xuejiao Liu" .
+
+ns1:author-a7a50dcb7a a ns1:Author ;
+    ns1:label "Michelle Pfister" .
+
+ns1:author-a7cce268cc a ns1:Author ;
+    ns1:label "Zahra Almaspoor" .
+
+ns1:author-a84ecdf215 a ns1:Author ;
+    ns1:label "Gregorio Martínez Pérez" .
+
+ns1:author-a85e9ae7f4 a ns1:Author ;
+    ns1:label "Andreas Henriksen" .
+
+ns1:author-aa135d39b2 a ns1:Author ;
+    ns1:label "National Compensation Center for Digital Economy Faculty of Computational Mathematics and Cybernetics Director of the Center for Geospatial Economic Analysis Faculty of Economics Department of Economics of Innovation, the Laboratory of Innovative Development Problems Faculty of Economics the Laboratory of Open Information Technologies Lomonosov Moscow State University Lomonosov Moscow State University Lomonosov Moscow State University Ventspils University College Lomonosov Moscow State University Lomonosov Moscow State University" .
+
+ns1:author-aab21c4e2e a ns1:Author ;
+    ns1:label "Gordon Candelin" .
+
+ns1:author-ab110dcfc1 a ns1:Author ;
+    ns1:label """Miltiadis
+
+C Filippou""" .
+
+ns1:author-ab176a943b a ns1:Author ;
+    ns1:label "Madalina Kmen" .
+
+ns1:author-acbaba0fe8 a ns1:Author ;
+    ns1:label "Konrad Nübel" .
+
+ns1:author-ad077a5d11 a ns1:Author ;
+    ns1:label "Kupriyanovsky Vasily" .
+
+ns1:author-ad494b1a88 a ns1:Author ;
+    ns1:label """Rafiziana
+
+Md. Kasmani""" .
+
+ns1:author-af4cd2e63c a ns1:Author ;
+    ns1:label "Yang Xing" .
+
+ns1:author-af8ee31da1 a ns1:Author ;
+    ns1:label "Aleš Janota" .
+
+ns1:author-b0cc24c7fd a ns1:Author ;
+    ns1:label "Ishteyaaq Ahmad" .
+
+ns1:author-b161df4519 a ns1:Author ;
+    ns1:label "Kaizhong Cao" .
+
+ns1:author-b245c81769 a ns1:Author ;
+    ns1:label "Elżbieta Rogalska" .
+
+ns1:author-b34860654f a ns1:Author ;
+    ns1:label "Camille Dulompont" .
+
+ns1:author-b3c5575ec2 a ns1:Author ;
+    ns1:label "Fawad" .
+
+ns1:author-b44471b99e a ns1:Author ;
+    ns1:label "Andrew Mentges" .
+
+ns1:author-b57ef5265d a ns1:Author ;
+    ns1:label "Nan Zhao" .
+
+ns1:author-b5a6f3240b a ns1:Author ;
+    ns1:label "Yimin Deng" .
+
+ns1:author-b71dc6ba52 a ns1:Author ;
+    ns1:label "Philibert Parquier" .
+
+ns1:author-b765d0fba2 a ns1:Author ;
+    ns1:label "Xingru Zhou" .
+
+ns1:author-b7c06e361d a ns1:Author ;
+    ns1:label "Fadi Al-Machot" .
+
+ns1:author-b7de81fcd2 a ns1:Author ;
+    ns1:label "Mohsen Guizani" .
+
+ns1:author-b7defc4fda a ns1:Author ;
+    ns1:label """Simon
+
+Elias Bibri""" .
+
+ns1:author-b8b2d8bde4 a ns1:Author ;
+    ns1:label """Joaquín
+
+López Pascual""" .
+
+ns1:author-b9497de2f5 a ns1:Author ;
+    ns1:label "Xiangbin Zeng" .
+
+ns1:author-b9d9bb4630 a ns1:Author ;
+    ns1:label "Yunsik Cho" .
+
+ns1:author-ba8ab3eac8 a ns1:Author ;
+    ns1:label "Erfu Yang" .
+
+ns1:author-ba98541cb4 a ns1:Author ;
+    ns1:label "Yiyang Bian" .
+
+ns1:author-baa187f983 a ns1:Author ;
+    ns1:label "Dogan Gursoy" .
+
+ns1:author-badc97c9ea a ns1:Author ;
+    ns1:label "Ioannis Moscholios" .
+
+ns1:author-bc7161e4f7 a ns1:Author ;
+    ns1:label "Disney Enterprises Inc U.S. Patent11210843 dated December 28 2021" .
+
+ns1:author-bc736e46ce a ns1:Author ;
+    ns1:label "Rajesh Singh" .
+
+ns1:author-bc7712cd10 a ns1:Author ;
+    ns1:label "Ryan Scheiding" .
+
+ns1:author-bd0d9789c1 a ns1:Author ;
+    ns1:label "Chao Wang" .
+
+ns1:author-be3b393049 a ns1:Author ;
+    ns1:label "Xu Jiang" .
+
+ns1:author-bf7685553b a ns1:Author ;
+    ns1:label """Abu
+
+Rashed Osman""" .
+
+ns1:author-bfc25f6521 a ns1:Author ;
+    ns1:label "Yaning Zou" .
+
+ns1:author-c0a3237fba a ns1:Author ;
+    ns1:label "Bin Tian" .
+
+ns1:author-c18cbbf0d0 a ns1:Author ;
+    ns1:label "Jiewu Leng" .
+
+ns1:author-c22ebf1880 a ns1:Author ;
+    ns1:label "Muhibur Rahman" .
+
+ns1:author-c264b614a7 a ns1:Author ;
+    ns1:label "Pavel Přibyl" .
+
+ns1:author-c2d4ff1e5e a ns1:Author ;
+    ns1:label "Kelly Gerakoudi-Ventouri" .
+
+ns1:author-c324ba527a a ns1:Author ;
+    ns1:label "Bhekisipho Twala" .
+
+ns1:author-c3cb833264 a ns1:Author ;
+    ns1:label "Dapeng Tan" .
+
+ns1:author-c4cdf661a8 a ns1:Author ;
+    ns1:label "Marco Hoffmann" .
+
+ns1:author-c6bb22534c a ns1:Author ;
+    ns1:label "Hantian Xu" .
+
+ns1:author-c8baef3cad a ns1:Author ;
+    ns1:label "Alberto Huertas Celdrán" .
+
+ns1:author-c990ce847d a ns1:Author ;
+    ns1:label "Ugljesa Stankov" .
+
+ns1:author-ca0bc630c5 a ns1:Author ;
+    ns1:label "Luca Petrigna" .
+
+ns1:author-ca4536cbf0 a ns1:Author ;
+    ns1:label "Ingrid Rones" .
+
+ns1:author-cc9c282d86 a ns1:Author ;
+    ns1:label "Tianchi Liao" .
+
+ns1:author-ccccb4f3c4 a ns1:Author ;
+    ns1:label """S
+
+A Sinyagov""" .
+
+ns1:author-ccf1767518 a ns1:Author ;
+    ns1:label """Neal
+
+N Xiong""" .
+
+ns1:author-ce50b70ef3 a ns1:Author ;
+    ns1:label "Nils Jean- Mairet" .
+
+ns1:author-ce9964fec2 a ns1:Author ;
+    ns1:label """Lingzhi
+
+Brian Fang""" .
+
+ns1:author-ceedaf1297 a ns1:Author ;
+    ns1:label "Hans-Georg Fill" .
+
+ns1:author-cefb1054de a ns1:Author ;
+    ns1:label "Yiyu Cai" .
+
+ns1:author-cf6845e604 a ns1:Author ;
+    ns1:label """Emilio
+
+Calvanese Strinati""" .
+
+ns1:author-cfdfa1d4e7 a ns1:Author ;
+    ns1:label "Wei Deng" .
+
+ns1:author-d014c87ec0 a ns1:Author ;
+    ns1:label "Julia Kupriyanovsky" .
+
+ns1:author-d0448e8498 a ns1:Author ;
+    ns1:label "Rajkumar Buyya" .
+
+ns1:author-d04f894483 a ns1:Author ;
+    ns1:label "Madjid Haddad" .
+
+ns1:author-d14e6ad907 a ns1:Author ;
+    ns1:label "Stefan Stieglitz" .
+
+ns1:author-d2aaf6698c a ns1:Author ;
+    ns1:label """Mona
+
+M Alrajhi""" .
+
+ns1:author-d2efdccbaf a ns1:Author ;
+    ns1:label """David
+
+J Langley""" .
+
+ns1:author-d3a74614e1 a ns1:Author ;
+    ns1:label "Deling Yang" .
+
+ns1:author-d4db51a166 a ns1:Author ;
+    ns1:label "Lingxi Li" .
+
+ns1:author-d51e1b1600 a ns1:Author ;
+    ns1:label "Maria Reichelt" .
+
+ns1:author-d521fee3b0 a ns1:Author ;
+    ns1:label """Inês
+
+Araújo Lopes""" .
+
+ns1:author-d580207072 a ns1:Author ;
+    ns1:label "Fatmah Abdulrahman" .
+
+ns1:author-d61a73448f a ns1:Author ;
+    ns1:label "Yansong Cao" .
+
+ns1:author-d69c70d363 a ns1:Author ;
+    ns1:label """Michael
+
+Max Bühler""" .
+
+ns1:author-d7fbdf0e82 a ns1:Author ;
+    ns1:label "Neha Koul" .
+
+ns1:author-d8f6e17a27 a ns1:Author ;
+    ns1:label "Benjamin Finley" .
+
+ns1:author-d8ffd35bf3 a ns1:Author ;
+    ns1:label "Niclas Kannengießer" .
+
+ns1:author-d910fe4c23 a ns1:Author ;
+    ns1:label "Nistha Tandiya" .
+
+ns1:author-daaccb3e35 a ns1:Author ;
+    ns1:label "Jitong Li" .
+
+ns1:author-db3dd67640 a ns1:Author ;
+    ns1:label "Lingjun Zhao" .
+
+ns1:author-dbdb533eb4 a ns1:Author ;
+    ns1:label "Lorenzo Gigli" .
+
+ns1:author-dbe2a3baf1 a ns1:Author ;
+    ns1:label "Ziad Monla" .
+
+ns1:author-de66c2418f a ns1:Author ;
+    ns1:label "Simon Curty" .
+
+ns1:author-de9f17ccb4 a ns1:Author ;
+    ns1:label "Shuaipeng Guan" .
+
+ns1:author-dea1ba20b2 a ns1:Author ;
+    ns1:label "School of Engineering Jönköping University 2022" .
+
+ns1:author-e0061663a3 a ns1:Author ;
+    ns1:label "Naveen Ghorpade" .
+
+ns1:author-e05a71e40f a ns1:Author ;
+    ns1:label "Heinrich Söbke" .
+
+ns1:author-e07f3c3129 a ns1:Author ;
+    ns1:label """Ajay
+
+Sudhir Bale""" .
+
+ns1:author-e080ff0791 a ns1:Author ;
+    ns1:label "Xianbin Wang" .
+
+ns1:author-e08d26923d a ns1:Author ;
+    ns1:label "Huy Nguyen Trieu" .
+
+ns1:author-e0a340e5ce a ns1:Author ;
+    ns1:label "Shih-Che Lo" .
+
+ns1:author-e131a630b3 a ns1:Author ;
+    ns1:label """Cristian
+
+Cezar Postelnicu""" .
+
+ns1:author-e2167469bb a ns1:Author ;
+    ns1:label "Rashid Ali" .
+
+ns1:author-e21db2c277 a ns1:Author ;
+    ns1:label "Chuan Chen" .
+
+ns1:author-e2b6f7c943 a ns1:Author ;
+    ns1:label "Ke Xiao" .
+
+ns1:author-e431cc62af a ns1:Author ;
+    ns1:label "Kartik Trehan" .
+
+ns1:author-e4520732a4 a ns1:Author ;
+    ns1:label "Tristan Braud" .
+
+ns1:author-e483cef214 a ns1:Author ;
+    ns1:label """Hyung
+
+Seok Kim""" .
+
+ns1:author-e5878cb9bd a ns1:Author ;
+    ns1:label """Gerhard
+
+P Fettweis""" .
+
+ns1:author-e76b1285fe a ns1:Author ;
+    ns1:label "Lin Li" .
+
+ns1:author-e7d3473b73 a ns1:Author ;
+    ns1:label "Elvira Nica" .
+
+ns1:author-e81a12c196 a ns1:Author ;
+    ns1:label "Hongyu Huang" .
+
+ns1:author-e86b989f96 a ns1:Author ;
+    ns1:label "Xiang Cheng" .
+
+ns1:author-e8a976d4bb a ns1:Author ;
+    ns1:label "Amira Dhouib" .
+
+ns1:author-eac11f800d a ns1:Author ;
+    ns1:label """Sunil
+
+K Singh""" .
+
+ns1:author-eafbf385ea a ns1:Author ;
+    ns1:label "Leila Ismail" .
+
+ns1:author-eb2b557ae6 a ns1:Author ;
+    ns1:label "Mingyu Kim" .
+
+ns1:author-eb3addfd30 a ns1:Author ;
+    ns1:label """Soneji
+
+S Bioinformatics""" .
+
+ns1:author-ebb0b52158 a ns1:Author ;
+    ns1:label "Volker Ziegler" .
+
+ns1:author-ec11a86499 a ns1:Author ;
+    ns1:label "@ Mckinsey" .
+
+ns1:author-ed576c831a a ns1:Author ;
+    ns1:label "Ruonan He" .
+
+ns1:author-ed727a1e6e a ns1:Author ;
+    ns1:label "Hui Fang" .
+
+ns1:author-ee7187e287 a ns1:Author ;
+    ns1:label "Angelo Difino" .
+
+ns1:author-f0822c9b0f a ns1:Author ;
+    ns1:label "Emanuele Bellini" .
+
+ns1:author-f0e9bb8194 a ns1:Author ;
+    ns1:label "Seungyeon Choo" .
+
+ns1:author-f111e02d57 a ns1:Author ;
+    ns1:label "Michiel Contents" .
+
+ns1:author-f1fcc319c1 a ns1:Author ;
+    ns1:label "Yang-Wai Chow" .
+
+ns1:author-f3e97a55bd a ns1:Author ;
+    ns1:label "Paulo Álvares" .
+
+ns1:author-f44b129a6e a ns1:Author ;
+    ns1:label "Aarno Parssinen" .
+
+ns1:author-f4c72d20f3 a ns1:Author ;
+    ns1:label "Antoine Mauri" .
+
+ns1:author-f5014a5282 a ns1:Author ;
+    ns1:label """Ahmed
+
+Imran Kabir""" .
+
+ns1:author-f5b806a950 a ns1:Author ;
+    ns1:label "Gianni Pantaleo" .
+
+ns1:author-f5e07da6b5 a ns1:Author ;
+    ns1:label "Roberto Moro-Visconti" .
+
+ns1:author-f6e1a12158 a ns1:Author ;
+    ns1:label "Chi Zhang" .
+
+ns1:author-f72ffbb7f5 a ns1:Author ;
+    ns1:label "Simona Rossi" .
+
+ns1:author-f74b2a7b76 a ns1:Author ;
+    ns1:label "Antonio Celso" .
+
+ns1:author-f7b696345a a ns1:Author ;
+    ns1:label "Florin Gîrbacia" .
+
+ns1:author-f7cbe8af09 a ns1:Author ;
+    ns1:label "Sebastian Cubela" .
+
+ns1:author-f7f5e4b034 a ns1:Author ;
+    ns1:label """Ashok
+
+Kumar Das""" .
+
+ns1:author-f829d1e6c0 a ns1:Author ;
+    ns1:label "Sihan Wu" .
+
+ns1:author-f8ad0405d4 a ns1:Author ;
+    ns1:label "Jinmo Kim" .
+
+ns1:author-f8b6310bac a ns1:Author ;
+    ns1:label "Didier Chabaud" .
+
+ns1:author-f9981eb99f a ns1:Author ;
+    ns1:label """Mikko
+
+A Uusitalo""" .
+
+ns1:author-f9a72b7638 a ns1:Author ;
+    ns1:label "Phil Laplante" .
+
+ns1:author-fab78cd286 a ns1:Author ;
+    ns1:label "Carlos Moreno" .
+
+ns1:author-fae1acc4c5 a ns1:Author ;
+    ns1:label "Yuhang Liu" .
+
+ns1:author-fc20bfdcf6 a ns1:Author ;
+    ns1:label """Gheorghe
+
+Daniel Voinea""" .
+
+ns1:author-fc3f9bcb94 a ns1:Author ;
+    ns1:label "Kim Rants" .
+
+ns1:author-fc71baa9c3 a ns1:Author ;
+    ns1:label "Shixing Li" .
+
+ns1:author-fc7c777904 a ns1:Author ;
+    ns1:label "Elias Iosif" .
+
+ns1:author-fd4d940132 a ns1:Author ;
+    ns1:label "Kean Walmsley" .
+
+ns1:author-fd840a10e9 a ns1:Author ;
+    ns1:label """Abu
+
+Saleh Md. Sohel-Uz-Zaman""" .
+
+ns1:author-fe04429a76 a ns1:Author ;
+    ns1:label """Bharat
+
+S Rawal""" .
+
+ns1:author-fe0cb2b851 a ns1:Author ;
+    ns1:label """Cheun
+
+Hoe Yow""" .
+
+ns1:author-fe5d6ac57a a ns1:Author ;
+    ns1:label "Redouane Khemmar" .
+
+ns1:author-ffdcda05ff a ns1:Author ;
+    ns1:label "Shuyan Feng" .
+
+ns1:dataset-00844f995a a ns1:Dataset ;
+    ns1:label "Transaction Data" .
+
+ns1:dataset-046f91d51d a ns1:Dataset ;
+    ns1:label "Google Trends data" .
+
+ns1:dataset-08a09d014f a ns1:Dataset ;
+    ns1:label "replication package" .
+
+ns1:dataset-1666ec5789 a ns1:Dataset ;
+    ns1:label "EuArtisan Model" .
+
+ns1:dataset-1715b86cdd a ns1:Dataset ;
+    ns1:label "data set" .
+
+ns1:dataset-a91b7a5297 a ns1:Dataset ;
+    ns1:label "dataset" .
+
+ns1:dataset-afdbb25cb4 a ns1:Dataset ;
+    ns1:label "Consumer Data" .
+
+ns1:dataset-bc357b3c6e a ns1:Dataset ;
+    ns1:label "Sensors" .
+
+ns1:dataset-c5a835bdb3 a ns1:Dataset ;
+    ns1:label "hybrid dataset" .
+
+ns1:method-023064dc3b a ns1:Method ;
+    ns1:label "XR Experiences" .
+
+ns1:method-0e0f5ba862 a ns1:Method ;
+    ns1:label "Energy Management" .
+
+ns1:method-13e610cddf a ns1:Method ;
+    ns1:label "Blender Ray Tracing" .
+
+ns1:method-19aad0d7bb a ns1:Method ;
+    ns1:label "IoE and Big Multimedia Data" .
+
+ns1:method-1b37399b1e a ns1:Method ;
+    ns1:label "Scenario Engineering" .
+
+ns1:method-286a2258c7 a ns1:Method ;
+    ns1:label "SWOT Analysis" .
+
+ns1:method-291599c3ca a ns1:Method ;
+    ns1:label "Virtual Reality" .
+
+ns1:method-2ae975bce9 a ns1:Method ;
+    ns1:label "IEEE DHS-IV" .
+
+ns1:method-409e88f2b9 a ns1:Method ;
+    ns1:label "3D Object Design" .
+
+ns1:method-487c8633d8 a ns1:Method ;
+    ns1:label "hype cycle methodology" .
+
+ns1:method-4c3c2a8cb5 a ns1:Method ;
+    ns1:label "Digital Twin" .
+
+ns1:method-5184d162b4 a ns1:Method ;
+    ns1:label "Multi-disciplinary Conversation" .
+
+ns1:method-5b7a37f965 a ns1:Method ;
+    ns1:label "Virtual Space" .
+
+ns1:method-65787dfebe a ns1:Method ;
+    ns1:label "Modeling" .
+
+ns1:method-6d8628e988 a ns1:Method ;
+    ns1:label "HoloLens" .
+
+ns1:method-6e68c070f9 a ns1:Method ;
+    ns1:label "Optimized Methods" .
+
+ns1:method-739a2a3340 a ns1:Method ;
+    ns1:label "Innovation Lab" .
+
+ns1:method-7b166ddc24 a ns1:Method ;
+    ns1:label "Plate Scanning" .
+
+ns1:method-88678a7973 a ns1:Method ;
+    ns1:label "Component Combination" .
+
+ns1:method-8b0d963719 a ns1:Method ;
+    ns1:label "Spectrum Usage" .
+
+ns1:method-93258a5cdf a ns1:Method ;
+    ns1:label "Commercial Platforms" .
+
+ns1:method-989cb917c3 a ns1:Method ;
+    ns1:label "Positioning in Metaverse" .
+
+ns1:method-9a9c4dec8b a ns1:Method ;
+    ns1:label "Mixed Reality Analysis" .
+
+ns1:method-a4a90a9e7f a ns1:Method ;
+    ns1:label "DLT Protocols" .
+
+ns1:method-a743858184 a ns1:Method ;
+    ns1:label "SLR" .
+
+ns1:method-a903cbeae3 a ns1:Method ;
+    ns1:label "Design Checklist" .
+
+ns1:method-a9a466cb6f a ns1:Method ;
+    ns1:label "Enumerations" .
+
+ns1:method-b03a00ea54 a ns1:Method ;
+    ns1:label "Ethnography" .
+
+ns1:method-b18e87deb1 a ns1:Method ;
+    ns1:label "Augmented reality" .
+
+ns1:method-b822fc17e9 a ns1:Method ;
+    ns1:label "Electrode Placement" .
+
+ns1:method-bbd1ec3444 a ns1:Method ;
+    ns1:label "sensor fusion" .
+
+ns1:method-bf0f4370b8 a ns1:Method ;
+    ns1:label "AR and VR" .
+
+ns1:method-c8be8c44c1 a ns1:Method ;
+    ns1:label "Smart Contracts" .
+
+ns1:method-c9467526fe a ns1:Method ;
+    ns1:label "deep learning" .
+
+ns1:method-cab7d2c140 a ns1:Method ;
+    ns1:label "AR and VR Integration" .
+
+ns1:method-cddc4deda8 a ns1:Method ;
+    ns1:label "Quality Assurance Framework" .
+
+ns1:method-ceab684ded a ns1:Method ;
+    ns1:label "Machine Learning" .
+
+ns1:method-d10aa436e9 a ns1:Method ;
+    ns1:label "Integration of Fields" .
+
+ns1:method-d2190c36a6 a ns1:Method ;
+    ns1:label "CPS-based Production" .
+
+ns1:method-df9fc6d17c a ns1:Method ;
+    ns1:label "3D Virtual Environments" .
+
+ns1:method-e0ee1de0cf a ns1:Method ;
+    ns1:label "ontology" .
+
+ns1:method-e6cabe7fe2 a ns1:Method ;
+    ns1:label "federated learning" .
+
+ns1:method-eaafafc252 a ns1:Method ;
+    ns1:label "case study" .
+
+ns1:method-edff9cecff a ns1:Method ;
+    ns1:label "Tokenization" .
+
+ns1:method-f33f7ea54b a ns1:Method ;
+    ns1:label "Decentralized Storage" .
+
+ns1:method-f36dcd78f2 a ns1:Method ;
+    ns1:label "Mapping" .
+
+ns1:method-f469141835 a ns1:Method ;
+    ns1:label "AR Connection" .
+
+ns1:method-f5b1e70e49 a ns1:Method ;
+    ns1:label "Open Source Tools" .
+
+ns1:method-f5be2459a8 a ns1:Method ;
+    ns1:label "QCA" .
+
+ns1:method-fb8c66a780 a ns1:Method ;
+    ns1:label "Key Institutions Analysis" .
+
+ns1:metric-01eb235d14 a ns1:Metric ;
+    ns1:label "latency" .
+
+ns1:metric-07add205e9 a ns1:Metric ;
+    ns1:label "Google Trends" .
+
+ns1:metric-081cd17f38 a ns1:Metric ;
+    ns1:label "qoe" .
+
+ns1:metric-22f06c84c6 a ns1:Metric ;
+    ns1:label "f1" .
+
+ns1:metric-61aada9554 a ns1:Metric ;
+    ns1:label "throughput" .
+
+ns1:metric-66c90435cf a ns1:Metric ;
+    ns1:label "IoT Value Increase" .
+
+ns1:metric-8d7fae0de9 a ns1:Metric ;
+    ns1:label "precision" .
+
+ns1:metric-8e19b2d7b5 a ns1:Metric ;
+    ns1:label "cost" .
+
+ns1:metric-ec7166135f a ns1:Metric ;
+    ns1:label "distance measurement accuracy" .
+
+ns1:topic-011aabe092 a ns1:Topic ;
+    ns1:label "Scientific Literature" .
+
+ns1:topic-0202e0953a a ns1:Topic ;
+    ns1:label "Hospitality" .
+
+ns1:topic-039a7e9c39 a ns1:Topic ;
+    ns1:label "AOI" .
+
+ns1:topic-04e5e90322 a ns1:Topic ;
+    ns1:label "Media Communication" .
+
+ns1:topic-053aae1034 a ns1:Topic ;
+    ns1:label "Fluid Machinery" .
+
+ns1:topic-058681b747 a ns1:Topic ;
+    ns1:label "Digital Divide" .
+
+ns1:topic-069c432b3b a ns1:Topic ;
+    ns1:label "VR/AR technologies" .
+
+ns1:topic-071cc4d7c9 a ns1:Topic ;
+    ns1:label "Water Supply" .
+
+ns1:topic-0a17189715 a ns1:Topic ;
+    ns1:label "Research Trends" .
+
+ns1:topic-0b943bfaf0 a ns1:Topic ;
+    ns1:label "Metaverse development" .
+
+ns1:topic-0e8cfee4d4 a ns1:Topic ;
+    ns1:label "Computational Power" .
+
+ns1:topic-0ea38fcd4d a ns1:Topic ;
+    ns1:label "МСЭ" .
+
+ns1:topic-137a3a9671 a ns1:Topic ;
+    ns1:label "Mixed Reality" .
+
+ns1:topic-14fb49fec6 a ns1:Topic ;
+    ns1:label "Law Enforcement" .
+
+ns1:topic-18967210c7 a ns1:Topic ;
+    ns1:label "Architecture Design" .
+
+ns1:topic-1b01f0c771 a ns1:Topic ;
+    ns1:label "Closing-of-the-Loop" .
+
+ns1:topic-1b944b6d51 a ns1:Topic ;
+    ns1:label "Industrial Safety" .
+
+ns1:topic-1cbf5cdb48 a ns1:Topic ;
+    ns1:label "Smart Services" .
+
+ns1:topic-1ccbc16595 a ns1:Topic ;
+    ns1:label "Medical Care" .
+
+ns1:topic-1d056fdfd1 a ns1:Topic ;
+    ns1:label "Smart Learning Environments" .
+
+ns1:topic-1d62b52f6e a ns1:Topic ;
+    ns1:label "Climate change" .
+
+ns1:topic-1de4250c4b a ns1:Topic ;
+    ns1:label "Financial Institutions" .
+
+ns1:topic-20ce257a5f a ns1:Topic ;
+    ns1:label "Audiovisual Industry" .
+
+ns1:topic-2341664f88 a ns1:Topic ;
+    ns1:label "Digital Scenes" .
+
+ns1:topic-2405b8fc76 a ns1:Topic ;
+    ns1:label "information asymmetry" .
+
+ns1:topic-29469faef7 a ns1:Topic ;
+    ns1:label "Law Enforcement Innovation" .
+
+ns1:topic-296fd07906 a ns1:Topic ;
+    ns1:label "6G Technology" .
+
+ns1:topic-297bba70e2 a ns1:Topic ;
+    ns1:label "Generation Z" .
+
+ns1:topic-29d0620d81 a ns1:Topic ;
+    ns1:label "Product data" .
+
+ns1:topic-2a6cee920f a ns1:Topic ;
+    ns1:label "Germany" .
+
+ns1:topic-2c17cf097c a ns1:Topic ;
+    ns1:label "Digital Twin Campus" .
+
+ns1:topic-2f45bcd778 a ns1:Topic ;
+    ns1:label "IoT Development Platforms" .
+
+ns1:topic-319fd915cd a ns1:Topic ;
+    ns1:label "Transformative Experience" .
+
+ns1:topic-32d271bce4 a ns1:Topic ;
+    ns1:label "Education Metaverse" .
+
+ns1:topic-33437f6423 a ns1:Topic ;
+    ns1:label "Workplace Competences" .
+
+ns1:topic-338efc4df1 a ns1:Topic ;
+    ns1:label "Simulation Tools" .
+
+ns1:topic-34cd21e41f a ns1:Topic ;
+    ns1:label "Crime" .
+
+ns1:topic-353a3e5285 a ns1:Topic ;
+    ns1:label "Data Visualization" .
+
+ns1:topic-3553eb949e a ns1:Topic ;
+    ns1:label "BISE Perspective" .
+
+ns1:topic-379cb93e71 a ns1:Topic ;
+    ns1:label "Mirror World" .
+
+ns1:topic-3844f77d23 a ns1:Topic ;
+    ns1:label "Light Environment Art" .
+
+ns1:topic-3a590695ba a ns1:Topic ;
+    ns1:label "Web3.0" .
+
+ns1:topic-3ac0cee836 a ns1:Topic ;
+    ns1:label "Token-Based Insurance" .
+
+ns1:topic-3c663e180c a ns1:Topic ;
+    ns1:label "System Interoperability" .
+
+ns1:topic-3f6a4ec957 a ns1:Topic ;
+    ns1:label "Security" .
+
+ns1:topic-3fbadebbba a ns1:Topic ;
+    ns1:label "Interoperability" .
+
+ns1:topic-414da6384e a ns1:Topic ;
+    ns1:label "City Transformation" .
+
+ns1:topic-42a4ac7127 a ns1:Topic ;
+    ns1:label "Vehicular Applications" .
+
+ns1:topic-478f48df9c a ns1:Topic ;
+    ns1:label "SSVEP" .
+
+ns1:topic-4adb5b33f9 a ns1:Topic ;
+    ns1:label "Human Entertainment" .
+
+ns1:topic-4b583af053 a ns1:Topic ;
+    ns1:label "BCI" .
+
+ns1:topic-4bcb301559 a ns1:Topic ;
+    ns1:label "Regulating Social Media" .
+
+ns1:topic-4dc9a955fc a ns1:Topic ;
+    ns1:label "Supply Chain Management" .
+
+ns1:topic-4dcc238ebd a ns1:Topic ;
+    ns1:label "SCM" .
+
+ns1:topic-501636ed8d a ns1:Topic ;
+    ns1:label "Decentralized Governance" .
+
+ns1:topic-506e816e22 a ns1:Topic ;
+    ns1:label "Intelligent Vehicles" .
+
+ns1:topic-55265e0873 a ns1:Topic ;
+    ns1:label "5G Technology" .
+
+ns1:topic-561335050d a ns1:Topic ;
+    ns1:label "IoT in Marketing" .
+
+ns1:topic-57dafda792 a ns1:Topic ;
+    ns1:label "Metaverse Communication" .
+
+ns1:topic-5a59253ad0 a ns1:Topic ;
+    ns1:label "Virtual Community" .
+
+ns1:topic-5dd8a3c6ef a ns1:Topic ;
+    ns1:label "Driving" .
+
+ns1:topic-6181207b0d a ns1:Topic ;
+    ns1:label "Non-invasive recording" .
+
+ns1:topic-61de75543a a ns1:Topic ;
+    ns1:label "Metaverse Regulation" .
+
+ns1:topic-644da0161a a ns1:Topic ;
+    ns1:label "Urban Efficiency" .
+
+ns1:topic-6609ae2063 a ns1:Topic ;
+    ns1:label "Virtual Space Design" .
+
+ns1:topic-666791506e a ns1:Topic ;
+    ns1:label "Visualization" .
+
+ns1:topic-67539de53e a ns1:Topic ;
+    ns1:label "Traffic Networks" .
+
+ns1:topic-67da58716e a ns1:Topic ;
+    ns1:label "Enterprise metaverse" .
+
+ns1:topic-68c8d5bdc4 a ns1:Topic ;
+    ns1:label "Harsh Environments" .
+
+ns1:topic-6a70c1c952 a ns1:Topic ;
+    ns1:label "DevOps" .
+
+ns1:topic-6b52a2814e a ns1:Topic ;
+    ns1:label "Trust Authority" .
+
+ns1:topic-6bf210f3c9 a ns1:Topic ;
+    ns1:label "Edge AI with 6G" .
+
+ns1:topic-6c00027109 a ns1:Topic ;
+    ns1:label "Ecological Education" .
+
+ns1:topic-6f3104dd66 a ns1:Topic ;
+    ns1:label "Energy Storage" .
+
+ns1:topic-6f9646b657 a ns1:Topic ;
+    ns1:label "6G Connectivity" .
+
+ns1:topic-6fd8ded34d a ns1:Topic ;
+    ns1:label "Digital Enterprises" .
+
+ns1:topic-701dc3278a a ns1:Topic ;
+    ns1:label "Real-time Data" .
+
+ns1:topic-7687374464 a ns1:Topic ;
+    ns1:label "Smart Systems" .
+
+ns1:topic-768831b3b5 a ns1:Topic ;
+    ns1:label "Internet of Everything" .
+
+ns1:topic-775cec9f7e a ns1:Topic ;
+    ns1:label "Tourism" .
+
+ns1:topic-7831567ce6 a ns1:Topic ;
+    ns1:label "Digital Object Representation" .
+
+ns1:topic-79e50fdc84 a ns1:Topic ;
+    ns1:label "Future Services" .
+
+ns1:topic-79fb5ba7ba a ns1:Topic ;
+    ns1:label "Token Economy" .
+
+ns1:topic-79fd273de1 a ns1:Topic ;
+    ns1:label "Enterprise Systems" .
+
+ns1:topic-80e1ebcac2 a ns1:Topic ;
+    ns1:label "NFTs" .
+
+ns1:topic-8206e1d529 a ns1:Topic ;
+    ns1:label "Brain-Computer Interfaces" .
+
+ns1:topic-82b4cf6532 a ns1:Topic ;
+    ns1:label "Global Economic Activity" .
+
+ns1:topic-842d53384d a ns1:Topic ;
+    ns1:label "Digital Twin Consortium" .
+
+ns1:topic-874f1b35a6 a ns1:Topic ;
+    ns1:label "Industry" .
+
+ns1:topic-879d966a1c a ns1:Topic ;
+    ns1:label "Logistics 4.0" .
+
+ns1:topic-89a94360ad a ns1:Topic ;
+    ns1:label "Next Generation Computing" .
+
+ns1:topic-8c4b7a4250 a ns1:Topic ;
+    ns1:label "6G" .
+
+ns1:topic-8d3968ab97 a ns1:Topic ;
+    ns1:label "Tourism Industry" .
+
+ns1:topic-8e8740ac44 a ns1:Topic ;
+    ns1:label "Virtual Spaces" .
+
+ns1:topic-8fad5d87bf a ns1:Topic ;
+    ns1:label "Virtual World" .
+
+ns1:topic-90f37727af a ns1:Topic ;
+    ns1:label "shipping industry" .
+
+ns1:topic-976bcd355a a ns1:Topic ;
+    ns1:label "Internet Technology" .
+
+ns1:topic-9955cfbb93 a ns1:Topic ;
+    ns1:label "Cryptocurrency Markets" .
+
+ns1:topic-9a2bd6376a a ns1:Topic ;
+    ns1:label "Industrial Metaverse" .
+
+ns1:topic-9aa0270338 a ns1:Topic ;
+    ns1:label "Virus spread" .
+
+ns1:topic-9bab08a9c1 a ns1:Topic ;
+    ns1:label "Smart Transport" .
+
+ns1:topic-9cbcb7b466 a ns1:Topic ;
+    ns1:label "Tactile Internet" .
+
+ns1:topic-9e4b022981 a ns1:Topic ;
+    ns1:label "Federated Learning" .
+
+ns1:topic-9ffb66fda4 a ns1:Topic ;
+    ns1:label "Readiness Assessment" .
+
+ns1:topic-a1986716f5 a ns1:Topic ;
+    ns1:label "Технологии связи" .
+
+ns1:topic-a4a98d034b a ns1:Topic ;
+    ns1:label "Metaverse Impact" .
+
+ns1:topic-a52140e81e a ns1:Topic ;
+    ns1:label "Data Processing" .
+
+ns1:topic-a5b5ced291 a ns1:Topic ;
+    ns1:label "Fourth Industrial Revolution" .
+
+ns1:topic-a64e6f9261 a ns1:Topic ;
+    ns1:label "Remote Work" .
+
+ns1:topic-ac5567af7b a ns1:Topic ;
+    ns1:label "Internet Youth" .
+
+ns1:topic-ac7862a476 a ns1:Topic ;
+    ns1:label "Metaverse Research" .
+
+ns1:topic-ac7adc5ab7 a ns1:Topic ;
+    ns1:label "IoT/IoE Architecture" .
+
+ns1:topic-b126065c2d a ns1:Topic ;
+    ns1:label "Master Domain" .
+
+ns1:topic-b59315ec3a a ns1:Topic ;
+    ns1:label "Industrial Metaverses" .
+
+ns1:topic-b5a2aad27c a ns1:Topic ;
+    ns1:label "Distributed Systems" .
+
+ns1:topic-b7b1f482e3 a ns1:Topic ;
+    ns1:label "Industrial Internet of Things" .
+
+ns1:topic-b7e041422d a ns1:Topic ;
+    ns1:label "Neuro-enhanced Reality" .
+
+ns1:topic-b85889d4e0 a ns1:Topic ;
+    ns1:label "Remote Management" .
+
+ns1:topic-b8acb5cc90 a ns1:Topic ;
+    ns1:label "European Commission" .
+
+ns1:topic-bb1d5f2bfc a ns1:Topic ;
+    ns1:label "Smart Transportation" .
+
+ns1:topic-bc388a42df a ns1:Topic ;
+    ns1:label "Robotics" .
+
+ns1:topic-c021b626dc a ns1:Topic ;
+    ns1:label "5G Evolution" .
+
+ns1:topic-c18e2e5fe9 a ns1:Topic ;
+    ns1:label "VR Safety Training" .
+
+ns1:topic-c218ece6b9 a ns1:Topic ;
+    ns1:label "Education Efficiency" .
+
+ns1:topic-c22ff29eee a ns1:Topic ;
+    ns1:label "Parallel Probing" .
+
+ns1:topic-c361ed9312 a ns1:Topic ;
+    ns1:label "Metaverse in Education" .
+
+ns1:topic-c47aae5cda a ns1:Topic ;
+    ns1:label "Vehicle Data Storage" .
+
+ns1:topic-c6656e82bc a ns1:Topic ;
+    ns1:label "Semantic web" .
+
+ns1:topic-c802045979 a ns1:Topic ;
+    ns1:label "Urban Transport Resilience" .
+
+ns1:topic-c80a06776c a ns1:Topic ;
+    ns1:label "C-ITS" .
+
+ns1:topic-c8361d233c a ns1:Topic ;
+    ns1:label "Social Presence" .
+
+ns1:topic-c894eddf53 a ns1:Topic ;
+    ns1:label "Computing" .
+
+ns1:topic-c90f3cd733 a ns1:Topic ;
+    ns1:label "Architectural Design" .
+
+ns1:topic-c9da85a78d a ns1:Topic ;
+    ns1:label "UAV Energy Limitations" .
+
+ns1:topic-ca5d44b9a3 a ns1:Topic ;
+    ns1:label "Market Needs" .
+
+ns1:topic-ca95973f00 a ns1:Topic ;
+    ns1:label "Industrial IoT" .
+
+ns1:topic-cb2df6c453 a ns1:Topic ;
+    ns1:label "Extended Cognition" .
+
+ns1:topic-cb7cf3e8e5 a ns1:Topic ;
+    ns1:label "Task Requirements" .
+
+ns1:topic-cc83171181 a ns1:Topic ;
+    ns1:label "Socialist Modern Power" .
+
+ns1:topic-cd4f491a75 a ns1:Topic ;
+    ns1:label "Taxonomy" .
+
+ns1:topic-cebbf725ef a ns1:Topic ;
+    ns1:label "BIM platforms" .
+
+ns1:topic-cfcd1441be a ns1:Topic ;
+    ns1:label "Social Interaction" .
+
+ns1:topic-d1d0b2d7a8 a ns1:Topic ;
+    ns1:label "E-Learning" .
+
+ns1:topic-d1d581f1a6 a ns1:Topic ;
+    ns1:label "Industrial Operations" .
+
+ns1:topic-d2e23c0e72 a ns1:Topic ;
+    ns1:label "Engineering Education" .
+
+ns1:topic-d3718455ed a ns1:Topic ;
+    ns1:label "Market Analysis" .
+
+ns1:topic-d55af0a4e2 a ns1:Topic ;
+    ns1:label "Immersive Experiential Metaverse" .
+
+ns1:topic-d771802fcf a ns1:Topic ;
+    ns1:label "Urban Mobility" .
+
+ns1:topic-db1892f176 a ns1:Topic ;
+    ns1:label "smart mobility" .
+
+ns1:topic-db58ee97ff a ns1:Topic ;
+    ns1:label "QoM" .
+
+ns1:topic-db7ada8091 a ns1:Topic ;
+    ns1:label "Risk Decision Making" .
+
+ns1:topic-ddc45b592a a ns1:Topic ;
+    ns1:label "Communication" .
+
+ns1:topic-ddd2c4a580 a ns1:Topic ;
+    ns1:label "Digital Rail" .
+
+ns1:topic-dea9be28b5 a ns1:Topic ;
+    ns1:label "6G Development" .
+
+ns1:topic-e19858b09f a ns1:Topic ;
+    ns1:label "Flipped Learning" .
+
+ns1:topic-e2126d5056 a ns1:Topic ;
+    ns1:label "Digital Infrastructure" .
+
+ns1:topic-e2ae7d8169 a ns1:Topic ;
+    ns1:label "Digital Intelligence" .
+
+ns1:topic-e2cf9a2b62 a ns1:Topic ;
+    ns1:label "Economic Impact" .
+
+ns1:topic-e485db3f82 a ns1:Topic ;
+    ns1:label "Future Research" .
+
+ns1:topic-e59c74b690 a ns1:Topic ;
+    ns1:label "Sensor Monitoring" .
+
+ns1:topic-e74015f7c0 a ns1:Topic ;
+    ns1:label "Service Communication" .
+
+ns1:topic-e7997dbfff a ns1:Topic ;
+    ns1:label "BCI Applications" .
+
+ns1:topic-e827a8d8dc a ns1:Topic ;
+    ns1:label "Digital Practice" .
+
+ns1:topic-eaa3dc24f1 a ns1:Topic ;
+    ns1:label "Supply Chains" .
+
+ns1:topic-eda877ffdf a ns1:Topic ;
+    ns1:label "Light Field Research" .
+
+ns1:topic-eeceb6b5ba a ns1:Topic ;
+    ns1:label "Low Code Technology" .
+
+ns1:topic-f052ff8538 a ns1:Topic ;
+    ns1:label "Smart Manufacturing" .
+
+ns1:topic-f605c40751 a ns1:Topic ;
+    ns1:label "Virtual Reality in Education" .
+
+ns1:topic-f9be088486 a ns1:Topic ;
+    ns1:label "Citizen Development" .
+
+ns1:topic-fc8d46a677 a ns1:Topic ;
+    ns1:label "Economic Outcomes" .
+
+ns1:topic-fe25b8dab1 a ns1:Topic ;
+    ns1:label "Influential Marketing" .
+
+ns1:topic-febd9ca130 a ns1:Topic ;
+    ns1:label "Smart Tourism City" .
+
+ns1:topic-ff787f0baf a ns1:Topic ;
+    ns1:label "Future" .
+
+ns1:year-05b9aef9ac a ns1:Year ;
+    ns1:label "2005" .
+
+ns1:year-21774e249f a ns1:Year ;
+    ns1:label "2035" .
+
+ns1:year-737058a970 a ns1:Year ;
+    ns1:label "2002" .
+
+ns1:year-b5b35c5e8a a ns1:Year ;
+    ns1:label "1992" .
+
+ns1:year-b6c4f78448 a ns1:Year ;
+    ns1:label "2016" .
+
+ns1:year-d7fef9f2f8 a ns1:Year ;
+    ns1:label "2010" .
+
+ns1:year-e8fcfa53cf a ns1:Year ;
+    ns1:label "2000" .
+
+ns1:year-f31b047b3b a ns1:Year ;
+    ns1:label "1999" .
+
+ns1:author-1e698e3a5e a ns1:Author ;
+    ns1:label "Jinhong Xu" .
+
+ns1:author-21ca2899f5 a ns1:Author ;
+    ns1:label "Xiao Wang" .
+
+ns1:author-5abfccb94e a ns1:Author ;
+    ns1:label "Pierfrancesco Bellini" .
+
+ns1:author-5c006218ce a ns1:Author ;
+    ns1:label "Federico Montori" .
+
+ns1:author-5dafe6df18 a ns1:Author ;
+    ns1:label "Brian Harrison" .
+
+ns1:author-607ebb9319 a ns1:Author ;
+    ns1:label "Palgrave Macmillan Cham" .
+
+ns1:author-6cbbb1de55 a ns1:Author ;
+    ns1:label "Fei-Yue Wang" .
+
+ns1:author-6dbe185044 a ns1:Author ;
+    ns1:label "Chunyan Jiang" .
+
+ns1:author-8595a3a459 a ns1:Author ;
+    ns1:label "Yonglin Tian" .
+
+ns1:author-8f53ff1d82 a ns1:Author ;
+    ns1:label "Xuan Li" .
+
+ns1:author-9ac14e4a38 a ns1:Author ;
+    ns1:label "Xiaoxiang Na" .
+
+ns1:author-9cd053a9a7 a ns1:Author ;
+    ns1:label "Marcellino Gemelli" .
+
+ns1:author-a4e607504b a ns1:Author ;
+    ns1:label "Jiamei Bai" .
+
+ns1:author-a9cd5a09d3 a ns1:Author ;
+    ns1:label "Andrew Macleod" .
+
+ns1:author-cfb7c46efb a ns1:Author ;
+    ns1:label "Paolo Nesi" .
+
+ns1:author-dbc33cae63 a ns1:Author ;
+    ns1:label "Jing Yang" .
+
+ns1:author-f3768d86ab a ns1:Author ;
+    ns1:label "Chau Nguyen" .
+
+ns1:method-20bd626542 a ns1:Method ;
+    ns1:label "bibliometric" .
+
+ns1:method-ab389a344e a ns1:Method ;
+    ns1:label "semantic web" .
+
+ns1:metric-839a972df9 a ns1:Metric ;
+    ns1:label "Functional Compatibility" .
+
+ns1:topic-123b8470c7 a ns1:Topic ;
+    ns1:label "Web of Science" .
+
+ns1:topic-1bffdf65bb a ns1:Topic ;
+    ns1:label "Virtual Reality" .
+
+ns1:topic-2b68e86079 a ns1:Topic ;
+    ns1:label "Metaverses" .
+
+ns1:topic-2fcf1c25fc a ns1:Topic ;
+    ns1:label "Decentralized Tasks" .
+
+ns1:topic-466cc5b4c7 a ns1:Topic ;
+    ns1:label "Digital Transformation" .
+
+ns1:topic-4c315a3afc a ns1:Topic ;
+    ns1:label "IPFS" .
+
+ns1:topic-53b0e3a888 a ns1:Topic ;
+    ns1:label "Augmented Reality" .
+
+ns1:topic-55c824aa37 a ns1:Topic ;
+    ns1:label "Artificial Intelligence" .
+
+ns1:topic-5611b016a0 a ns1:Topic ;
+    ns1:label "Virtual Economy" .
+
+ns1:topic-5a77e02320 a ns1:Topic ;
+    ns1:label "Web of Things" .
+
+ns1:topic-6bb5ae6a52 a ns1:Topic ;
+    ns1:label "Smart Cities" .
+
+ns1:topic-7215815a98 a ns1:Topic ;
+    ns1:label "Controlled Domain" .
+
+ns1:topic-9095b0a38d a ns1:Topic ;
+    ns1:label "Smart City",
+        "smart city" .
+
+ns1:topic-ad74f80718 a ns1:Topic ;
+    ns1:label "Energy Efficiency" .
+
+ns1:topic-b6194540f5 a ns1:Topic ;
+    ns1:label "Extended Reality" .
+
+ns1:topic-c5ae89f11b a ns1:Topic ;
+    ns1:label "OutSystems" .
+
+ns1:topic-e402bc4768 a ns1:Topic ;
+    ns1:label "Cybersecurity" .
+
+ns1:topic-e77ecb485a a ns1:Topic ;
+    ns1:label "Transactions" .
+
+ns1:topic-eb3c9e3a20 a ns1:Topic ;
+    ns1:label "цифровая экономика" .
+
+ns1:topic-f79e8c5228 a ns1:Topic ;
+    ns1:label "Logistics" .
+
+ns1:topic-f8cca57fac a ns1:Topic ;
+    ns1:label "Systematic Review" .
+
+ns1:year-45ee3673e4 a ns1:Year ;
+    ns1:label "2020" .
+
+ns1:year-d7c7d2d362 a ns1:Year ;
+    ns1:label "2019" .
+
+ns1:year-ff8d316513 a ns1:Year ;
+    ns1:label "2018" .
+
+ns1:author-04f0841716 a ns1:Author ;
+    ns1:label "Brandon Lewis" .
+
+ns1:author-6dd82ed561 a ns1:Author ;
+    ns1:label "Doug Migliori" .
+
+ns1:author-b980090e62 a ns1:Author ;
+    ns1:label "Curt Schwaderer" .
+
+ns1:method-58a71d1539 a ns1:Method ;
+    ns1:label "swot" .
+
+ns1:method-853f8df074 a ns1:Method ;
+    ns1:label "systematic review" .
+
+ns1:method-97797660fd a ns1:Method ;
+    ns1:label "онтология" .
+
+ns1:topic-7bd81dd917 a ns1:Topic ;
+    ns1:label "Low-Code Development",
+        "Low-code development",
+        "low-code development" .
+
+ns1:topic-ca95dd363f a ns1:Topic ;
+    ns1:label "Energy Consumption" .
+
+ns1:topic-d0d1a1beec a ns1:Topic ;
+    ns1:label "Low-Code Platforms",
+        "Low-code Platforms" .
+
+ns1:year-cc4de0c8ca a ns1:Year ;
+    ns1:label "2017" .
+
+ns1:dataset-2c49569bee a ns1:Dataset ;
+    ns1:label "набор данных" .
+
+ns1:method-73b73d4d62 a ns1:Method ;
+    ns1:label "систематический обзор" .
+
+ns1:metric-9149107815 a ns1:Metric ;
+    ns1:label "qos" .
+
+ns1:topic-c1e198806a a ns1:Topic ;
+    ns1:label "IoV" .
+
+ns1:author-f407bd6550 a ns1:Author ;
+    ns1:label "Thinkpad" .
+
+ns1:topic-9ad6b77c8c a ns1:Topic ;
+    ns1:label "Internet of Things",
+        "internet of things" .
+
+ns1:topic-e55d434e0a a ns1:Topic ;
+    ns1:label "Digital Economy",
+        "digital economy" .
+
+ns1:topic-f6d2164f9f a ns1:Topic ;
+    ns1:label "Supply Chain",
+        "supply chain" .
+
+ns1:topic-fd8e0a315d a ns1:Topic ;
+    ns1:label "Blockchain Technology",
+        "blockchain technology" .
+
+ns1:topic-6f5af92dd8 a ns1:Topic ;
+    ns1:label "умный город" .
+
+ns1:topic-c280d88b1c a ns1:Topic ;
+    ns1:label "цепочки поставок" .
+
+ns1:topic-059ee594dc a ns1:Topic ;
+    ns1:label "Digital Twins",
+        "Digital twins" .
+
+ns1:topic-13805f4a32 a ns1:Topic ;
+    ns1:label "цифровой двойник" .
+
+ns1:topic-2714c18783 a ns1:Topic ;
+    ns1:label "web3" .
+
+ns1:topic-440a249cfd a ns1:Topic ;
+    ns1:label "Digital Twin",
+        "digital twin" .
+
+ns1:method-bc24585fed a ns1:Method ;
+    ns1:label "Survey",
+        "survey" .
+
+ns1:metric-6a331906f1 a ns1:Metric ;
+    ns1:label "точность" .
+
+ns1:method-808a99ba9a a ns1:Method ;
+    ns1:label "review" .
+
+ns1:year-702cf86515 a ns1:Year ;
+    ns1:label "2021" .
+
+ns1:topic-5b7dcc8e20 a ns1:Topic ;
+    ns1:label "интернет вещей" .
+
+ns1:topic-360b48120b a ns1:Topic ;
+    ns1:label "Blockchain",
+        "blockchain" .
+
+ns1:topic-32cc066fff a ns1:Topic ;
+    ns1:label "IoT",
+        "iot" .
+
+ns1:topic-eb5ede998f a ns1:Topic ;
+    ns1:label "блокчейн" .
+
+ns1:topic-e6a1304d26 a ns1:Topic ;
+    ns1:label "метавселенная" .
+
+ns1:topic-d825498c63 a ns1:Topic ;
+    ns1:label "Metaverse",
+        "metaverse" .
+
+ns1:year-c038715a58 a ns1:Year ;
+    ns1:label "2022" .
+

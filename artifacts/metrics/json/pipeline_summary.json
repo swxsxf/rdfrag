@@ -1,0 +1,49 @@
+{
+  "summary": {
+    "status": "completed",
+    "generated_at": "2026-04-18T17:59:16.280162+00:00",
+    "pdf_count": 151,
+    "parsed_count": 151,
+    "chunk_count": 5135,
+    "knowledge_document_count": 151,
+    "rdf_path": "C:\\rdfrag_vkr\\data\\rdf\\knowledge_graph.ttl",
+    "vector_backend": "faiss",
+    "grobid_mode": "required",
+    "fuseki_uploaded": true,
+    "knowledge_backend": "ollama_hybrid",
+    "llm_provider": "ollama",
+    "llm_model": "qwen3:8b"
+  },
+  "stage_metrics": [
+    {
+      "stage": "parse",
+      "seconds": 770.703,
+      "count": 151
+    },
+    {
+      "stage": "preprocess",
+      "seconds": 1.797,
+      "count": 5135
+    },
+    {
+      "stage": "knowledge_extraction",
+      "seconds": 3162.219,
+      "count": 151
+    },
+    {
+      "stage": "rdf_build",
+      "seconds": 0.578,
+      "count": 1
+    },
+    {
+      "stage": "fuseki_sync",
+      "seconds": 1.047,
+      "count": 1
+    },
+    {
+      "stage": "vector_index",
+      "seconds": 232.109,
+      "count": 5135
+    }
+  ]
+}

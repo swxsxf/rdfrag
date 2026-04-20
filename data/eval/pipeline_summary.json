@@ -1,0 +1,15 @@
+{
+  "status": "completed",
+  "generated_at": "2026-04-18T17:59:16.280162+00:00",
+  "pdf_count": 151,
+  "parsed_count": 151,
+  "chunk_count": 5135,
+  "knowledge_document_count": 151,
+  "rdf_path": "C:\\rdfrag_vkr\\data\\rdf\\knowledge_graph.ttl",
+  "vector_backend": "faiss",
+  "grobid_mode": "required",
+  "fuseki_uploaded": true,
+  "knowledge_backend": "ollama_hybrid",
+  "llm_provider": "ollama",
+  "llm_model": "qwen3:8b"
+}

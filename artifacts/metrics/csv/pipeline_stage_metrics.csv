@@ -1,0 +1,7 @@
+stage,seconds,count
+parse,770.703,151
+preprocess,1.797,5135
+knowledge_extraction,3162.219,151
+rdf_build,0.578,1
+fuseki_sync,1.047,1
+vector_index,232.109,5135
