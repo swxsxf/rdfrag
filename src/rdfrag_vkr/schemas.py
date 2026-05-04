@@ -1,4 +1,4 @@
-"""Shared schemas for the MVP modules."""
+"""Shared schemas for the RDFRAG modules."""
 
 from __future__ import annotations
 

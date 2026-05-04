@@ -24,7 +24,7 @@ QUERY_EXPANSIONS = {
 
 
 class HybridRetriever:
-    """Combine graph retrieval and vector retrieval for MVP answers."""
+    """Combine graph retrieval and vector retrieval for grounded answers."""
 
     def __init__(self, settings: Settings | None = None) -> None:
         self.settings = settings or get_settings()

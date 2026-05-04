@@ -1,4 +1,4 @@
-"""RDF graph builder for MVP knowledge extraction outputs."""
+"""RDF graph builder for extracted article knowledge."""
 
 from __future__ import annotations
 

@@ -9,7 +9,7 @@ description = "Hybrid graph + vector RAG MVP for scientific PDFs on the digital 
 readme = "README.md"
 requires-python = ">=3.11"
 authors = [
-  { name = "Codex" }
+  { name = "RDFRAG VKR project" }
 ]
 dependencies = [
   "fastapi>=0.110.0",

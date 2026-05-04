@@ -1,4 +1,4 @@
-"""End-to-end ingestion pipeline for the diploma MVP."""
+"""End-to-end ingestion pipeline for the diploma project."""
 
 from __future__ import annotations
 

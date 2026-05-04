@@ -177,21 +177,19 @@ class SparqlService:
 
     def is_fuseki_available(self) -> bool:
         """Check whether the configured Fuseki dataset responds."""
-        if not self.ensure_dataset_exists():
-            return False
         ping_url = f"{self.settings.fuseki_dataset_url}/query?query=ASK%20WHERE%20%7B%20%3Fs%20%3Fp%20%3Fo%20%7D"
         req = request.Request(ping_url, headers={"Accept": "application/sparql-results+json"}, method="GET")
         try:
             with request.urlopen(req, timeout=5) as response:
                 return 200 <= response.status < 300
-        except error.URLError:
+        except Exception:
             return False
 
     def wait_for_fuseki(self, timeout_seconds: int = 60) -> bool:
         """Wait for the Fuseki endpoint to become reachable."""
         started = time.monotonic()
         while time.monotonic() - started < timeout_seconds:
-            if self.is_fuseki_available():
+            if self._is_fuseki_server_available():
                 return True
             time.sleep(2)
         return False
@@ -212,7 +210,7 @@ class SparqlService:
         try:
             with request.urlopen(req, timeout=10) as response:
                 payload = json.loads(response.read().decode("utf-8"))
-        except error.URLError:
+        except Exception:
             return []
         bindings = payload.get("results", {}).get("bindings", [])
         rows: list[dict] = []
@@ -250,7 +248,7 @@ class SparqlService:
         try:
             with request.urlopen(req, timeout=10) as response:
                 payload = json.loads(response.read().decode("utf-8"))
-        except error.URLError:
+        except Exception:
             return []
         names: list[str] = []
         for item in payload.get("datasets", []):
@@ -292,6 +290,15 @@ class SparqlService:
 
     def _dataset_name(self) -> str:
         return urlparse(self.settings.fuseki_dataset_url).path.strip("/").split("/")[-1]
+
+    def _is_fuseki_server_available(self) -> bool:
+        req = request.Request(self._admin_datasets_url(), method="GET")
+        self._add_admin_auth(req)
+        try:
+            with request.urlopen(req, timeout=5) as response:
+                return 200 <= response.status < 300
+        except Exception:
+            return False
 
     def _add_admin_auth(self, req: request.Request) -> None:
         import base64

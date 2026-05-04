@@ -1,9 +1,8 @@
-"""Rule-based relation extraction for the diploma MVP."""
+"""Relation extraction for article-centric RDF graph construction."""
 
 from __future__ import annotations
 
 from rdfrag_vkr.config import Settings, get_settings
-from rdfrag_vkr.modules.knowledge_llm import OllamaKnowledgeExtractor
 from rdfrag_vkr.schemas import Entity, ParsedDocument, Relation
 
 
@@ -18,13 +17,32 @@ PREDICATE_BY_ENTITY = {
 
 
 class RuleBasedRelationExtractor:
-    """Create simple article-centric relations from extracted entities."""
+    """Build article relations from extracted entities and optional LLM relation rows."""
 
-    def extract(self, document: ParsedDocument, entities: list[Entity]) -> list[Relation]:
-        """Build relations from article to each supported entity type."""
+    def __init__(self, settings: Settings | None = None) -> None:
+        self.settings = settings or get_settings()
+
+    def extract(self, document: ParsedDocument, entities: list[Entity], llm_payload: dict | None = None) -> list[Relation]:
+        """Create article-centric relations for RDF serialization."""
         article_entity = next((entity for entity in entities if entity.entity_type == "Article"), None)
         if article_entity is None:
             return []
+
+        relations = self._relations_from_entities(document, article_entity, entities)
+        if self.settings.knowledge_backend in {"ollama", "ollama_hybrid"} and llm_payload is not None:
+            relations.extend(self._relations_from_llm_payload(document, article_entity, entities, llm_payload))
+
+        unique: dict[str, Relation] = {}
+        for relation in relations:
+            unique[relation.relation_id] = relation
+        return list(unique.values())
+
+    def _relations_from_entities(
+        self,
+        document: ParsedDocument,
+        article_entity: Entity,
+        entities: list[Entity],
+    ) -> list[Relation]:
         relations: list[Relation] = []
         for entity in entities:
             if entity.entity_type == "Article":
@@ -43,34 +61,15 @@ class RuleBasedRelationExtractor:
             )
         return relations
 
-
-class LLMRelationExtractorStub:
-    """Placeholder for a future LLM-based relation extraction stage."""
-
-    def extract(self, document: ParsedDocument, entities: list[Entity]) -> list[Relation]:
-        """Return no relations until the LLM-based stage is implemented."""
-        _ = document, entities
-        return []
-
-
-class FinalHybridRelationExtractor(RuleBasedRelationExtractor):
-    """Rule-based article relations enriched with cached Ollama relations."""
-
-    def __init__(self, settings: Settings | None = None) -> None:
-        self.settings = settings or get_settings()
-        self.llm_extractor = OllamaKnowledgeExtractor(self.settings)
-
-    def extract(self, document: ParsedDocument, entities: list[Entity], llm_payload: dict | None = None) -> list[Relation]:
-        relations = super().extract(document, entities)
-        if self.settings.knowledge_backend not in {"ollama", "ollama_hybrid"}:
-            return relations
-
-        article_entity = next((entity for entity in entities if entity.entity_type == "Article"), None)
-        if article_entity is None:
-            return relations
-
+    def _relations_from_llm_payload(
+        self,
+        document: ParsedDocument,
+        article_entity: Entity,
+        entities: list[Entity],
+        llm_payload: dict,
+    ) -> list[Relation]:
         entities_by_label = {entity.label.strip().lower(): entity for entity in entities}
-        llm_payload = llm_payload or self.llm_extractor.extract(document)
+        relations: list[Relation] = []
         for row in llm_payload.get("relations", []):
             object_entity = entities_by_label.get(str(row["object_label"]).strip().lower())
             if object_entity is None:
@@ -85,11 +84,4 @@ class FinalHybridRelationExtractor(RuleBasedRelationExtractor):
                     evidence=row.get("evidence") or object_entity.evidence or document.metadata.title,
                 )
             )
-
-        unique: dict[str, Relation] = {}
-        for relation in relations:
-            unique[relation.relation_id] = relation
-        return list(unique.values())
-
-
-RuleBasedRelationExtractor = FinalHybridRelationExtractor
+        return relations

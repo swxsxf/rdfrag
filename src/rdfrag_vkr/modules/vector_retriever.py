@@ -1,4 +1,4 @@
-"""Vector retrieval with sentence-transformers, FAISS and a safe hash fallback."""
+"""Vector retrieval with sentence-transformers, FAISS and hash/lexical fallback."""
 
 from __future__ import annotations
 
@@ -8,9 +8,17 @@ import math
 from collections import Counter
 from pathlib import Path
 
-import faiss
 import numpy as np
-from sentence_transformers import SentenceTransformer
+
+try:  # pragma: no cover - depends on local optional runtime
+    import faiss
+except Exception:  # pragma: no cover
+    faiss = None
+
+try:  # pragma: no cover - depends on local optional runtime
+    from sentence_transformers import SentenceTransformer
+except Exception:  # pragma: no cover
+    SentenceTransformer = None
 
 from rdfrag_vkr.config import Settings, get_settings
 from rdfrag_vkr.schemas import ChunkRecord, RetrievalHit
@@ -26,7 +34,7 @@ class VectorRetriever:
 
     def __init__(self, settings: Settings | None = None) -> None:
         self.settings = settings or get_settings()
-        self._model: SentenceTransformer | None = None
+        self._model: object | None = None
         self.logger = logging.getLogger(__name__)
 
     def build_index(self, chunks: list[ChunkRecord] | None = None) -> dict:
@@ -48,7 +56,7 @@ class VectorRetriever:
             "count": int(embeddings.shape[0]),
         }
 
-        if backend == "faiss":
+        if backend == "faiss" and faiss is not None:
             index = faiss.IndexFlatIP(int(embeddings.shape[1]))
             index.add(embeddings)
             faiss.write_index(index, str(self._faiss_index_path()))
@@ -80,7 +88,7 @@ class VectorRetriever:
             return self._lexical_search(query, chunks, top_k=top_k)
 
         scored: list[tuple[int, float]] = []
-        if backend == "faiss" and self._faiss_index_path().exists():
+        if backend == "faiss" and faiss is not None and self._faiss_index_path().exists():
             index = faiss.read_index(str(self._faiss_index_path()))
             scores, indices = index.search(query_embedding.reshape(1, -1), top_k)
             for idx, score in zip(indices[0], scores[0], strict=False):
@@ -147,7 +155,8 @@ class VectorRetriever:
                 normalize_embeddings=True,
                 convert_to_numpy=True,
             )
-            return embeddings.astype("float32"), "faiss"
+            backend = "faiss" if faiss is not None else "numpy"
+            return embeddings.astype("float32"), backend
         except Exception:
             vectors = np.vstack([self._hash_embed_text(text) for text in texts]).astype("float32")
             return vectors, "hash"
@@ -164,7 +173,9 @@ class VectorRetriever:
             ).astype("float32")
         return np.vstack([self._hash_embed_text(query) for query in queries]).astype("float32")
 
-    def _load_model(self) -> SentenceTransformer:
+    def _load_model(self) -> object:
+        if SentenceTransformer is None:
+            raise ImportError("sentence-transformers is not available.")
         if self._model is None:
             self._model = SentenceTransformer(self.settings.embedding_model_name, local_files_only=True)
         return self._model

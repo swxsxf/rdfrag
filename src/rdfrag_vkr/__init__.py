@@ -1,2 +1,2 @@
-"""RDFRAG VKR MVP package."""
+"""RDFRAG VKR package."""
 

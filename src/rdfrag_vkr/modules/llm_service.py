@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import logging
+import re
 
 import httpx
 
@@ -28,108 +29,136 @@ class LLMService:
         if self.settings.llm_provider.lower() == "ollama" and self.is_ollama_available():
             prompt = self._build_prompt(question, hits, graph_context)
             answer = self._generate_with_ollama(prompt)
-            if answer:
+            if answer and self._is_usable_answer(answer, question):
                 if self._is_russian(question) and not self._looks_like_russian_answer(answer):
-                    self.logger.warning("Ollama returned a non-Russian answer for a Russian question; using fallback.")
+                    self.logger.warning("Ollama returned a non-Russian answer for a Russian question; retrying.")
+                    retry_prompt = (
+                        "/no_think\n"
+                        "Перепиши следующий ответ строго на русском языке. "
+                        "Сохрани смысл, формат 'Ответ:' и 'Ключевые пункты:', не добавляй новые факты.\n\n"
+                        f"Вопрос: {question}\n\n"
+                        f"Ответ для перевода/исправления:\n{answer}"
+                    )
+                    retry_answer = self._generate_with_ollama(retry_prompt)
+                    if retry_answer and self._looks_like_russian_answer(retry_answer):
+                        return retry_answer
                 else:
                     return answer
+            retry_prompt = self._build_prompt(question, hits[:2], graph_context=[], compact=True)
+            retry_answer = self._generate_with_ollama(retry_prompt)
+            if retry_answer and self._is_usable_answer(retry_answer, question):
+                return retry_answer
 
-        return self._fallback_answer(question, hits, graph_context)
+        raise RuntimeError(
+            "Ollama недоступна или не смогла сгенерировать ответ. "
+            f"Проверь, что сервер Ollama работает на {self.settings.ollama_url} "
+            f"и что модель {self.settings.ollama_model} доступна."
+        )
 
     def is_ollama_available(self) -> bool:
         """Check whether the configured Ollama endpoint is reachable."""
         try:
-            response = httpx.get(
-                f"{self.settings.ollama_url}/api/tags",
-                timeout=min(self.settings.ollama_timeout_seconds, 15),
-            )
+            with httpx.Client(trust_env=False, timeout=min(self.settings.ollama_timeout_seconds, 15)) as client:
+                response = client.get(f"{self.settings.ollama_url}/api/tags")
             return response.status_code == 200
         except Exception:
             return False
 
     def _generate_with_ollama(self, prompt: str) -> str | None:
         try:
-            response = httpx.post(
-                f"{self.settings.ollama_url}/api/generate",
-                json={
-                    "model": self.settings.ollama_model,
-                    "prompt": prompt,
-                    "stream": False,
-                    "options": {"temperature": self.settings.ollama_temperature},
-                },
-                timeout=self.settings.ollama_timeout_seconds,
-            )
+            with httpx.Client(trust_env=False, timeout=self.settings.ollama_timeout_seconds) as client:
+                response = client.post(
+                    f"{self.settings.ollama_url}/api/generate",
+                    json={
+                        "model": self.settings.ollama_model,
+                        "prompt": prompt,
+                        "stream": False,
+                        "think": False,
+                        "options": {
+                            "temperature": self.settings.ollama_temperature,
+                            "num_predict": max(700, self.settings.ollama_num_predict),
+                        },
+                    },
+                )
             response.raise_for_status()
             payload = response.json()
-            return str(payload.get("response", "")).strip() or None
+            answer = str(payload.get("response", "")).strip()
+            if not answer:
+                return None
+            return self._normalize_answer_text(answer)
         except Exception as exc:
             self.logger.warning("Ollama answer generation failed, using fallback synthesis: %s", exc)
             return None
 
-    def _build_prompt(self, question: str, hits: list[RetrievalHit], graph_context: list[dict]) -> str:
+    def _build_prompt(
+        self,
+        question: str,
+        hits: list[RetrievalHit],
+        graph_context: list[dict],
+        compact: bool = False,
+    ) -> str:
         evidence_blocks = []
-        for index, hit in enumerate(self._select_evidence_hits(hits), start=1):
+        max_hits = 2 if compact else 3
+        max_chars = 420 if compact else 620
+        for index, hit in enumerate(self._select_evidence_hits(hits)[:max_hits], start=1):
+            clean_text = self._prepare_context_text(hit.text, question)
+            if not clean_text:
+                continue
             evidence_blocks.append(
-                f"[Source {index}] title={hit.title}\n"
-                f"file={hit.source_file}\n"
-                f"retrieval_source={hit.source}\n"
-                f"score={hit.score:.3f}\n"
-                f"text={hit.text[:1200]}"
+                f"Фрагмент {index}:\n"
+                f"{clean_text[:max_chars]}"
             )
-        graph_lines = []
-        for item in graph_context[:5]:
-            matched = ", ".join(item.get("matched_entities", [])) or "no explicit entity match"
-            graph_lines.append(
-                f"title={item.get('title', '')}; file={item.get('source_file', '')}; "
-                f"score={item.get('score', 0)}; matched={matched}"
-            )
-        graph_part = "\n".join(graph_lines) if graph_lines else "No graph matches."
         evidence_part = "\n\n".join(evidence_blocks)
         target_language = self._target_language(question)
         if self._is_russian(question):
             output_format = (
+                "/no_think\n"
                 "Формат ответа:\n"
-                "1. Краткое определение или суть вопроса.\n"
-                "2. Основные механизмы, принципы или подходы.\n"
-                "3. Применение, примеры или сценарии из фрагментов.\n"
-                "4. Ключевые выводы и, если уместно, ограничения.\n"
-                "Пиши минимум 3-5 абзацев, подробно и структурированно.\n\n"
+                "Ответ: один содержательный абзац из 4-6 предложений с прямым ответом на вопрос.\n"
+                "В абзаце раскрой суть, принцип работы/механизм и практическое значение, если это подтверждается фрагментами.\n"
+                "Затем обязательно добавь отдельный блок 'Ключевые пункты:' с 3-4 короткими пунктами через дефис.\n"
+                "Если уместно, добавь 1 короткое ограничение или оговорку.\n"
+                "Не ограничивайся только абзацем: блок 'Ключевые пункты:' обязателен.\n"
+                "Не используй длинные разделы и не превращай ответ в текст главы ВКР.\n\n"
             )
         else:
             output_format = (
+                "/no_think\n"
                 "Response format:\n"
-                "1. Short definition or core idea.\n"
-                "2. Main mechanisms, principles, or approaches.\n"
-                "3. Applications, examples, or scenarios from the fragments.\n"
-                "4. Key conclusions and, when relevant, limitations.\n"
-                "Write at least 3-5 paragraphs, in a detailed and structured way.\n\n"
+                "Answer: one informative paragraph of 4-6 sentences that directly answers the question.\n"
+                "Cover the core idea, mechanism, and practical meaning when supported by the fragments.\n"
+                "Then always add a separate 'Key points:' block with 3-4 concise hyphen bullets.\n"
+                "When relevant, add 1 short limitation or caveat.\n"
+                "Do not return only the paragraph: the 'Key points:' block is required.\n"
+                "Do not use long sections and do not write a thesis chapter.\n\n"
             )
         if self._is_russian(question):
             system_prompt = (
                 "Ты — эксперт-аналитик. Тебе предоставлены фрагменты научных PDF-документов.\n\n"
                 "ПРАВИЛА:\n"
-                "1. Отвечай подробно и структурированно.\n"
-                "2. Используй все предоставленные фрагменты и не игнорируй релевантные детали.\n"
-                "3. Приводи конкретные термины, механизмы, методы, примеры и ограничения из документов.\n"
+                "1. Отвечай компактно, структурированно и по делу, но не слишком сухо.\n"
+                "2. Используй предоставленные фрагменты и не игнорируй релевантные детали.\n"
+                "3. Приводи конкретные термины, механизмы, методы, примеры и ограничения из документов, но без лишнего объема.\n"
                 "4. Если фрагменты не дают полного ответа, прямо укажи, что вывод ограничен имеющимся контекстом.\n"
                 "5. Если фрагменты противоречат друг другу, укажи это явно.\n"
                 "6. Не выдумывай факты, которых нет в предоставленных фрагментах.\n"
                 "7. Не пиши как retrieval-отчёт: не упоминай score, graph context, файл, chunk, API или техническую диагностику.\n"
                 "8. Пиши весь ответ на русском языке, даже если отдельные фрагменты или названия статей даны на английском.\n\n"
+                "ВАЖНО: вопрос задан на русском, поэтому весь итоговый ответ обязан быть на русском языке.\n\n"
+                "Итоговый ответ обязательно должен содержать строки 'Ответ:' и 'Ключевые пункты:'.\n\n"
             )
             user_prompt = (
                 f"Вопрос: {question}\n\n"
-                f"Графовый контекст:\n{graph_part}\n\n"
-                f"Документы:\n{evidence_part}\n\n"
-                "Дай развёрнутый экспертный ответ, опираясь на все фрагменты выше.\n"
+                f"Фрагменты научных документов:\n{evidence_part}\n\n"
+                "Дай компактный экспертный ответ, опираясь на фрагменты выше.\n"
             )
         else:
             system_prompt = (
                 "You are an expert analyst. You are given fragments from scientific PDF documents.\n\n"
                 "RULES:\n"
-                "1. Answer in a detailed and structured way.\n"
+                "1. Answer compactly, structurally, and directly, but not too tersely.\n"
                 "2. Use all provided fragments and do not ignore relevant evidence.\n"
-                "3. Include concrete terms, mechanisms, methods, examples, and limitations from the documents.\n"
+                "3. Include concrete terms, mechanisms, methods, examples, and limitations from the documents, but avoid unnecessary length.\n"
                 "4. If the fragments do not fully support a conclusion, state that clearly.\n"
                 "5. If fragments contradict each other, mention that explicitly.\n"
                 "6. Do not invent facts not grounded in the provided fragments.\n"
@@ -138,15 +167,67 @@ class LLMService:
             )
             user_prompt = (
                 f"Question: {question}\n\n"
-                f"Graph context:\n{graph_part}\n\n"
-                f"Documents:\n{evidence_part}\n\n"
-                "Provide a detailed expert answer grounded in all fragments above.\n"
+                f"Scientific document fragments:\n{evidence_part}\n\n"
+                "Provide a compact expert answer grounded in the fragments above.\n"
             )
 
         return system_prompt + output_format + user_prompt
 
     @staticmethod
+    def _prepare_context_text(text: str, question: str) -> str:
+        cleaned = " ".join(text.replace("\n", " ").split())
+        if cleaned == "Matched through graph entities.":
+            return ""
+        cleaned = cleaned.replace("•", " ")
+        cleaned = cleaned.replace("[", "").replace("]", "")
+        cleaned = " ".join(cleaned.split())
+        parts = [part.strip() for part in re.split(r"(?<=[.!?])\s+", cleaned) if part.strip()]
+        terms = LLMService._query_terms_for_context(question)
+        selected = [
+            part
+            for part in parts
+            if 45 <= len(part) <= 420 and any(term in part.lower() for term in terms)
+        ]
+        if not selected:
+            selected = [part for part in parts if 45 <= len(part) <= 420]
+        return " ".join(selected[:3]) or cleaned[:620]
+
+    @staticmethod
+    def _query_terms_for_context(question: str) -> set[str]:
+        lowered = question.lower()
+        terms = {token for token in re.findall(r"[\w-]+", lowered) if len(token) > 3}
+        aliases = {
+            "блокчейн": {"blockchain", "dlt", "реестр", "реестра"},
+            "цифров": {"digital", "twin", "twins", "dt", "двойник", "двойники", "двойниках"},
+            "iot": {"internet", "things", "интернет", "вещей"},
+            "метавселен": {"metaverse"},
+        }
+        for key, values in aliases.items():
+            if key in lowered:
+                terms.update(values)
+        return terms
+
+    @staticmethod
+    def _is_usable_answer(answer: str, question: str) -> bool:
+        stripped = answer.strip()
+        if len(stripped) < 80:
+            return False
+        if LLMService._is_russian(question) and not LLMService._looks_like_russian_answer(stripped):
+            return False
+        bad_chars = sum(1 for char in stripped if char in "#$%&*+/<=>@\\^_|~")
+        if bad_chars / max(1, len(stripped)) > 0.08:
+            return False
+        if not any(marker in stripped for marker in ("Ответ", "Ключевые пункты", "Answer", "Key points")):
+            return False
+        return True
+
+    @staticmethod
+    def _normalize_answer_text(answer: str) -> str:
+        return answer.replace("Ключевые пункы", "Ключевые пункты")
+
+    @staticmethod
     def _fallback_answer(question: str, hits: list[RetrievalHit], graph_context: list[dict]) -> str:
+        """Deterministic retrieval summary used only by offline evaluation scripts."""
         selected_hits = LLMService._select_evidence_hits(hits)
         evidence_points = []
         key_phrases = []
@@ -155,12 +236,14 @@ class LLMService:
             snippet = hit.text.replace("\n", " ").strip()
             if snippet == "Matched through graph entities.":
                 continue
-            evidence_points.append(f"- {LLMService._clean_snippet(snippet)}")
+            cleaned = LLMService._clean_snippet(snippet)
+            if cleaned:
+                evidence_points.append(f"- {cleaned}")
             key_phrases.extend(LLMService._extract_key_phrases(hit))
 
         if LLMService._is_russian(question):
-            short_answer = LLMService._build_direct_answer_ru(question, concepts, key_phrases)
-            bullet_points = LLMService._build_key_points_ru(question, concepts, evidence_points)
+            short_answer = LLMService._build_fallback_summary_ru(concepts, key_phrases)
+            bullet_points = LLMService._build_fallback_points_ru(concepts, evidence_points)
             sections = [
                 f"Ответ: {short_answer}",
                 "Ключевые пункты:",
@@ -276,75 +359,24 @@ class LLMService:
         return found
 
     @staticmethod
-    def _build_direct_answer_ru(question: str, concepts: list[str], key_phrases: list[str]) -> str:
-        lowered = question.lower()
-        if "что такое" in lowered and "блокчейн" in lowered:
+    def _build_fallback_summary_ru(concepts: list[str], key_phrases: list[str]) -> str:
+        topics = list(dict.fromkeys([*concepts, *key_phrases]))
+        if topics:
+            topic_text = ", ".join(topics[:5])
             return (
-                "Блокчейн — это технология распределённого реестра, в которой данные о транзакциях и событиях "
-                "записываются в последовательность связанных блоков и защищаются от незаметного изменения. "
-                "В найденных материалах он описывается как основа для доверенного обмена данными, "
-                "прослеживаемости операций и межорганизационного взаимодействия без единого центра доверия."
+                "По найденным фрагментам можно сделать ограниченный, но предметный вывод: "
+                f"основной контекст ответа связан с темами {topic_text}. "
+                "Ниже приведены ключевые наблюдения, извлечённые из наиболее релевантных фрагментов корпуса."
             )
-        if "блокчейн" in lowered and ("цифров" in lowered or "double" in lowered or "twin" in lowered):
-            return (
-                "Блокчейн в цифровых двойниках используется прежде всего для защищённого обмена и хранения данных, "
-                "повышения их целостности и прослеживаемости, а также для координации взаимодействия между цифровыми двойниками. "
-                "В найденных работах он также сочетается с прогнозной аналитикой и обработкой оперативных данных в реальном времени."
-            )
-        if "метод" in lowered and "метавселен" in lowered:
-            method_concepts = [item for item in concepts if item in {"цифровые двойники", "edge ai", "6g", "iot", "блокчейн", "интероперабельность"}]
-            if method_concepts:
-                return (
-                    "В найденных исследованиях метавселенной чаще всего упоминаются такие методы и технологические подходы, как "
-                    + ", ".join(method_concepts[:5])
-                    + ". Они используются для моделирования объектов, связи физического и виртуального миров, передачи данных и поддержки интеллектуальных сервисов."
-                )
-            return (
-                "В найденных исследованиях метавселенной методы описаны как сочетание архитектурных, сетевых и данных-ориентированных подходов, "
-                "но прямое перечисление зависит от конкретной статьи."
-            )
-        if "low-code" in lowered or "low code" in lowered or "низк" in lowered:
-            return (
-                "В найденных работах low-code платформы рассматриваются как средство ускорения разработки и вовлечения непрофессиональных разработчиков, "
-                "но при этом отдельно подчёркиваются вопросы тестирования, контроля качества, интеграции и анализа влияния изменений."
-            )
-        if key_phrases:
-            phrase_text = ", ".join(dict.fromkeys(key_phrases[:4]))
-            return f"По найденному контексту вопрос в основном связан с такими темами, как {phrase_text}."
-        return "По найденному контексту можно сделать ограниченный, но предметный вывод по теме вопроса."
+        return (
+            "По найденным фрагментам можно сделать только ограниченный вывод: "
+            "релевантный контекст есть, но он не содержит достаточно явного объяснения для полного ответа."
+        )
 
     @staticmethod
-    def _build_key_points_ru(question: str, concepts: list[str], evidence_points: list[str]) -> list[str]:
-        lowered = question.lower()
-        if "что такое" in lowered and "блокчейн" in lowered:
-            return [
-                "- Блокчейн хранит записи в виде последовательности связанных блоков, что поддерживает целостность и неизменяемость данных.",
-                "- Технология применяется для прозрачной фиксации транзакций, событий и операций между несколькими участниками.",
-                "- В работах по корпусу блокчейн связывается с IoT, цифровой трансформацией, цепочками поставок и цифровыми двойниками.",
-            ]
-        if "блокчейн" in lowered and ("цифров" in lowered or "twin" in lowered):
-            points = [
-                "- Блокчейн используется для надёжного и неизменяемого обмена данными между цифровыми двойниками.",
-                "- Он помогает обеспечить прослеживаемость операций и безопасную совместную работу в реальном времени.",
-            ]
-            if "прогнозная аналитика" in concepts or "iot" in concepts:
-                points.append("- В отдельных работах блокчейн сочетается с прогнозной аналитикой, IoT и обработкой операционных данных.")
-            return points
-        if "метод" in lowered and "метавселен" in lowered:
-            points = []
-            if "цифровые двойники" in concepts:
-                points.append("- Цифровые двойники используются для отображения физических объектов и процессов в виртуальную среду.")
-            if "edge ai" in concepts or "6g" in concepts:
-                points.append("- Edge AI и 6G рассматриваются как технологическая основа для вычислений, связи и масштабируемости метавселенной.")
-            if "блокчейн" in concepts or "iot" in concepts:
-                points.append("- Дополнительно встречаются блокчейн и IoT как средства доверенного обмена данными и интеграции устройств.")
-            return points or evidence_points[:3]
-        if "low-code" in lowered or "low code" in lowered or "низк" in lowered:
-            points = [
-                "- Главный акцент делается на ускорении разработки и снижении объёма ручного кодирования.",
-                "- Одновременно подчёркиваются ограничения в тестировании, обеспечении качества и сопровождении таких систем.",
-            ]
-            if "impact analysis" in concepts:
-                points.append("- Отдельно обсуждается анализ влияния изменений и контроль эволюции low-code решений.")
-            return points
-        return evidence_points[:3]
+    def _build_fallback_points_ru(concepts: list[str], evidence_points: list[str]) -> list[str]:
+        if evidence_points:
+            return evidence_points[:4]
+        if concepts:
+            return [f"- В найденном контексте выделяется тема: {concept}." for concept in concepts[:4]]
+        return ["- Прямые текстовые фрагменты по вопросу ограничены, поэтому вывод требует уточнения запроса или расширения корпуса."]

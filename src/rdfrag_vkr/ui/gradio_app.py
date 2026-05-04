@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import html
 import threading
 import time
 from collections.abc import Generator
@@ -16,7 +17,61 @@ from rdfrag_vkr.modules.llm_service import LLMService
 from rdfrag_vkr.modules.pdf_parser import PDFParser
 from rdfrag_vkr.modules.sparql_service import SparqlService
 
-LOCAL_STORAGE_KEY = "rdfrag_vkr_question_history"
+LOCAL_STORAGE_KEY = "rdfrag_vkr_chat_sessions"
+
+
+def _chat_questions(chat_rows: list[dict[str, str]]) -> list[str]:
+    return [
+        str(row.get("content", "")).strip()
+        for row in chat_rows
+        if row.get("role") == "user" and str(row.get("content", "")).strip()
+    ]
+
+
+def _same_session(left: dict, right: dict) -> bool:
+    return left.get("messages") == right.get("messages")
+
+
+def _upsert_session(sessions: list[dict], session: dict | None) -> list[dict]:
+    if not session:
+        return sessions
+    session_questions = session.get("questions", [])
+    for index, existing in enumerate(sessions):
+        existing_questions = existing.get("questions", [])
+        if existing_questions and session_questions and existing_questions[0] == session_questions[0]:
+            sessions[index] = session
+            return sessions[-30:]
+        if _same_session(existing, session):
+            sessions[index] = session
+            return sessions[-30:]
+    sessions.append(session)
+    return sessions[-30:]
+
+
+def _history_markup(sessions: list[dict]) -> str:
+    if not sessions:
+        return (
+            '<div id="question-history-panel">'
+            '<div class="history-empty">'
+            "История чатов появится здесь после нажатия «Новый чат»."
+            "</div>"
+            "</div>"
+        )
+
+    items: list[str] = []
+    for index, session in reversed(list(enumerate(sessions))):
+        questions = session.get("questions", [])
+        title = str(session.get("title") or (questions[0] if questions else "Диалог")).strip()
+        safe_title = html.escape(title)
+        count = len(questions) if isinstance(questions, list) else 0
+        caption = f"{count} вопроса" if count not in {1, 11} else f"{count} вопрос"
+        items.append(
+            f'<button class="history-item" onclick="window.rdfragLoadChat({index})">'
+            f'<div class="history-title">{safe_title}</div>'
+            f'<div class="history-caption">{caption}</div>'
+            "</button>"
+        )
+    return '<div id="question-history-panel">' + "".join(items) + "</div>"
 
 CUSTOM_CSS = """
 :root {
@@ -133,7 +188,7 @@ body, .gradio-container {
 }
 
 #question-history-panel {
-  height: 620px;
+  height: 500px;
   overflow-y: auto;
   padding-right: 4px;
 }
@@ -165,6 +220,17 @@ body, .gradio-container {
   background: rgba(56, 189, 248, 0.08);
 }
 
+.history-title {
+  color: #f8fafc;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.history-caption {
+  color: #94a3b8;
+  font-size: 12px;
+}
+
 #new-chat-btn button {
   width: 100%;
   min-height: 46px;
@@ -175,19 +241,40 @@ body, .gradio-container {
   font-weight: 600;
 }
 
-#top-k-slider {
-  margin-bottom: 10px;
+#new-chat-btn {
+  margin-top: 22px;
 }
 
-#top-k-slider .wrap {
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 18px;
-  padding: 8px 12px;
+.input-toolbar {
+  align-items: stretch;
+  gap: 12px;
 }
 
-#rag-chatbot {
-  border: none;
+.send-controls {
+  min-width: 132px;
+}
+
+#top-k-select,
+#top-k-select .wrap,
+#top-k-select label,
+#top-k-select .container {
+  margin-bottom: 0 !important;
+}
+
+#top-k-select .wrap {
+  min-height: 44px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+#rag-chatbot,
+#rag-chatbot .wrap,
+#rag-chatbot .container,
+#rag-chatbot > div {
+  border-color: rgba(255, 255, 255, 0.08) !important;
+  box-shadow: none !important;
+  outline: none !important;
 }
 
 #rag-chatbot .bubble-wrap {
@@ -211,19 +298,24 @@ body, .gradio-container {
 }
 
 #question-input textarea {
-  min-height: 88px !important;
-  border-radius: 18px !important;
+  min-height: 46px !important;
+  max-height: 168px !important;
+  border-radius: 14px !important;
   background: rgba(255, 255, 255, 0.04) !important;
   border: 1px solid rgba(255, 255, 255, 0.08) !important;
   color: #f8fafc !important;
+  line-height: 1.45 !important;
+  padding-top: 12px !important;
+  padding-bottom: 12px !important;
 }
 
 #send-btn button {
-  min-height: 88px;
-  border-radius: 18px;
+  min-height: 44px;
+  border-radius: 14px;
   background: linear-gradient(135deg, #0284c7, #2563eb);
   border: none;
   font-weight: 700;
+  padding: 0 18px;
 }
 
 .pdf-list {
@@ -250,7 +342,8 @@ body, .gradio-container {
   color: #cbd5e1;
 }
 
-#question-history-data {
+#question-history-data,
+#selected-session-index {
   display: none !important;
 }
 """
@@ -269,7 +362,7 @@ HEAD_HTML = f"""
       .replaceAll("'", "&#39;");
   }}
 
-  function getQuestions() {{
+  function getSessions() {{
     try {{
       const raw = window.localStorage.getItem(storageKey) || "[]";
       const parsed = JSON.parse(raw);
@@ -284,15 +377,18 @@ HEAD_HTML = f"""
     if (!host) {{
       return;
     }}
-    const questions = getQuestions();
-    if (!questions.length) {{
-      host.innerHTML = '<div class="history-empty">История вопросов появится здесь и сохранится в браузере.</div>';
+    const sessions = getSessions();
+    if (!sessions.length) {{
+      host.innerHTML = '<div class="history-empty">История чатов появится здесь после нажатия «Новый чат».</div>';
       return;
     }}
-    const items = [...questions].reverse().map((question) => {{
-      const safeQuestion = escapeHtml(question);
-      const payload = JSON.stringify(question);
-      return `<button class="history-item" onclick='window.rdfragFillQuestion(${{payload}})'>${{safeQuestion}}</button>`;
+    const items = [...sessions].reverse().map((session) => {{
+      const questions = Array.isArray(session.questions) ? session.questions : [];
+      const title = session.title || questions[0] || "Диалог";
+      const count = questions.length;
+      const caption = count === 1 ? "1 вопрос" : `${{count}} вопроса`;
+      const originalIndex = sessions.indexOf(session);
+      return `<button class="history-item" onclick="window.rdfragLoadChat(${{originalIndex}})"><div class="history-title">${{escapeHtml(title)}}</div><div class="history-caption">${{escapeHtml(caption)}}</div></button>`;
     }});
     host.innerHTML = items.join("");
   }}
@@ -303,7 +399,13 @@ HEAD_HTML = f"""
       window.setTimeout(syncFromHiddenField, 350);
       return;
     }}
-    let lastValue = field.value || "[]";
+    const storedValue = JSON.stringify(getSessions());
+    if (storedValue !== "[]") {{
+      field.value = storedValue;
+      field.dispatchEvent(new Event("input", {{ bubbles: true }}));
+      field.dispatchEvent(new Event("change", {{ bubbles: true }}));
+    }}
+    let lastValue = field.value || storedValue || "[]";
     try {{
       window.localStorage.setItem(storageKey, lastValue);
     }} catch (_error) {{
@@ -333,6 +435,16 @@ HEAD_HTML = f"""
     textbox.value = question;
     textbox.dispatchEvent(new Event("input", {{ bubbles: true }}));
     textbox.focus();
+  }};
+
+  window.rdfragLoadChat = function(index) {{
+    const field = document.querySelector("#selected-session-index textarea, #selected-session-index input");
+    if (!field) {{
+      return;
+    }}
+    field.value = String(index);
+    field.dispatchEvent(new Event("input", {{ bubbles: true }}));
+    field.dispatchEvent(new Event("change", {{ bubbles: true }}));
   }};
 
   window.addEventListener("load", () => {{
@@ -430,29 +542,101 @@ class RAGChatController:
         ]
         return _format_answer(answer, hits), serialized_hits
 
-    def clear_chat(self) -> tuple[list[dict[str, str]], list[dict[str, str]], list[str], str, str]:
-        return [], [], [], "[]", ""
+    @staticmethod
+    def _load_chat_sessions(payload: str | None) -> list[dict]:
+        try:
+            parsed = json.loads(payload or "[]")
+        except json.JSONDecodeError:
+            return []
+        if not isinstance(parsed, list):
+            return []
+        sessions: list[dict] = []
+        for item in parsed:
+            if not isinstance(item, dict):
+                continue
+            messages = item.get("messages", [])
+            questions = item.get("questions", [])
+            if not isinstance(messages, list) or not isinstance(questions, list):
+                continue
+            clean_messages = [
+                {"role": str(row.get("role", "")), "content": str(row.get("content", ""))}
+                for row in messages
+                if isinstance(row, dict) and row.get("role") in {"user", "assistant"}
+            ]
+            clean_questions = [str(question).strip() for question in questions if str(question).strip()]
+            if clean_messages and clean_questions:
+                sessions.append(
+                    {
+                        "title": str(item.get("title") or clean_questions[0])[:80],
+                        "questions": clean_questions,
+                        "messages": clean_messages,
+                    }
+                )
+        return sessions
+
+    @staticmethod
+    def _build_chat_session(chat_rows: list[dict[str, str]]) -> dict | None:
+        stable_rows = [
+            dict(row)
+            for row in chat_rows
+            if str(row.get("content", "")).strip() not in {"Думаю.", "Думаю..", "Думаю..."}
+        ]
+        questions = _chat_questions(stable_rows)
+        if not questions:
+            return None
+        return {
+            "title": questions[0][:80],
+            "questions": questions,
+            "messages": stable_rows,
+        }
+
+    def clear_chat(
+        self,
+        chat_history: list[dict[str, str]] | None,
+        sessions_payload: str | None,
+    ) -> tuple[list[dict[str, str]], list[dict[str, str]], str, str, str]:
+        sessions = self._load_chat_sessions(sessions_payload)
+        chat_rows = [dict(row) for row in (chat_history or [])]
+        session = self._build_chat_session(chat_rows)
+        sessions = _upsert_session(sessions, session)
+        payload = json.dumps(sessions, ensure_ascii=False)
+        return [], [], "", payload, _history_markup(sessions)
+
+    def load_chat_session(
+        self,
+        selected_index: str | None,
+        sessions_payload: str | None,
+    ) -> tuple[list[dict[str, str]], list[dict[str, str]], str]:
+        sessions = self._load_chat_sessions(sessions_payload)
+        try:
+            index = int(str(selected_index or "").strip())
+        except ValueError:
+            return [], [], ""
+        if index < 0 or index >= len(sessions):
+            return [], [], ""
+        messages = [dict(row) for row in sessions[index].get("messages", [])]
+        return messages, messages, ""
 
     def stream_answer(
         self,
         question: str,
         top_k: int,
         chat_history: list[dict[str, str]] | None,
-        question_history: list[str] | None,
-    ) -> Generator[tuple[list[dict[str, str]], list[dict[str, str]], list[str], str, str], None, None]:
+        sessions_payload: str | None,
+    ) -> Generator[tuple[list[dict[str, str]], list[dict[str, str]], str, str, str], None, None]:
         prompt = question.strip()
         chat_rows = [dict(row) for row in (chat_history or [])]
-        asked_questions = list(question_history or [])
+        sessions = self._load_chat_sessions(sessions_payload)
+        payload = json.dumps(sessions, ensure_ascii=False)
         if not prompt:
-            payload = json.dumps(asked_questions, ensure_ascii=False)
-            yield chat_rows, chat_rows, asked_questions, payload, ""
+            yield chat_rows, chat_rows, payload, _history_markup(sessions), ""
             return
 
-        asked_questions.append(prompt)
-        payload = json.dumps(asked_questions, ensure_ascii=False)
         chat_rows.append({"role": "user", "content": prompt})
         chat_rows.append({"role": "assistant", "content": "Думаю."})
-        yield chat_rows, chat_rows, asked_questions, payload, ""
+        sessions = _upsert_session(sessions, self._build_chat_session(chat_rows))
+        payload = json.dumps(sessions, ensure_ascii=False)
+        yield chat_rows, chat_rows, payload, _history_markup(sessions), ""
 
         result: dict[str, object] = {}
         error: dict[str, str] = {}
@@ -472,7 +656,7 @@ class RAGChatController:
         frame_index = 0
         while thread.is_alive():
             chat_rows[-1]["content"] = frames[frame_index % len(frames)]
-            yield chat_rows, chat_rows, asked_questions, payload, ""
+            yield chat_rows, chat_rows, payload, _history_markup(sessions), ""
             time.sleep(0.35)
             frame_index += 1
 
@@ -483,7 +667,9 @@ class RAGChatController:
             )
         else:
             chat_rows[-1]["content"] = str(result["answer"])
-        yield chat_rows, chat_rows, asked_questions, payload, ""
+        sessions = _upsert_session(sessions, self._build_chat_session(chat_rows))
+        payload = json.dumps(sessions, ensure_ascii=False)
+        yield chat_rows, chat_rows, payload, _history_markup(sessions), ""
 
 
 def create_demo(settings: Settings | None = None) -> gr.Blocks:
@@ -492,52 +678,56 @@ def create_demo(settings: Settings | None = None) -> gr.Blocks:
 
     with gr.Blocks(title="RDFRAG Chat") as demo:
         chat_state = gr.State([])
-        question_state = gr.State([])
 
         with gr.Column(elem_id="app-shell"):
             gr.HTML(controller.build_status_markup())
             with gr.Row(equal_height=True):
                 with gr.Column(scale=1, min_width=280):
                     with gr.Column(elem_classes=["sidebar-shell"]):
-                        gr.Markdown("История вопросов", elem_classes=["sidebar-title"])
-                        gr.HTML('<div id="question-history-panel"></div>')
+                        gr.Markdown("История чатов", elem_classes=["sidebar-title"])
+                        history_panel = gr.HTML(_history_markup([]))
                         new_chat = gr.Button("Новый чат", elem_id="new-chat-btn")
-                        question_history_json = gr.Textbox(
+                        chat_sessions_json = gr.Textbox(
                             value="[]",
-                            visible=False,
+                            visible=True,
                             elem_id="question-history-data",
+                            show_label=False,
+                        )
+                        selected_session_index = gr.Textbox(
+                            value="",
+                            visible=True,
+                            elem_id="selected-session-index",
                             show_label=False,
                         )
                 with gr.Column(scale=4, min_width=780):
                     with gr.Column(elem_classes=["chat-shell"]):
                         gr.Markdown("Диалог с системой", elem_classes=["chat-title"])
-                        top_k = gr.Slider(
-                            minimum=5,
-                            maximum=15,
-                            step=1,
-                            value=5,
-                            label="Top-K retrieval",
-                            elem_id="top-k-slider",
-                        )
                         chatbot = gr.Chatbot(
                             value=[],
                             label="",
                             height=560,
                             elem_id="rag-chatbot",
                         )
-                        with gr.Row():
+                        with gr.Row(elem_classes=["input-toolbar"]):
                             question_box = gr.Textbox(
                                 placeholder="Задай вопрос по корпусу статей...",
                                 show_label=False,
-                                lines=4,
+                                lines=1,
                                 max_lines=6,
                                 elem_id="question-input",
                                 scale=8,
                             )
-                            send_button = gr.Button("Отправить", elem_id="send-btn", scale=1)
+                            with gr.Column(scale=1, min_width=132, elem_classes=["send-controls"]):
+                                top_k = gr.Dropdown(
+                                    choices=[str(value) for value in range(1, 16)],
+                                    value="5",
+                                    label="Top-K",
+                                    elem_id="top-k-select",
+                                )
+                                send_button = gr.Button("Отправить", elem_id="send-btn")
 
-        submit_outputs = [chatbot, chat_state, question_state, question_history_json, question_box]
-        submit_inputs = [question_box, top_k, chat_state, question_state]
+        submit_outputs = [chatbot, chat_state, chat_sessions_json, history_panel, question_box]
+        submit_inputs = [question_box, top_k, chat_state, chat_sessions_json]
 
         send_button.click(
             fn=controller.stream_answer,
@@ -551,7 +741,13 @@ def create_demo(settings: Settings | None = None) -> gr.Blocks:
         )
         new_chat.click(
             fn=controller.clear_chat,
-            outputs=submit_outputs,
+            inputs=[chat_state, chat_sessions_json],
+            outputs=[chatbot, chat_state, question_box, chat_sessions_json, history_panel],
+        )
+        selected_session_index.change(
+            fn=controller.load_chat_session,
+            inputs=[selected_session_index, chat_sessions_json],
+            outputs=[chatbot, chat_state, question_box],
         )
 
     demo.queue(default_concurrency_limit=2)
