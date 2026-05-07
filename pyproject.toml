@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "rdfrag-vkr"
-version = "0.1.0"
+version = "1.0.0"
 description = "Hybrid graph + vector RAG MVP for scientific PDFs on the digital economy."
 readme = "README.md"
 requires-python = ">=3.11"

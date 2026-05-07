@@ -274,48 +274,83 @@ class Evaluator:
         except Exception:
             return
 
+        color_bg = "#ffffff"
+        color_text = "#0f172a"
+        color_subtext = "#475569"
+        color_grid = "#cbd5e1"
+        color_blue = "#2563eb"
+        color_cyan = "#06b6d4"
+        color_green = "#10b981"
+        color_amber = "#f59e0b"
+        color_red = "#ef4444"
+        color_purple = "#a855f7"
+        color_slate = "#64748b"
+        mode_colors = [color_slate, color_blue, color_green]
+        plt.rcParams.update(
+            {
+                "figure.facecolor": color_bg,
+                "axes.facecolor": color_bg,
+                "savefig.facecolor": color_bg,
+                "axes.edgecolor": color_grid,
+                "axes.labelcolor": color_text,
+                "xtick.color": color_text,
+                "ytick.color": color_text,
+                "text.color": color_text,
+            }
+        )
+
+        def style_axis(axis, *, grid_axis: str = "y") -> None:
+            axis.set_facecolor(color_bg)
+            axis.grid(axis=grid_axis, color=color_grid, alpha=0.65, linewidth=0.8)
+            axis.set_axisbelow(True)
+            for spine in axis.spines.values():
+                spine.set_color(color_grid)
+
         summary_frame = pd.DataFrame(summary_rows)
         if not summary_frame.empty:
-            figure = plt.figure(figsize=(10, 5))
+            figure = plt.figure(figsize=(10, 5), facecolor=color_bg)
             positions = range(len(summary_frame))
             width = 0.25
-            plt.bar([pos - width for pos in positions], summary_frame["hit_rate_at_k"], width=width, label="HitRate")
-            plt.bar(positions, summary_frame["mrr_at_k"], width=width, label="MRR")
-            plt.bar([pos + width for pos in positions], summary_frame["ndcg_at_k"], width=width, label="nDCG")
+            plt.bar([pos - width for pos in positions], summary_frame["hit_rate_at_k"], width=width, label="HitRate", color=color_blue)
+            plt.bar(positions, summary_frame["mrr_at_k"], width=width, label="MRR", color=color_cyan)
+            plt.bar([pos + width for pos in positions], summary_frame["ndcg_at_k"], width=width, label="nDCG", color=color_green)
             plt.xticks(list(positions), summary_frame["mode"])
             plt.ylim(0, 1.05)
             plt.title("Retrieval Quality Comparison")
             plt.legend()
+            style_axis(plt.gca())
             plt.tight_layout()
-            figure.savefig(self.settings.artifacts_plots_retrieval_dir / "retrieval_quality_comparison.png", dpi=200)
+            figure.savefig(self.settings.artifacts_plots_retrieval_dir / "retrieval_quality_comparison.png", dpi=200, facecolor=color_bg)
             plt.close(figure)
 
-            figure = plt.figure(figsize=(8, 5))
-            plt.bar(summary_frame["mode"], summary_frame["hit_rate_at_k"], color=["#9ca3af", "#2563eb", "#059669"])
+            figure = plt.figure(figsize=(8, 5), facecolor=color_bg)
+            plt.bar(summary_frame["mode"], summary_frame["hit_rate_at_k"], color=mode_colors)
             plt.ylim(0, 1.05)
             plt.title("Baseline vs Tuned vs Hybrid")
             plt.ylabel("HitRate@K")
+            style_axis(plt.gca())
             plt.tight_layout()
-            figure.savefig(self.settings.artifacts_plots_retrieval_dir / "baseline_vs_tuned_vs_hybrid.png", dpi=200)
+            figure.savefig(self.settings.artifacts_plots_retrieval_dir / "baseline_vs_tuned_vs_hybrid.png", dpi=200, facecolor=color_bg)
             plt.close(figure)
 
-            figure = plt.figure(figsize=(8, 5))
+            figure = plt.figure(figsize=(8, 5), facecolor=color_bg)
             positions = range(len(summary_frame))
             width = 0.35
-            plt.bar([pos - width / 2 for pos in positions], summary_frame["precision_at_k"], width=width, label="Precision@K")
-            plt.bar([pos + width / 2 for pos in positions], summary_frame["recall_at_k"], width=width, label="Recall@K")
+            plt.bar([pos - width / 2 for pos in positions], summary_frame["precision_at_k"], width=width, label="Precision@K", color=color_blue)
+            plt.bar([pos + width / 2 for pos in positions], summary_frame["recall_at_k"], width=width, label="Recall@K", color=color_green)
             plt.xticks(list(positions), summary_frame["mode"])
             plt.ylim(0, 1.05)
             plt.title("Precision@K vs Recall@K")
             plt.legend()
+            style_axis(plt.gca())
             plt.tight_layout()
-            figure.savefig(self.settings.artifacts_plots_retrieval_dir / "precision_recall_comparison.png", dpi=200)
+            figure.savefig(self.settings.artifacts_plots_retrieval_dir / "precision_recall_comparison.png", dpi=200, facecolor=color_bg)
             plt.close(figure)
 
         topk_frame = pd.DataFrame(topk_summary_rows)
         if not topk_frame.empty:
-            figure = plt.figure(figsize=(9, 5))
-            for mode, color in (("baseline", "#9ca3af"), ("tuned", "#2563eb"), ("hybrid", "#059669")):
+            figure = plt.figure(figsize=(9, 5), facecolor=color_bg)
+            for mode, color in (("baseline", color_slate), ("tuned", color_blue), ("hybrid", color_green)):
                 mode_frame = topk_frame[topk_frame["mode"] == mode].sort_values("top_k")
                 if not mode_frame.empty:
                     plt.plot(mode_frame["top_k"], mode_frame["hit_rate_at_k"], marker="o", label=mode, color=color)
@@ -325,12 +360,13 @@ class Evaluator:
             plt.xlabel("K")
             plt.ylabel("HitRate@K")
             plt.legend()
+            style_axis(plt.gca())
             plt.tight_layout()
-            figure.savefig(self.settings.artifacts_plots_retrieval_dir / "topk_hit_rate_comparison.png", dpi=200)
+            figure.savefig(self.settings.artifacts_plots_retrieval_dir / "topk_hit_rate_comparison.png", dpi=200, facecolor=color_bg)
             plt.close(figure)
 
-            figure = plt.figure(figsize=(9, 5))
-            for mode, color in (("baseline", "#9ca3af"), ("tuned", "#2563eb"), ("hybrid", "#059669")):
+            figure = plt.figure(figsize=(9, 5), facecolor=color_bg)
+            for mode, color in (("baseline", color_slate), ("tuned", color_blue), ("hybrid", color_green)):
                 mode_frame = topk_frame[topk_frame["mode"] == mode].sort_values("top_k")
                 if not mode_frame.empty:
                     plt.plot(mode_frame["top_k"], mode_frame["recall_at_k"], marker="o", label=mode, color=color)
@@ -340,77 +376,83 @@ class Evaluator:
             plt.xlabel("K")
             plt.ylabel("Recall@K")
             plt.legend()
+            style_axis(plt.gca())
             plt.tight_layout()
-            figure.savefig(self.settings.artifacts_plots_retrieval_dir / "topk_recall_comparison.png", dpi=200)
+            figure.savefig(self.settings.artifacts_plots_retrieval_dir / "topk_recall_comparison.png", dpi=200, facecolor=color_bg)
             plt.close(figure)
 
         per_query_frame = pd.DataFrame(per_query_rows)
         if not per_query_frame.empty:
             hit_pivot = per_query_frame.pivot(index="question", columns="mode", values="hit").fillna(0).astype(float)
             if not hit_pivot.empty:
-                figure = plt.figure(figsize=(10, max(5, len(hit_pivot) * 0.6)))
-                plt.imshow(hit_pivot.values, aspect="auto", cmap="YlGn", vmin=0, vmax=1)
+                figure = plt.figure(figsize=(10, max(5, len(hit_pivot) * 0.6)), facecolor=color_bg)
+                plt.imshow(hit_pivot.values, aspect="auto", cmap="GnBu", vmin=0, vmax=1)
                 plt.xticks(range(len(hit_pivot.columns)), hit_pivot.columns)
                 plt.yticks(range(len(hit_pivot.index)), hit_pivot.index)
                 plt.title("Per-query Retrieval Hit Heatmap")
                 plt.colorbar(label="Hit")
                 plt.tight_layout()
-                figure.savefig(self.settings.artifacts_plots_retrieval_dir / "per_query_hit_heatmap.png", dpi=200)
+                figure.savefig(self.settings.artifacts_plots_retrieval_dir / "per_query_hit_heatmap.png", dpi=200, facecolor=color_bg)
                 plt.close(figure)
 
             rank_frame = per_query_frame.copy()
             rank_frame["first_relevant_rank"] = rank_frame["first_relevant_rank"].replace(0, float("nan"))
             grouped_rank = rank_frame.groupby("mode", as_index=False)["first_relevant_rank"].mean()
             if not grouped_rank.empty:
-                figure = plt.figure(figsize=(8, 5))
-                plt.bar(grouped_rank["mode"], grouped_rank["first_relevant_rank"], color=["#64748b", "#0ea5e9", "#22c55e"])
+                figure = plt.figure(figsize=(8, 5), facecolor=color_bg)
+                plt.bar(grouped_rank["mode"], grouped_rank["first_relevant_rank"], color=mode_colors)
                 plt.title("Average First Relevant Rank")
                 plt.ylabel("Rank")
+                style_axis(plt.gca())
                 plt.tight_layout()
-                figure.savefig(self.settings.artifacts_plots_retrieval_dir / "first_relevant_rank_comparison.png", dpi=200)
+                figure.savefig(self.settings.artifacts_plots_retrieval_dir / "first_relevant_rank_comparison.png", dpi=200, facecolor=color_bg)
                 plt.close(figure)
 
         answer_frame = pd.DataFrame(answer_rows)
         if not answer_frame.empty:
             grouped = answer_frame.groupby("mode", as_index=False)["answer_words"].mean()
-            figure = plt.figure(figsize=(8, 5))
-            plt.bar(grouped["mode"], grouped["answer_words"], color=["#64748b", "#0ea5e9", "#22c55e"])
+            figure = plt.figure(figsize=(8, 5), facecolor=color_bg)
+            plt.bar(grouped["mode"], grouped["answer_words"], color=mode_colors)
             plt.title("Average Answer Length by Retrieval Mode")
             plt.ylabel("Words")
+            style_axis(plt.gca())
             plt.tight_layout()
-            figure.savefig(self.settings.artifacts_plots_answers_dir / "answer_length_comparison.png", dpi=200)
+            figure.savefig(self.settings.artifacts_plots_answers_dir / "answer_length_comparison.png", dpi=200, facecolor=color_bg)
             plt.close(figure)
 
         knowledge_frame = pd.DataFrame(knowledge_rows)
         backend_frame = pd.DataFrame(knowledge_backend_rows)
         if not backend_frame.empty:
-            figure = plt.figure(figsize=(8, 5))
-            plt.bar(backend_frame["backend"], backend_frame["documents"], color=["#0ea5e9", "#f59e0b", "#64748b", "#ef4444"][: len(backend_frame)])
+            figure = plt.figure(figsize=(8, 5), facecolor=color_bg)
+            plt.bar(backend_frame["backend"], backend_frame["documents"], color=[color_cyan, color_amber, color_slate, color_red][: len(backend_frame)])
             plt.title("Knowledge Extraction Backend Distribution")
             plt.ylabel("Documents")
+            style_axis(plt.gca())
             plt.tight_layout()
-            figure.savefig(self.settings.artifacts_plots_training_dir / "knowledge_backend_distribution.png", dpi=200)
+            figure.savefig(self.settings.artifacts_plots_training_dir / "knowledge_backend_distribution.png", dpi=200, facecolor=color_bg)
             plt.close(figure)
 
         if not knowledge_frame.empty:
-            figure = plt.figure(figsize=(8, 5))
-            plt.hist(knowledge_frame["entity_count"], bins=15, alpha=0.7, label="Entities")
-            plt.hist(knowledge_frame["relation_count"], bins=15, alpha=0.7, label="Relations")
+            figure = plt.figure(figsize=(8, 5), facecolor=color_bg)
+            plt.hist(knowledge_frame["entity_count"], bins=15, alpha=0.74, label="Entities", color=color_blue)
+            plt.hist(knowledge_frame["relation_count"], bins=15, alpha=0.68, label="Relations", color=color_green)
             plt.title("Knowledge Extraction Coverage Distribution")
             plt.xlabel("Count per document")
             plt.ylabel("Documents")
             plt.legend()
+            style_axis(plt.gca())
             plt.tight_layout()
-            figure.savefig(self.settings.artifacts_plots_training_dir / "knowledge_entities_relations_distribution.png", dpi=200)
+            figure.savefig(self.settings.artifacts_plots_training_dir / "knowledge_entities_relations_distribution.png", dpi=200, facecolor=color_bg)
             plt.close(figure)
 
-            figure = plt.figure(figsize=(8, 5))
-            plt.scatter(knowledge_frame["entity_count"], knowledge_frame["relation_count"], alpha=0.7, color="#2563eb")
+            figure = plt.figure(figsize=(8, 5), facecolor=color_bg)
+            plt.scatter(knowledge_frame["entity_count"], knowledge_frame["relation_count"], alpha=0.72, color=color_blue, edgecolors=color_bg, linewidths=0.5)
             plt.title("Entities vs Relations per Document")
             plt.xlabel("Entity count")
             plt.ylabel("Relation count")
+            style_axis(plt.gca(), grid_axis="both")
             plt.tight_layout()
-            figure.savefig(self.settings.artifacts_plots_training_dir / "knowledge_entities_relations_scatter.png", dpi=200)
+            figure.savefig(self.settings.artifacts_plots_training_dir / "knowledge_entities_relations_scatter.png", dpi=200, facecolor=color_bg)
             plt.close(figure)
 
     def _collect_knowledge_coverage(self) -> tuple[list[dict], list[dict], dict]:

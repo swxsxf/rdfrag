@@ -24,6 +24,12 @@ from rdfrag_vkr.config import get_settings
 
 BASE_URI = "http://example.org/rdfrag/"
 SKIP_PREDICATES = {"title", "sourceFile", "publishedInYearLiteral", "label"}
+COLOR_BG = "#ffffff"
+COLOR_PANEL = "#f8fafc"
+COLOR_TEXT = "#0f172a"
+COLOR_SUBTEXT = "#475569"
+COLOR_GRID = "#cbd5e1"
+COLOR_EDGE = "#64748b"
 SEED_GROUPS = {
     "Blockchain": ["blockchain", "блокчейн"],
     "Digital Twins": ["digital twin", "digital twins", "цифров", "digital-twin"],
@@ -62,6 +68,10 @@ def sanitize_text(value: str, width: int = 26, max_lines: int = 3) -> str:
         wrapped = wrapped[:max_lines]
         wrapped[-1] = wrapped[-1][: max(0, width - 3)].rstrip() + "..."
     return "\n".join(wrapped)
+
+
+def scale_node_sizes(values: list[float], factor: float = 1.45) -> list[float]:
+    return [value * factor for value in values]
 
 
 class GraphVisualizer:
@@ -162,11 +172,11 @@ class GraphVisualizer:
         if not graph.nodes:
             return
 
-        figure = plt.figure(figsize=(16, 10), facecolor="#070b14")
+        figure = plt.figure(figsize=(18, 10.6), facecolor=COLOR_BG)
         axis = plt.gca()
-        axis.set_facecolor("#070b14")
+        axis.set_facecolor(COLOR_BG)
         axis.axis("off")
-        figure.subplots_adjust(top=0.84, left=0.03, right=0.98, bottom=0.03)
+        figure.subplots_adjust(top=0.82, left=0.025, right=0.985, bottom=0.025)
 
         if layout == "shell":
             pos = nx.shell_layout(graph)
@@ -176,10 +186,10 @@ class GraphVisualizer:
             pos = nx.spring_layout(graph, seed=42, k=max(0.55, 1.8 / math.sqrt(max(1, graph.number_of_nodes()))))
 
         node_colors = [TYPE_COLORS.get(graph.nodes[node].get("node_type", "Unknown"), TYPE_COLORS["Unknown"]) for node in graph.nodes]
-        node_size_values = [
+        node_size_values = scale_node_sizes([
             float(node_sizes.get(node, 1800)) if node_sizes else float(graph.nodes[node].get("node_size", 1800))
             for node in graph.nodes
-        ]
+        ])
         edge_width_values = []
         for edge in graph.edges:
             if edge_widths and edge in edge_widths:
@@ -191,8 +201,8 @@ class GraphVisualizer:
 
         edge_kwargs = {
             "width": edge_width_values,
-            "edge_color": "#64748b",
-            "alpha": 0.55,
+            "edge_color": COLOR_EDGE,
+            "alpha": 0.52,
             "connectionstyle": "arc3,rad=0.08" if isinstance(graph, nx.DiGraph) else "arc3",
         }
         if isinstance(graph, nx.DiGraph):
@@ -204,16 +214,17 @@ class GraphVisualizer:
             pos,
             node_color=node_colors,
             node_size=node_size_values,
-            edgecolors="#e2e8f0",
-            linewidths=1.0,
+            edgecolors=COLOR_BG,
+            linewidths=1.4,
             alpha=0.96,
         )
         nx.draw_networkx_labels(
             graph,
             pos,
             labels={node: graph.nodes[node].get("label", node) for node in graph.nodes},
-            font_size=9,
-            font_color="#e5e7eb",
+            font_size=11,
+            font_color=COLOR_TEXT,
+            bbox={"boxstyle": "round,pad=0.18", "facecolor": COLOR_BG, "edgecolor": COLOR_GRID, "alpha": 0.88},
         )
 
         if edge_labels:
@@ -221,18 +232,18 @@ class GraphVisualizer:
                 graph,
                 pos,
                 edge_labels=edge_labels,
-                font_size=8,
-                font_color="#cbd5e1",
+                font_size=13,
+                font_color=COLOR_SUBTEXT,
                 rotate=False,
-                bbox={"alpha": 0.0, "pad": 0.1},
+                bbox={"boxstyle": "round,pad=0.18", "facecolor": COLOR_BG, "edgecolor": "none", "alpha": 0.96},
             )
 
         figure.text(
             0.03,
             0.955,
             title,
-            fontsize=22,
-            color="#f8fafc",
+            fontsize=30,
+            color=COLOR_TEXT,
             ha="left",
             va="top",
             fontweight="bold",
@@ -242,8 +253,8 @@ class GraphVisualizer:
                 0.03,
                 0.895,
                 subtitle,
-                fontsize=11,
-                color="#94a3b8",
+                fontsize=15,
+                color=COLOR_SUBTEXT,
                 ha="left",
                 va="top",
             )
@@ -259,16 +270,16 @@ class GraphVisualizer:
         graph = nx.DiGraph()
         for group_name, nodes in seed_matches.items():
             for node in nodes[:2]:
-                graph.add_node(str(node), label=self._node_label(node), node_type=self._node_type(node), node_size=2300)
+                graph.add_node(str(node), label=self._node_label(node, width=22), node_type=self._node_type(node), node_size=2800)
         for article in selected_articles:
             article_key = str(article)
-            graph.add_node(article_key, label=self._node_label(article, width=22), node_type="Article", node_size=2600)
+            graph.add_node(article_key, label=self._node_label(article, width=20), node_type="Article", node_size=3100)
             for predicate_name, neighbor in self._article_neighbors(article):
                 if neighbor not in seed_nodes:
                     continue
                 neighbor_key = str(neighbor)
                 if neighbor_key not in graph:
-                    graph.add_node(neighbor_key, label=self._node_label(neighbor), node_type=self._node_type(neighbor), node_size=2200)
+                    graph.add_node(neighbor_key, label=self._node_label(neighbor, width=22), node_type=self._node_type(neighbor), node_size=2700)
                 graph.add_edge(article_key, neighbor_key, predicate=predicate_name)
 
         output_path = self.plot_dir / "topic_subgraph_blockchain_digital_twins_iot_smart_city.png"
@@ -297,15 +308,15 @@ class GraphVisualizer:
 
         graph = nx.DiGraph()
         article_key = str(preferred)
-        graph.add_node(article_key, label=self._node_label(preferred, width=28), node_type="Article", node_size=3600)
+        graph.add_node(article_key, label=self._node_label(preferred, width=26), node_type="Article", node_size=5000)
         edge_labels: dict[tuple[str, str], str] = {}
         for predicate_name, neighbor in self._article_neighbors(preferred)[:16]:
             neighbor_key = str(neighbor)
             graph.add_node(
                 neighbor_key,
-                label=self._node_label(neighbor, width=20),
+                label=self._node_label(neighbor, width=18),
                 node_type=self._node_type(neighbor),
-                node_size=2200 if self._node_type(neighbor) != "Author" else 1800,
+                node_size=2900 if self._node_type(neighbor) != "Author" else 2400,
             )
             graph.add_edge(article_key, neighbor_key)
             edge_labels[(article_key, neighbor_key)] = predicate_name
@@ -343,9 +354,9 @@ class GraphVisualizer:
                 key,
                 label=self._node_label(entity),
                 node_type=self._node_type(entity),
-                node_size=1500 + article_count * 220,
+                node_size=2100 + article_count * 280,
             )
-            node_sizes[key] = 1500 + article_count * 220
+            node_sizes[key] = 2100 + article_count * 280
 
         co_occurrence: Counter = Counter()
         for article in self.article_nodes:
@@ -386,8 +397,8 @@ class GraphVisualizer:
         edge_labels: dict[tuple[str, str], str] = {}
         node_sizes: dict[str, float] = {}
         for source_type, target_type, predicate_name in schema_counts:
-            graph.add_node(source_type, label=source_type, node_type=source_type, node_size=2800)
-            graph.add_node(target_type, label=target_type, node_type=target_type, node_size=2400)
+            graph.add_node(source_type, label=source_type, node_type=source_type, node_size=3600)
+            graph.add_node(target_type, label=target_type, node_type=target_type, node_size=3300)
             if graph.has_edge(source_type, target_type):
                 graph.edges[source_type, target_type]["predicates"].append((predicate_name, schema_counts[(source_type, target_type, predicate_name)]))
             else:
@@ -396,8 +407,8 @@ class GraphVisualizer:
                     target_type,
                     predicates=[(predicate_name, schema_counts[(source_type, target_type, predicate_name)])],
                 )
-            node_sizes[source_type] = 3000
-            node_sizes[target_type] = 2600
+            node_sizes[source_type] = 3800
+            node_sizes[target_type] = 3400
 
         for source, target in graph.edges:
             predicates = graph.edges[source, target]["predicates"]

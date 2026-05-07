@@ -31,7 +31,7 @@ def _safe_count_pdfs(settings: Settings) -> int:
 def create_app(settings: Settings | None = None) -> FastAPI:
     """Create a FastAPI app with project services."""
     app_settings = settings or get_settings()
-    app = FastAPI(title="RDFRAG VKR", version="0.1.0")
+    app = FastAPI(title="RDFRAG VKR", version="1.0.0")
     retriever = HybridRetriever(app_settings)
     llm_service = LLMService(app_settings)
     pdf_parser = PDFParser(app_settings)

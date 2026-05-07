@@ -20,5 +20,7 @@ data/embeddings/
 
 # Generated local build/runtime artifacts
 artifacts/models/
+artifacts/fine_tuning/
 artifacts/tmp/
+kaggle/
 src/*.egg-info/

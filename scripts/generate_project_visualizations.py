@@ -19,18 +19,18 @@ from rdfrag_vkr.config import get_settings
 
 
 BASE_URI = "http://example.org/rdfrag/"
-COLOR_BG = "#070b14"
-COLOR_PANEL = "#0f172a"
-COLOR_PANEL_ALT = "#111827"
-COLOR_TEXT = "#f8fafc"
-COLOR_SUBTEXT = "#94a3b8"
-COLOR_GRID = "#1f2937"
+COLOR_BG = "#ffffff"
+COLOR_PANEL = "#ffffff"
+COLOR_PANEL_ALT = "#f8fafc"
+COLOR_TEXT = "#0f172a"
+COLOR_SUBTEXT = "#475569"
+COLOR_GRID = "#cbd5e1"
 COLOR_BLUE = "#2563eb"
 COLOR_CYAN = "#06b6d4"
 COLOR_GREEN = "#10b981"
 COLOR_AMBER = "#f59e0b"
 COLOR_RED = "#ef4444"
-COLOR_PURPLE = "#8b5cf6"
+COLOR_PURPLE = "#a855f7"
 COLOR_SLATE = "#64748b"
 
 MODE_LABELS = {
@@ -93,9 +93,9 @@ def clean_text(value: str, max_len: int = 66) -> str:
     return text[: max_len - 3].rstrip() + "..."
 
 
-def draw_title(figure: plt.Figure, title: str, subtitle: str) -> None:
-    figure.text(0.04, 0.965, title, fontsize=22, fontweight="bold", color=COLOR_TEXT, ha="left", va="top")
-    figure.text(0.04, 0.915, subtitle, fontsize=11, color=COLOR_SUBTEXT, ha="left", va="top")
+def draw_title(figure: plt.Figure, title: str, subtitle: str, *, title_size: int = 22, subtitle_size: int = 11) -> None:
+    figure.text(0.04, 0.965, title, fontsize=title_size, fontweight="bold", color=COLOR_TEXT, ha="left", va="top")
+    figure.text(0.04, 0.905, subtitle, fontsize=subtitle_size, color=COLOR_SUBTEXT, ha="left", va="top")
 
 
 class ProjectVisualizer:
@@ -140,7 +140,7 @@ class ProjectVisualizer:
 
     def build_architecture_diagram(self) -> Path:
         output = self.plot_dir / "architecture_overview.png"
-        figure = plt.figure(figsize=(16, 9), facecolor=COLOR_BG)
+        figure = plt.figure(figsize=(18, 9.8), facecolor=COLOR_BG)
         axis = plt.gca()
         axis.set_xlim(0, 1)
         axis.set_ylim(0, 1)
@@ -154,7 +154,7 @@ class ProjectVisualizer:
                     arrowstyle="-|>" if arrow else "-",
                     mutation_scale=16 if arrow else 1,
                     linewidth=2.0,
-                    color=COLOR_SUBTEXT,
+                    color=COLOR_SLATE,
                     connectionstyle="arc3,rad=0.0",
                 )
             )
@@ -163,18 +163,20 @@ class ProjectVisualizer:
             figure,
             "Архитектура graph-enhanced RAG-системы",
             "Полный путь от корпуса PDF до ответа в API и Gradio-интерфейсе.",
+            title_size=30,
+            subtitle_size=16,
         )
 
         boxes = {
-            "pdf": (0.05, 0.62, 0.14, 0.12, "Корпус PDF\n151 документов", COLOR_PANEL_ALT),
-            "parse": (0.24, 0.62, 0.16, 0.12, "Парсинг\nGROBID / pypdf", COLOR_PANEL),
-            "chunks": (0.45, 0.62, 0.15, 0.12, "Chunking\n5 135 фрагментов", COLOR_PANEL_ALT),
-            "extract": (0.65, 0.62, 0.16, 0.12, "Knowledge extraction\nqwen3:8b", COLOR_PANEL),
-            "vector": (0.60, 0.34, 0.17, 0.12, "FAISS index\nvector retrieval", COLOR_PANEL_ALT),
-            "graph": (0.81, 0.34, 0.14, 0.12, "RDF + Fuseki\ngraph retrieval", COLOR_PANEL_ALT),
-            "hybrid": (0.67, 0.12, 0.18, 0.12, "Hybrid retrieval\nfusion + reranking", COLOR_PANEL),
-            "answer": (0.42, 0.12, 0.18, 0.12, "Answer generation\nLLM synthesis", COLOR_PANEL_ALT),
-            "serve": (0.16, 0.12, 0.18, 0.12, "FastAPI + Gradio\nчат / query endpoint", COLOR_PANEL),
+            "pdf": (0.035, 0.66, 0.17, 0.145, "Корпус PDF\n151 документов", COLOR_PANEL_ALT),
+            "parse": (0.245, 0.66, 0.18, 0.145, "Парсинг\nGROBID / pypdf", COLOR_PANEL),
+            "chunks": (0.465, 0.66, 0.18, 0.145, "Chunking\n5 135 фрагментов", COLOR_PANEL_ALT),
+            "extract": (0.685, 0.66, 0.19, 0.145, "Knowledge extraction\nqwen3:8b", COLOR_PANEL),
+            "vector": (0.595, 0.365, 0.20, 0.145, "FAISS index\nvector retrieval", COLOR_PANEL_ALT),
+            "graph": (0.815, 0.365, 0.17, 0.145, "RDF + Fuseki\ngraph retrieval", COLOR_PANEL_ALT),
+            "hybrid": (0.67, 0.105, 0.21, 0.145, "Hybrid retrieval\nfusion + reranking", COLOR_PANEL),
+            "answer": (0.405, 0.105, 0.21, 0.145, "Answer generation\nLLM synthesis", COLOR_PANEL_ALT),
+            "serve": (0.125, 0.105, 0.22, 0.145, "FastAPI + Gradio\nчат / query endpoint", COLOR_PANEL),
         }
 
         for _, (x, y, w, h, label, face) in boxes.items():
@@ -185,11 +187,11 @@ class ProjectVisualizer:
                     h,
                     boxstyle="round,pad=0.012,rounding_size=0.025",
                     linewidth=1.4,
-                    edgecolor="#1e293b",
+                    edgecolor=COLOR_GRID,
                     facecolor=face,
                 )
             )
-            axis.text(x + w / 2, y + h / 2, label, ha="center", va="center", fontsize=12, color=COLOR_TEXT)
+            axis.text(x + w / 2, y + h / 2, label, ha="center", va="center", fontsize=15, color=COLOR_TEXT)
 
         top_arrows = [
             ("pdf", "parse"),
@@ -209,9 +211,9 @@ class ProjectVisualizer:
         serve_x, serve_y, serve_w, serve_h, *_ = boxes["serve"]
 
         branch_origin = (extract_x + extract_w / 2, extract_y)
-        branch_split = (extract_x + extract_w / 2, 0.525)
-        left_anchor = (vector_x + vector_w / 2, 0.495)
-        right_anchor = (graph_x + graph_w / 2, 0.495)
+        branch_split = (extract_x + extract_w / 2, 0.575)
+        left_anchor = (vector_x + vector_w / 2, 0.54)
+        right_anchor = (graph_x + graph_w / 2, 0.54)
         vector_target = (vector_x + vector_w / 2, vector_y + vector_h)
         graph_target = (graph_x + graph_w / 2, graph_y + graph_h)
 
@@ -223,9 +225,9 @@ class ProjectVisualizer:
 
         axis.text(
             branch_split[0],
-            0.462,
+            0.512,
             "Из extraction формируются\nдве базы: векторная и графовая",
-            fontsize=9.5,
+            fontsize=12.5,
             color=COLOR_SUBTEXT,
             ha="center",
             va="center",
@@ -235,7 +237,7 @@ class ProjectVisualizer:
         vector_start = (vector_x + vector_w / 2, vector_y)
         graph_start = (graph_x + graph_w / 2, graph_y)
         hybrid_top = (hybrid_x + hybrid_w / 2, hybrid_y + hybrid_h)
-        elbow_y = hybrid_y + hybrid_h + 0.03
+        elbow_y = hybrid_y + hybrid_h + 0.045
         draw_link(vector_start, (vector_start[0], elbow_y), arrow=False)
         draw_link((vector_start[0], elbow_y), (hybrid_top[0], elbow_y), arrow=False)
         draw_link((hybrid_top[0], elbow_y), hybrid_top)
@@ -449,7 +451,7 @@ class ProjectVisualizer:
                 cell.set_text_props(color=COLOR_TEXT, weight="bold")
                 cell.set_facecolor(COLOR_PANEL_ALT)
             else:
-                cell.set_facecolor(COLOR_PANEL if row_index % 2 else "#0b1220")
+                cell.set_facecolor(COLOR_PANEL if row_index % 2 else COLOR_PANEL_ALT)
                 cell.get_text().set_color(COLOR_TEXT)
         figure.subplots_adjust(top=0.83, left=0.02, right=0.98, bottom=0.06)
         figure.savefig(output, dpi=220, bbox_inches="tight")

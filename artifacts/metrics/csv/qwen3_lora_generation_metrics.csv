@@ -1,0 +1,3 @@
+model,avg_answer_words,format_adherence,refusal_rate,russian_language_rate,avg_context_overlap
+Base Qwen3:8B,42.0,0.4,0.0,1.0,0.167
+Qwen3:8B + LoRA,66.4,1.0,0.4,1.0,0.094

@@ -164,15 +164,30 @@ def _save_ingestion_artifacts(settings: Settings, summary: dict, stage_metrics: 
     try:
         import matplotlib.pyplot as plt
 
-        figure = plt.figure(figsize=(10, 5))
+        color_bg = "#ffffff"
+        color_text = "#0f172a"
+        color_grid = "#cbd5e1"
+        color_blue = "#2563eb"
+
+        figure = plt.figure(figsize=(10, 5), facecolor=color_bg)
         labels = [row["stage"] for row in stage_metrics]
         values = [row["seconds"] for row in stage_metrics]
-        plt.bar(labels, values, color="#2563eb")
+        plt.bar(labels, values, color=color_blue)
         plt.xticks(rotation=30, ha="right")
         plt.ylabel("Seconds")
         plt.title("Pipeline Stage Runtime")
+        axis = plt.gca()
+        axis.set_facecolor(color_bg)
+        axis.grid(axis="y", color=color_grid, alpha=0.65, linewidth=0.8)
+        axis.set_axisbelow(True)
+        axis.tick_params(colors=color_text)
+        axis.xaxis.label.set_color(color_text)
+        axis.yaxis.label.set_color(color_text)
+        axis.title.set_color(color_text)
+        for spine in axis.spines.values():
+            spine.set_color(color_grid)
         plt.tight_layout()
-        figure.savefig(settings.artifacts_plots_training_dir / "pipeline_stage_runtime.png", dpi=200)
+        figure.savefig(settings.artifacts_plots_training_dir / "pipeline_stage_runtime.png", dpi=200, facecolor=color_bg)
         plt.close(figure)
     except Exception:
         pass
